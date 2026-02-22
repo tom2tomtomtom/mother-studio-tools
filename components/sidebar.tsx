@@ -90,7 +90,7 @@ export function Sidebar() {
       {/* Navigation */}
       <ScrollArea className="flex-1 overflow-hidden px-2 py-4">
         <nav className="space-y-1">
-          {/* Main Links */}
+          {/* Core */}
           <NavLink href="/" icon={<Home className="h-4 w-4" />} collapsed={collapsed} active={pathname === '/'}>
             Home
           </NavLink>
@@ -100,20 +100,22 @@ export function Sidebar() {
           <NavLink href="/favorites" icon={<Star className="h-4 w-4" />} collapsed={collapsed} active={pathname === '/favorites'}>
             Favorites
           </NavLink>
-          <NavLink href="/guides" icon={<BookOpen className="h-4 w-4" />} collapsed={collapsed} active={pathname.startsWith('/guides')}>
-            Guides
-          </NavLink>
-          <NavLink href="/tips" icon={<Lightbulb className="h-4 w-4" />} collapsed={collapsed} active={pathname === '/tips'}>
-            Expert Tips
-          </NavLink>
-          <NavLink href="/prompt-generator" icon={<Video className="h-4 w-4" />} collapsed={collapsed} active={pathname === '/prompt-generator'}>
-            Prompt Generator
-          </NavLink>
+
+          {/* Separator — Tools */}
+          <div className="my-3 h-px bg-sidebar-border" />
+          {!collapsed && (
+            <div className="mb-2 px-2 text-xs font-semibold text-sidebar-foreground/50 uppercase tracking-wider">
+              Tools
+            </div>
+          )}
           <NavLink href="/catalogue" icon={<Layers className="h-4 w-4" />} collapsed={collapsed} active={pathname === '/catalogue'}>
             Full Catalogue
           </NavLink>
           <NavLink href="/plugins" icon={<Puzzle className="h-4 w-4" />} collapsed={collapsed} active={pathname === '/plugins'}>
             Cowork Plugins
+          </NavLink>
+          <NavLink href="/prompt-generator" icon={<Video className="h-4 w-4" />} collapsed={collapsed} active={pathname === '/prompt-generator'}>
+            Prompt Generator
           </NavLink>
           <NavLink href="/skill-builder" icon={<Wand2 className="h-4 w-4" />} collapsed={collapsed} active={pathname === '/skill-builder'}>
             Skill Builder
@@ -122,8 +124,22 @@ export function Sidebar() {
             Community Skills
           </NavLink>
 
-          {/* Separator */}
-          <div className="my-4 h-px bg-sidebar-border" />
+          {/* Separator — Learn */}
+          <div className="my-3 h-px bg-sidebar-border" />
+          {!collapsed && (
+            <div className="mb-2 px-2 text-xs font-semibold text-sidebar-foreground/50 uppercase tracking-wider">
+              Learn
+            </div>
+          )}
+          <NavLink href="/guides" icon={<BookOpen className="h-4 w-4" />} collapsed={collapsed} active={pathname.startsWith('/guides')}>
+            Guides
+          </NavLink>
+          <NavLink href="/tips" icon={<Lightbulb className="h-4 w-4" />} collapsed={collapsed} active={pathname === '/tips'}>
+            Expert Tips
+          </NavLink>
+
+          {/* Separator — Departments */}
+          <div className="my-3 h-px bg-sidebar-border" />
 
           {/* Teams */}
           {!collapsed && (
