@@ -168,7 +168,7 @@ export function SearchContent() {
           </div>
         ) : (
           results.map(prompt => (
-            <PromptCard key={prompt.id} prompt={prompt} />
+            <PromptCard key={prompt.id} prompt={prompt} locked />
           ))
         )}
       </div>

@@ -90,7 +90,7 @@ export function FilteredPromptList({ prompts }: FilteredPromptListProps) {
 
       <div className="space-y-4">
         {filteredPrompts.map(prompt => (
-          <PromptCard key={prompt.id} prompt={prompt} />
+          <PromptCard key={prompt.id} prompt={prompt} locked />
         ))}
       </div>
 

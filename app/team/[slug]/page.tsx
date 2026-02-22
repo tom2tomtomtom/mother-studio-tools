@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props) {
   if (!team) return { title: 'Team Not Found' };
   
   return {
-    title: `${team.name} | Uncommon Studio AI Tools`,
+    title: `${team.name} | Mother AI Tools`,
     description: teamDescriptions[slug] || `AI tools for the ${team.name}`,
   };
 }

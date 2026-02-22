@@ -20,7 +20,8 @@ import {
   BookOpen,
   Monitor,
   Sparkles,
-  FileText
+  FileText,
+  Lock
 } from 'lucide-react';
 import type { Prompt } from '@/lib/prompts';
 
@@ -51,9 +52,10 @@ const toolBadgeConfig: Record<string, { variant: 'default' | 'secondary' | 'outl
 
 interface PromptCardProps {
   prompt: Prompt;
+  locked?: boolean;
 }
 
-export function PromptCard({ prompt }: PromptCardProps) {
+export function PromptCard({ prompt, locked = false }: PromptCardProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const { toggleFavorite, isFavorite } = useFavorites();
@@ -63,6 +65,7 @@ export function PromptCard({ prompt }: PromptCardProps) {
 
   const handleCopy = async (e?: React.MouseEvent) => {
     e?.stopPropagation();
+    if (locked) return;
     await navigator.clipboard.writeText(prompt.prompt);
     setCopied(true);
     addRecentlyUsed(prompt.id);
@@ -75,14 +78,64 @@ export function PromptCard({ prompt }: PromptCardProps) {
   };
 
   const handleFavorite = useCallback(() => {
+    if (locked) return;
     toggleFavorite(prompt.id);
     track({ type: 'favorite_toggle', promptId: prompt.id, favorited: !favorited });
-  }, [toggleFavorite, track, prompt.id, favorited]);
+  }, [locked, toggleFavorite, track, prompt.id, favorited]);
 
   const claudeUrl = useMemo(
     () => `https://claude.ai/new?q=${encodeURIComponent(prompt.prompt.slice(0, 4000))}`,
     [prompt.prompt]
   );
+
+  if (locked) {
+    return (
+      <Card
+        id={prompt.id}
+        className="transition-all duration-200 scroll-mt-20 border-border/30 rounded-xl overflow-hidden opacity-60 cursor-not-allowed"
+      >
+        <CardHeader className="pb-3">
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex-1 min-w-0">
+              <CardTitle className="text-lg leading-tight text-muted-foreground">
+                {prompt.name}
+              </CardTitle>
+              {prompt.description && (
+                <CardDescription className="mt-1.5 line-clamp-2">
+                  {prompt.description}
+                </CardDescription>
+              )}
+            </div>
+            <div className="flex items-center gap-1.5 shrink-0">
+              <div className="flex items-center gap-1.5 h-8 px-3 rounded-md bg-muted text-muted-foreground text-sm">
+                <Lock className="h-3.5 w-3.5" />
+                <span className="hidden sm:inline">Locked</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Badges */}
+          <div className="flex flex-wrap gap-2 mt-3">
+            <Badge variant="secondary" className="flex items-center opacity-60">
+              {toolBadgeConfig[prompt.toolRecommendation]?.icon}
+              {prompt.toolRecommendation}
+            </Badge>
+            {prompt.knowledgeToUpload.length > 0 && (
+              <Badge variant="outline" className="gap-1 opacity-60">
+                <BookOpen className="h-3 w-3" />
+                {prompt.knowledgeToUpload.length} {prompt.knowledgeToUpload.length === 1 ? 'file suggested' : 'files suggested'}
+              </Badge>
+            )}
+          </div>
+
+          {/* Locked message */}
+          <div className="mt-3 text-xs text-muted-foreground/60 italic">
+            Contact to unlock this tool
+          </div>
+        </CardHeader>
+      </Card>
+    );
+  }
 
   return (
     <Card

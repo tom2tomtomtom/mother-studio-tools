@@ -107,7 +107,7 @@ export default function FavoritesPage() {
       ) : (
         <div className="space-y-4">
           {favoritePrompts.map(prompt => (
-            <PromptCard key={prompt.id} prompt={prompt} />
+            <PromptCard key={prompt.id} prompt={prompt} locked />
           ))}
         </div>
       )}
