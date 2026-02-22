@@ -38,7 +38,7 @@ function nextMessageId() {
   return `msg-${Date.now()}-${++messageCounter}`;
 }
 
-const MESSAGES_STORAGE = 'uncommon-ai-chat-v2';
+const MESSAGES_STORAGE = 'mother-ai-chat-v1';
 
 // Build a map of all navigable pages
 const APP_PAGES = {
@@ -160,7 +160,7 @@ function buildSystemPrompt(pathname: string, userContext?: { favorites: string[]
     }
   }
 
-  return `You are Uncommon AI, a knowledgeable creative and advertising assistant built into the Uncommon Studio AI Tools toolkit.
+  return `You are Mother AI, a knowledgeable creative and advertising assistant built into the Mother London Studio Tools toolkit.
 You have broad expertise in advertising, campaigns, strategy, copywriting, design, production, and creative processes.
 The toolkit has ${teams.length} departments, ${prompts.length}+ AI prompts, and comprehensive guides for AI tools.
 
@@ -363,7 +363,7 @@ function ActionChips({ items, onSelect, disabled }: { items: { label: string; me
 const WELCOME_MESSAGE: Message = {
   id: 'welcome',
   role: 'assistant',
-  content: "Hi! I'm **Uncommon AI**, your creative assistant. Ask me anything about campaigns, strategy, copywriting, design, or AI workflows — and I'll point you to the right toolkit resources along the way.",
+  content: "Hi! I'm **Mother AI**, your creative assistant. Ask me anything about campaigns, strategy, copywriting, design, or AI workflows — and I'll point you to the right toolkit resources along the way.",
   recommendations: [],
 };
 
@@ -508,7 +508,7 @@ export function ChatWidget() {
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
             onClick={() => setIsOpen(true)}
-            aria-label="Open Uncommon AI chat assistant"
+            aria-label="Open Mother AI chat assistant"
             className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-primary text-primary-foreground rounded-full px-4 py-3 shadow-lg hover:shadow-xl transition-shadow"
           >
             <MessageCircle className="h-5 w-5" aria-hidden="true" />
@@ -534,7 +534,7 @@ export function ChatWidget() {
             <div className="flex items-center justify-between p-4 border-b shrink-0">
               <div className="flex items-center gap-2">
                 <Sparkles className="h-5 w-5 text-primary" />
-                <span className="font-semibold">Uncommon AI</span>
+                <span className="font-semibold">Mother AI</span>
               </div>
               <div className="flex items-center gap-1">
                 {messages.length > 1 && (

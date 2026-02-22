@@ -146,7 +146,7 @@ WCAG is organized around four principles -- Perceivable, Operable, Understandabl
 
 **Functional images (links, buttons):**
 - Describe the action or destination, not the image
-- Example: Logo that links to homepage -- alt="Uncommon Studio homepage" not alt="Uncommon Studio logo"
+- Example: Logo that links to homepage -- alt="Mother London homepage" not alt="Mother London logo"
 
 **Decorative images:**
 - Use alt="" (empty alt attribute)

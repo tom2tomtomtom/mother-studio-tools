@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { PromptGeneratorForm } from '@/components/prompt-generator-form';
 
 export const metadata: Metadata = {
-  title: 'Prompt Generator | Uncommon Studio',
+  title: 'Prompt Generator | Mother London Studio Tools',
   description:
     'Build optimized prompts for Runway Gen-4, Google Veo 3, and Nano Banana',
 };

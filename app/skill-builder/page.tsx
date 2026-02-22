@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { SkillBuilderForm } from '@/components/skill-builder-form';
 
 export const metadata: Metadata = {
-  title: 'Skill Builder | Uncommon Studio AI Tools',
+  title: 'Skill Builder | Mother London Studio Tools',
   description: 'Describe a task and AI will generate an expert-level Claude Skill for you.',
 };
 

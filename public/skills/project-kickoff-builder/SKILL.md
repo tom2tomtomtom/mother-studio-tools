@@ -5,7 +5,7 @@ description: Creates kickoff documents with project overview, team roles, commun
 
 # Project Kickoff Builder
 
-This skill generates comprehensive project kickoff documents for Uncommon Studio engagements. A strong kickoff sets the tone for the entire project -- it aligns expectations, establishes communication norms, identifies risks early, and gives every stakeholder a clear picture of what happens next. This skill produces both the kickoff document and a meeting agenda for the kickoff session.
+This skill generates comprehensive project kickoff documents for Mother London engagements. A strong kickoff sets the tone for the entire project -- it aligns expectations, establishes communication norms, identifies risks early, and gives every stakeholder a clear picture of what happens next. This skill produces both the kickoff document and a meeting agenda for the kickoff session.
 
 ## When to Use
 
@@ -43,7 +43,7 @@ Examples:
 
 ### 3. Team and Roles
 
-#### Uncommon Studio Team
+#### Mother London Team
 
 | Role | Name | Responsibility | Email |
 |------|------|---------------|-------|

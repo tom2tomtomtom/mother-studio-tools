@@ -5,7 +5,7 @@ description: Writes briefs for external vendors including photographers, printer
 
 # Vendor Brief Writer
 
-This skill generates clear, professional briefs for external vendors and freelancers engaged by Uncommon Studio. A strong vendor brief eliminates ambiguity, reduces revision cycles, and protects both parties by documenting expectations upfront. Whether briefing a photographer, printer, developer, animator, or illustrator, this skill produces a complete brief ready to send.
+This skill generates clear, professional briefs for external vendors and freelancers engaged by Mother London. A strong vendor brief eliminates ambiguity, reduces revision cycles, and protects both parties by documenting expectations upfront. Whether briefing a photographer, printer, developer, animator, or illustrator, this skill produces a complete brief ready to send.
 
 ## When to Use
 
@@ -23,7 +23,7 @@ Provide context so the vendor understands the bigger picture:
 
 - **Project name**: [Name]
 - **Client**: [Client name] -- [industry/description]
-- **Agency**: Uncommon Studio
+- **Agency**: Mother London
 - **Brief date**: [Date]
 - **Brief prepared by**: [Name, role, email, phone]
 - **Project summary**: 3-5 sentences describing the overall project, the vendor's piece within it, and what the final output will be used for
@@ -71,16 +71,16 @@ Specify the technical parameters the vendor must meet:
 
 | Milestone | Date | Responsibility |
 |-----------|------|---------------|
-| Brief issued | [Date] | Uncommon Studio |
+| Brief issued | [Date] | Mother London |
 | Vendor questions due | [Date] | Vendor |
 | Estimate/quote due | [Date] | Vendor |
-| Estimate approved | [Date] | Uncommon Studio |
+| Estimate approved | [Date] | Mother London |
 | Production begins | [Date] | Vendor |
 | First proof/draft/selects | [Date] | Vendor |
-| Studio feedback | [Date] | Uncommon Studio |
+| Studio feedback | [Date] | Mother London |
 | Revised deliverables | [Date] | Vendor |
 | Final delivery | [Date] | Vendor |
-| Payment | [Date/terms] | Uncommon Studio |
+| Payment | [Date/terms] | Mother London |
 
 Flag any dates that are hard deadlines and cannot move. Note any dependencies on client approvals or other vendors.
 
@@ -214,11 +214,11 @@ Include in the brief:
 
 ### Full Ownership (Work for Hire)
 
-"All deliverables produced under this brief shall be considered works made for hire. Upon full payment, all rights, title, and interest in the deliverables -- including copyright -- shall transfer to [Client/Uncommon Studio]. The vendor retains no rights to the deliverables except as explicitly granted below."
+"All deliverables produced under this brief shall be considered works made for hire. Upon full payment, all rights, title, and interest in the deliverables -- including copyright -- shall transfer to [Client/Mother London]. The vendor retains no rights to the deliverables except as explicitly granted below."
 
 ### Limited License
 
-"The vendor grants [Client/Uncommon Studio] an exclusive, perpetual, worldwide license to use the deliverables in [specified media/channels]. The vendor retains copyright ownership but may not license the same work to competing brands in the [industry] category for a period of [X] years."
+"The vendor grants [Client/Mother London] an exclusive, perpetual, worldwide license to use the deliverables in [specified media/channels]. The vendor retains copyright ownership but may not license the same work to competing brands in the [industry] category for a period of [X] years."
 
 ### Portfolio Usage
 

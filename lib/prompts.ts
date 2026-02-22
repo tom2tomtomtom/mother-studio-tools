@@ -1,4 +1,4 @@
-// Uncommon Studio AI Tools
+// Mother London Studio Tools
 // Creative Advertising Agency Prompts
 
 export interface Prompt {

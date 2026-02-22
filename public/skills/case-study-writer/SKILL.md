@@ -5,7 +5,7 @@ description: Writes client case studies in challenge-approach-results format wit
 
 # Case Study Writer
 
-This skill generates compelling client case studies for Uncommon Studio. Case studies are the studio's most powerful sales tool -- they demonstrate real results for real clients and provide social proof for prospective business. This skill produces case studies in multiple formats, from full-length website features to one-line summaries for proposal decks, all following the challenge-approach-results framework.
+This skill generates compelling client case studies for Mother London. Case studies are the studio's most powerful sales tool -- they demonstrate real results for real clients and provide social proof for prospective business. This skill produces case studies in multiple formats, from full-length website features to one-line summaries for proposal decks, all following the challenge-approach-results framework.
 
 ## When to Use
 
@@ -39,12 +39,12 @@ Provide a brief snapshot:
 - **Industry**: [Sector]
 - **Company size**: [Employees, revenue range, or market position -- if relevant]
 - **Engagement type**: [Project-based / Retainer / Campaign]
-- **Services provided**: [List of Uncommon Studio services used]
+- **Services provided**: [List of Mother London services used]
 - **Timeline**: [Duration of engagement]
 
 ### 3. The Challenge
 
-Describe the problem or opportunity that brought the client to Uncommon Studio. This section should create tension and make the reader curious about the solution.
+Describe the problem or opportunity that brought the client to Mother London. This section should create tension and make the reader curious about the solution.
 
 Structure:
 1. **Business context**: What was happening in the client's business or market
@@ -151,7 +151,7 @@ These takeaways help prospective clients see how the studio's thinking could app
 Template:
 "**[Client Name] -- [Industry]**
 
-[Challenge in 2-3 sentences]. Uncommon Studio [approach in 2-3 sentences].
+[Challenge in 2-3 sentences]. Mother London [approach in 2-3 sentences].
 
 **Results:**
 - [Primary metric]

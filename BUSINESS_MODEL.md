@@ -1,4 +1,4 @@
-# Uncommon Studio AI Tools
+# Mother London AI Tools
 ## Business Model: Selling to Agencies
 
 ---

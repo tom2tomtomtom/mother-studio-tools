@@ -1,11 +1,11 @@
-# Uncommon Studio AI Tools
+# Mother London AI Tools
 ## Sales & Valuation Document
 
 ---
 
 ## Executive Summary
 
-**Uncommon Studio AI Tools** is a production-ready, internally-deployed web platform that gives every department in a creative advertising agency instant access to AI-powered workflows. It packages **78 expert prompts**, **33 downloadable Claude Skills**, **12 Cowork Plugins**, and **18 in-depth guides** into a polished Next.js application with search, filtering, dark mode, an AI chat assistant, and one-click copy/download — all purpose-built for the daily work of creative agencies.
+**Mother London AI Tools** is a production-ready, internally-deployed web platform that gives every department in a creative advertising agency instant access to AI-powered workflows. It packages **78 expert prompts**, **33 downloadable Claude Skills**, **12 Cowork Plugins**, and **18 in-depth guides** into a polished Next.js application with search, filtering, dark mode, an AI chat assistant, and one-click copy/download — all purpose-built for the daily work of creative agencies.
 
 This is not a generic "prompt library." It is a complete **Agency AI Operating System** — structured by department, designed by practitioners, and ready to deploy on day one.
 
@@ -156,7 +156,7 @@ Based on [2026 custom SaaS development rates](https://saigontechnology.com/blog/
 | [Productive](https://productive.io/) | Agency management platform | $12-20/user/mo | $14,400 - $24,000 |
 | [Kantata](https://www.kantata.com/) | Professional services automation | Custom | $20,000 - $50,000+ |
 
-**Uncommon Studio AI Tools** replaces or augments functionality from **multiple** of these tools. While each competitor covers one narrow slice (ads, project management, content), this platform covers the **entire agency** — every department, every workflow, every tool.
+**Mother London AI Tools** replaces or augments functionality from **multiple** of these tools. While each competitor covers one narrow slice (ads, project management, content), this platform covers the **entire agency** — every department, every workflow, every tool.
 
 **Comparable annual value: $25,000 - $60,000/year** for a mid-size agency.
 

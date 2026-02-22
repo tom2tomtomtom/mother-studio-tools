@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { CommunitySkillsList } from './community-skills-list';
 
 export const metadata: Metadata = {
-  title: 'Community Skills | Uncommon Studio AI Tools',
+  title: 'Community Skills | Mother London Studio Tools',
   description: 'Browse Claude Skills created by the community. All community skills are preloaded in your account.',
 };
 

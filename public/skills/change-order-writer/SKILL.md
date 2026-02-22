@@ -5,7 +5,7 @@ description: Writes change orders and scope amendments with impact on timeline, 
 
 # Change Order Writer
 
-This skill generates professional change orders and scope amendments for Uncommon Studio projects. Change orders formalize modifications to an active project -- whether the client requests additional work, the scope needs to be reduced, or timelines require adjustment. Every change order protects both the studio and the client by documenting what is changing, why, and what it costs.
+This skill generates professional change orders and scope amendments for Mother London projects. Change orders formalize modifications to an active project -- whether the client requests additional work, the scope needs to be reduced, or timelines require adjustment. Every change order protects both the studio and the client by documenting what is changing, why, and what it costs.
 
 ## When to Use
 
@@ -117,7 +117,7 @@ Title: ____________________
 Signature: ____________________
 Date: ____________________
 
-**Uncommon Studio Approval**
+**Mother London Approval**
 Name: ____________________
 Title: ____________________
 Signature: ____________________

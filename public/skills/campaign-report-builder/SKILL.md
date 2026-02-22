@@ -5,7 +5,7 @@ description: Builds end-of-campaign performance reports with results vs KPIs, ch
 
 # Campaign Report Builder
 
-This skill generates comprehensive end-of-campaign performance reports for Uncommon Studio clients. It transforms raw campaign data into structured, insight-driven reports that demonstrate value, surface learnings, and provide actionable recommendations for future work. Reports are designed to be presentation-ready and suitable for sharing with client leadership.
+This skill generates comprehensive end-of-campaign performance reports for Mother London clients. It transforms raw campaign data into structured, insight-driven reports that demonstrate value, surface learnings, and provide actionable recommendations for future work. Reports are designed to be presentation-ready and suitable for sharing with client leadership.
 
 ## When to Use
 
@@ -129,7 +129,7 @@ When comparing results, layer in context:
 - **Historical benchmarks** -- compare to the client's previous campaigns
 - **Industry benchmarks** -- use published data for the client's vertical
 - **Platform benchmarks** -- compare to channel-specific norms
-- **Internal benchmarks** -- compare to Uncommon Studio portfolio averages
+- **Internal benchmarks** -- compare to Mother London portfolio averages
 
 Always cite the source and timeframe of any benchmark used.
 

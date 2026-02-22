@@ -1,4 +1,4 @@
-# Uncommon Studio AI Tools
+# Mother London AI Tools
 
 ### The AI Operating System for Creative Agencies
 
@@ -6,7 +6,7 @@
 
 **Your entire agency — 10 departments, 78 workflows, one platform.**
 
-Every department in your agency does work that AI can accelerate. The problem isn't access to AI — it's knowing *which* tool to use, *how* to use it, and getting consistent quality across 30+ people. Uncommon Studio AI Tools solves that on day one.
+Every department in your agency does work that AI can accelerate. The problem isn't access to AI — it's knowing *which* tool to use, *how* to use it, and getting consistent quality across 30+ people. Mother London AI Tools solves that on day one.
 
 ---
 
@@ -56,7 +56,7 @@ Each department gets purpose-built prompts, skills, and plugins matched to their
 
 ## Build vs. Buy
 
-| | Build In-House | Uncommon Studio |
+| | Build In-House | Mother London |
 |---|---|---|
 | **Cost** | $206,000+ | Fraction of the cost |
 | **Timeline** | 6-9 months | Deploy today |
@@ -74,7 +74,7 @@ Each department gets purpose-built prompts, skills, and plugins matched to their
 | MagicBrief | Briefs only | $3-30K |
 | Productive | Project mgmt only | $14-24K |
 | AdCreative.ai | Ad generation only | $3-18K |
-| **Uncommon Studio** | **All of the above + 6 more departments** | **Contact us** |
+| **Mother London** | **All of the above + 6 more departments** | **Contact us** |
 
 ---
 
