@@ -44,7 +44,7 @@ export default function ConnectorsPage() {
           <Badge variant="outline">20 min</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-500">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-foreground">
             <Plug className="h-6 w-6" />
           </div>
           <div>
@@ -55,10 +55,10 @@ export default function ConnectorsPage() {
       </div>
 
       {/* Concept */}
-      <Card className="bg-gradient-to-r from-cyan-500/5 via-cyan-500/10 to-cyan-500/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-start gap-3">
-            <Lightbulb className="h-5 w-5 text-amber-500 mt-0.5" />
+            <Lightbulb className="h-5 w-5 text-foreground mt-0.5" />
             <div>
               <p className="font-medium">The Goal</p>
               <p className="text-muted-foreground mt-1">
@@ -79,7 +79,7 @@ export default function ConnectorsPage() {
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="p-4 rounded-lg border">
               <div className="flex items-center gap-2 mb-2">
-                <Server className="h-5 w-5 text-blue-500" />
+                <Server className="h-5 w-5 text-foreground" />
                 <p className="font-medium">Native Web Connectors</p>
               </div>
               <p className="text-sm text-muted-foreground">
@@ -89,7 +89,7 @@ export default function ConnectorsPage() {
             </div>
             <div className="p-4 rounded-lg border">
               <div className="flex items-center gap-2 mb-2">
-                <Plug className="h-5 w-5 text-purple-500" />
+                <Plug className="h-5 w-5 text-foreground" />
                 <p className="font-medium">Model Context Protocol (MCP)</p>
               </div>
               <p className="text-sm text-muted-foreground">
@@ -104,7 +104,7 @@ export default function ConnectorsPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Server className="h-5 w-5 text-blue-500" />
+            <Server className="h-5 w-5 text-foreground" />
             Native Web Integrations
           </CardTitle>
           <CardDescription>
@@ -116,7 +116,7 @@ export default function ConnectorsPage() {
             <p className="font-medium mb-3">Available Integrations</p>
             <div className="grid gap-3 sm:grid-cols-2">
               <div className="flex items-start gap-2 p-3 rounded-lg border">
-                <Mail className="h-4 w-4 text-red-500 mt-0.5 shrink-0" />
+                <Mail className="h-4 w-4 text-foreground mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-sm">Google Workspace</p>
                   <p className="text-xs text-muted-foreground">Gmail, Google Calendar, Google Drive</p>
@@ -157,14 +157,14 @@ export default function ConnectorsPage() {
             <p className="font-medium mb-3">Key Use Cases</p>
             <div className="space-y-2">
               <div className="flex items-start gap-2">
-                <Calendar className="h-4 w-4 text-blue-500 mt-0.5 shrink-0" />
+                <Calendar className="h-4 w-4 text-foreground mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-sm">Meeting Management</p>
                   <p className="text-xs text-muted-foreground">"Check my Google Calendar for open slots next Tuesday and draft an invite email to the team"</p>
                 </div>
               </div>
               <div className="flex items-start gap-2">
-                <Mail className="h-4 w-4 text-red-500 mt-0.5 shrink-0" />
+                <Mail className="h-4 w-4 text-foreground mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-sm">Inbox Triage</p>
                   <p className="text-xs text-muted-foreground">Connect Gmail to scan and summarize high-priority messages or clean up promotional spam</p>
@@ -186,7 +186,7 @@ export default function ConnectorsPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Plug className="h-5 w-5 text-purple-500" />
+            <Plug className="h-5 w-5 text-foreground" />
             Mastering MCP (Model Context Protocol)
           </CardTitle>
           <CardDescription>
@@ -238,7 +238,7 @@ export default function ConnectorsPage() {
               </div>
               <div className="p-3 rounded-lg border border-amber-500/50 bg-amber-500/5">
                 <p className="font-medium text-sm flex items-center gap-2">
-                  <Shield className="h-4 w-4 text-amber-500" />
+                  <Shield className="h-4 w-4 text-foreground" />
                   Security Note
                 </p>
                 <p className="text-sm text-muted-foreground mt-1">
@@ -308,7 +308,7 @@ export default function ConnectorsPage() {
       <Card className="border-amber-500/50">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Zap className="h-5 w-5 text-amber-500" />
+            <Zap className="h-5 w-5 text-foreground" />
             Optimization & "Token Hygiene"
           </CardTitle>
           <CardDescription>
@@ -332,9 +332,9 @@ export default function ConnectorsPage() {
             </p>
           </div>
 
-          <div className="p-3 rounded-lg border border-amber-500/30 bg-amber-500/5">
+          <div className="p-3 rounded-lg border border-border bg-amber-500/5">
             <p className="font-medium text-sm flex items-center gap-2">
-              <AlertTriangle className="h-4 w-4 text-amber-500" />
+              <AlertTriangle className="h-4 w-4 text-foreground" />
               Watch for Large Outputs
             </p>
             <p className="text-sm text-muted-foreground mt-1">
@@ -400,13 +400,13 @@ export default function ConnectorsPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Shield className="h-5 w-5 text-green-500" />
+            <Shield className="h-5 w-5 text-foreground" />
             Security & Governance
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex items-start gap-3">
-            <Shield className="h-4 w-4 text-green-500 mt-1 shrink-0" />
+            <Shield className="h-4 w-4 text-foreground mt-1 shrink-0" />
             <div>
               <p className="font-medium">Human in the Loop</p>
               <p className="text-sm text-muted-foreground">
@@ -418,7 +418,7 @@ export default function ConnectorsPage() {
           </div>
 
           <div className="flex items-start gap-3">
-            <Database className="h-4 w-4 text-blue-500 mt-1 shrink-0" />
+            <Database className="h-4 w-4 text-foreground mt-1 shrink-0" />
             <div>
               <p className="font-medium">Data Boundaries</p>
               <p className="text-sm text-muted-foreground">
@@ -473,7 +473,7 @@ export default function ConnectorsPage() {
       </Card>
 
       {/* Next Steps */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-center justify-between">
             <div>

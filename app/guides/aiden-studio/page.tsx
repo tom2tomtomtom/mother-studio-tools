@@ -65,7 +65,7 @@ export default function AidenStudioPage() {
           <Badge variant="outline">60 min read</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-red-500/10 text-red-500">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-foreground">
             <Brain className="h-6 w-6" />
           </div>
           <div>
@@ -76,10 +76,10 @@ export default function AidenStudioPage() {
       </div>
 
       {/* What is AIDEN */}
-      <Card className="bg-gradient-to-r from-red-500/5 via-red-500/10 to-red-500/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-start gap-3">
-            <Lightbulb className="h-5 w-5 text-amber-500 mt-0.5" />
+            <Lightbulb className="h-5 w-5 text-foreground mt-0.5" />
             <div>
               <p className="font-medium">What is AIDEN.services?</p>
               <p className="text-muted-foreground mt-1">
@@ -99,7 +99,7 @@ export default function AidenStudioPage() {
           onClick={() => { setOpenSections(['pitch']); document.getElementById('pitch')?.scrollIntoView({ behavior: 'smooth' }); }}
           className="p-4 rounded-lg border hover:border-red-500 hover:bg-red-500/5 transition-colors text-left"
         >
-          <Target className="h-5 w-5 text-red-500 mb-2" />
+          <Target className="h-5 w-5 text-foreground mb-2" />
           <p className="font-medium text-sm">AIDEN.pitch</p>
           <p className="text-xs text-muted-foreground">Campaign Development</p>
         </button>
@@ -107,7 +107,7 @@ export default function AidenStudioPage() {
           onClick={() => { setOpenSections(['test']); document.getElementById('test')?.scrollIntoView({ behavior: 'smooth' }); }}
           className="p-4 rounded-lg border hover:border-purple-500 hover:bg-purple-500/5 transition-colors text-left"
         >
-          <Beaker className="h-5 w-5 text-purple-500 mb-2" />
+          <Beaker className="h-5 w-5 text-foreground mb-2" />
           <p className="font-medium text-sm">AIDEN.test</p>
           <p className="text-xs text-muted-foreground">Synthetic Research</p>
         </button>
@@ -115,7 +115,7 @@ export default function AidenStudioPage() {
           onClick={() => { setOpenSections(['chat']); document.getElementById('chat')?.scrollIntoView({ behavior: 'smooth' }); }}
           className="p-4 rounded-lg border hover:border-blue-500 hover:bg-blue-500/5 transition-colors text-left"
         >
-          <MessageSquare className="h-5 w-5 text-blue-500 mb-2" />
+          <MessageSquare className="h-5 w-5 text-foreground mb-2" />
           <p className="font-medium text-sm">AIDEN.chat</p>
           <p className="text-xs text-muted-foreground">334-Phantom AI</p>
         </button>
@@ -128,7 +128,7 @@ export default function AidenStudioPage() {
             <CardHeader className="cursor-pointer hover:bg-muted/50 transition-colors">
               <div className="flex items-center justify-between">
                 <CardTitle className="flex items-center gap-2">
-                  <Target className="h-5 w-5 text-red-500" />
+                  <Target className="h-5 w-5 text-foreground" />
                   AIDEN.pitch - Campaign Development Platform
                 </CardTitle>
                 <ChevronDown className={`h-5 w-5 transition-transform ${openSections.includes('pitch') ? 'rotate-180' : ''}`} />
@@ -182,16 +182,16 @@ export default function AidenStudioPage() {
                   <p className="font-medium text-sm">Insight Card Types</p>
                   <div className="grid gap-2 sm:grid-cols-4">
                     <div className="p-2 rounded border border-blue-500/30 bg-blue-500/5">
-                      <Badge variant="outline" className="text-blue-500 text-xs">Consumer</Badge>
+                      <Badge variant="outline" className="text-foreground text-xs">Consumer</Badge>
                     </div>
                     <div className="p-2 rounded border border-green-500/30 bg-green-500/5">
-                      <Badge variant="outline" className="text-green-500 text-xs">Market</Badge>
+                      <Badge variant="outline" className="text-foreground text-xs">Market</Badge>
                     </div>
-                    <div className="p-2 rounded border border-purple-500/30 bg-purple-500/5">
-                      <Badge variant="outline" className="text-purple-500 text-xs">Cultural</Badge>
+                    <div className="p-2 rounded border border-[#1A4A5C]/30 bg-purple-500/5">
+                      <Badge variant="outline" className="text-foreground text-xs">Cultural</Badge>
                     </div>
                     <div className="p-2 rounded border border-orange-500/30 bg-orange-500/5">
-                      <Badge variant="outline" className="text-orange-500 text-xs">Brand</Badge>
+                      <Badge variant="outline" className="text-foreground text-xs">Brand</Badge>
                     </div>
                   </div>
                 </div>
@@ -213,9 +213,9 @@ export default function AidenStudioPage() {
                   Territories are distinct creative positioning angles. AIDEN generates 3-5 territories with:
                   Insight, Angle, Why It Works, and Confidence Score.
                 </p>
-                <div className="p-3 rounded-lg bg-amber-500/5 border-amber-500/30 border">
+                <div className="p-3 rounded-lg bg-amber-500/5 border-border border">
                   <div className="flex items-center gap-2 mb-1">
-                    <Star className="h-4 w-4 text-amber-500" />
+                    <Star className="h-4 w-4 text-foreground" />
                     <p className="font-medium text-sm">The Wall</p>
                   </div>
                   <p className="text-xs text-muted-foreground">
@@ -274,7 +274,7 @@ export default function AidenStudioPage() {
                 </div>
                 <div className="p-3 rounded-lg bg-blue-500/5 border-blue-500/30 border">
                   <div className="flex items-center gap-2">
-                    <Timer className="h-4 w-4 text-blue-500" />
+                    <Timer className="h-4 w-4 text-foreground" />
                     <p className="text-xs"><strong>Generation Time: 3-5 minutes.</strong> Don&apos;t refresh the page!</p>
                   </div>
                 </div>
@@ -309,7 +309,7 @@ export default function AidenStudioPage() {
             <CardHeader className="cursor-pointer hover:bg-muted/50 transition-colors">
               <div className="flex items-center justify-between">
                 <CardTitle className="flex items-center gap-2">
-                  <Beaker className="h-5 w-5 text-purple-500" />
+                  <Beaker className="h-5 w-5 text-foreground" />
                   AIDEN.test - Synthetic Qualitative Research
                 </CardTitle>
                 <ChevronDown className={`h-5 w-5 transition-transform ${openSections.includes('test') ? 'rotate-180' : ''}`} />
@@ -416,7 +416,7 @@ export default function AidenStudioPage() {
             <CardHeader className="cursor-pointer hover:bg-muted/50 transition-colors">
               <div className="flex items-center justify-between">
                 <CardTitle className="flex items-center gap-2">
-                  <MessageSquare className="h-5 w-5 text-blue-500" />
+                  <MessageSquare className="h-5 w-5 text-foreground" />
                   AIDEN.chat - 334-Phantom AI Strategy Platform
                 </CardTitle>
                 <ChevronDown className={`h-5 w-5 transition-transform ${openSections.includes('chat') ? 'rotate-180' : ''}`} />
@@ -495,21 +495,21 @@ export default function AidenStudioPage() {
                 <div className="grid gap-3 sm:grid-cols-3">
                   <div className="p-3 rounded-lg border">
                     <div className="flex items-center gap-2 mb-1">
-                      <Lightbulb className="h-4 w-4 text-yellow-500" />
+                      <Lightbulb className="h-4 w-4 text-foreground" />
                       <p className="font-medium text-sm">INSIGHTS</p>
                     </div>
                     <p className="text-xs text-muted-foreground">Audience, Tension, Opportunity, Positioning</p>
                   </div>
                   <div className="p-3 rounded-lg border">
                     <div className="flex items-center gap-2 mb-1">
-                      <Zap className="h-4 w-4 text-orange-500" />
+                      <Zap className="h-4 w-4 text-foreground" />
                       <p className="font-medium text-sm">IDEAS</p>
                     </div>
                     <p className="text-xs text-muted-foreground">Campaign, Activation, Content, Wild</p>
                   </div>
                   <div className="p-3 rounded-lg border">
                     <div className="flex items-center gap-2 mb-1">
-                      <FileText className="h-4 w-4 text-blue-500" />
+                      <FileText className="h-4 w-4 text-foreground" />
                       <p className="font-medium text-sm">COPY</p>
                     </div>
                     <p className="text-xs text-muted-foreground">Headline, Tagline, Body, Manifesto</p>
@@ -534,13 +534,13 @@ export default function AidenStudioPage() {
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex flex-wrap items-center justify-center gap-2 text-sm font-medium">
-            <Badge variant="outline" className="text-blue-500 border-blue-500">DISCOVER</Badge>
+            <Badge variant="outline" className="text-foreground border-blue-500">DISCOVER</Badge>
             <ArrowRight className="h-4 w-4 text-muted-foreground" />
-            <Badge variant="outline" className="text-red-500 border-red-500">DEVELOP</Badge>
+            <Badge variant="outline" className="text-foreground border-red-500">DEVELOP</Badge>
             <ArrowRight className="h-4 w-4 text-muted-foreground" />
-            <Badge variant="outline" className="text-purple-500 border-purple-500">TEST</Badge>
+            <Badge variant="outline" className="text-foreground border-purple-500">TEST</Badge>
             <ArrowRight className="h-4 w-4 text-muted-foreground" />
-            <Badge variant="outline" className="text-orange-500 border-orange-500">REFINE</Badge>
+            <Badge variant="outline" className="text-foreground border-orange-500">REFINE</Badge>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-2 text-xs text-muted-foreground">
             <span>AIDEN.chat</span>
@@ -558,7 +558,7 @@ export default function AidenStudioPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <AlertTriangle className="h-5 w-5 text-amber-500" />
+            <AlertTriangle className="h-5 w-5 text-foreground" />
             Troubleshooting
           </CardTitle>
         </CardHeader>
@@ -585,7 +585,7 @@ export default function AidenStudioPage() {
       </Card>
 
       {/* Next Steps */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-center justify-between">
             <div>

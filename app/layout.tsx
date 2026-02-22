@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Space_Grotesk, Lora } from "next/font/google";
 import { Sidebar } from "@/components/sidebar";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/theme-provider";
 import { LazyCommandMenu, LazyChatWidget } from "@/components/lazy-widgets";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  variable: "--font-lora",
+});
 
 export const metadata: Metadata = {
-  title: "Mother AI Tools | Creative Agency Prompt Toolkit",
+  title: "Mother London | Studio Tools",
   description: "90+ AI prompts across 11 agency departments for creative advertising, strategy, and production",
   keywords: ["AI", "creative advertising", "agency tools", "prompts", "Claude"],
 };
@@ -22,11 +29,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${spaceGrotesk.variable} ${lora.variable} font-sans`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          forcedTheme="light"
           disableTransitionOnChange
         >
           {/* Accessibility: Skip to main content link */}
@@ -36,14 +42,12 @@ export default function RootLayout({
           <div className="flex min-h-screen">
             <Sidebar />
             <div className="flex-1 ml-0 md:ml-64">
-              <header className="sticky top-0 z-30 bg-background/80 backdrop-blur-sm border-b">
-                <div className="flex items-center justify-between px-4 md:px-6 h-16">
+              <header className="sticky top-0 z-30 bg-background border-b border-border">
+                <div className="flex items-center justify-end px-4 md:px-6 h-14">
                   {/* Spacer for mobile menu button */}
-                  <div className="w-10 md:hidden" />
-                  <h1 className="text-lg md:text-xl font-semibold">Mother AI Tools</h1>
+                  <div className="w-10 md:hidden mr-auto" />
                   <div className="flex items-center gap-3">
                     <LazyCommandMenu />
-                    <ThemeToggle />
                   </div>
                 </div>
               </header>

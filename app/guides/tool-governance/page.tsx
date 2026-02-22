@@ -41,7 +41,7 @@ export default function ToolGovernancePage() {
           <Badge variant="outline">20 min</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-500/10 text-slate-500">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-500/10 text-foreground">
             <Settings className="h-6 w-6" />
           </div>
           <div>
@@ -52,10 +52,10 @@ export default function ToolGovernancePage() {
       </div>
 
       {/* Why Governance Matters */}
-      <Card className="bg-gradient-to-r from-slate-500/5 via-slate-500/10 to-slate-500/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-start gap-3">
-            <Lightbulb className="h-5 w-5 text-amber-500 mt-0.5" />
+            <Lightbulb className="h-5 w-5 text-foreground mt-0.5" />
             <div>
               <p className="font-medium">Why Governance Matters</p>
               <p className="text-muted-foreground mt-1">
@@ -72,7 +72,7 @@ export default function ToolGovernancePage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <ClipboardList className="h-5 w-5 text-slate-500" />
+            <ClipboardList className="h-5 w-5 text-foreground" />
             The Evaluation Framework
           </CardTitle>
           <CardDescription>
@@ -126,7 +126,7 @@ export default function ToolGovernancePage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Lock className="h-5 w-5 text-slate-500" />
+            <Lock className="h-5 w-5 text-foreground" />
             Data & Security Checklist
           </CardTitle>
           <CardDescription>
@@ -160,7 +160,7 @@ export default function ToolGovernancePage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Scale className="h-5 w-5 text-slate-500" />
+            <Scale className="h-5 w-5 text-foreground" />
             Legal Considerations
           </CardTitle>
           <CardDescription>
@@ -214,7 +214,7 @@ export default function ToolGovernancePage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Shield className="h-5 w-5 text-green-500" />
+            <Shield className="h-5 w-5 text-foreground" />
             Approved Tool Stack
           </CardTitle>
           <CardDescription>
@@ -235,22 +235,22 @@ export default function ToolGovernancePage() {
                 <tr>
                   <td className="py-2 font-medium">Claude Enterprise</td>
                   <td className="py-2 text-muted-foreground">General AI, writing, analysis, code</td>
-                  <td className="py-2 text-green-600">No training on data</td>
+                  <td className="py-2 text-[#7A7A2A]">No training on data</td>
                 </tr>
                 <tr>
                   <td className="py-2 font-medium">NotebookLM</td>
                   <td className="py-2 text-muted-foreground">Document synthesis</td>
-                  <td className="py-2 text-green-600">Google Workspace integrated</td>
+                  <td className="py-2 text-[#7A7A2A]">Google Workspace integrated</td>
                 </tr>
                 <tr>
                   <td className="py-2 font-medium">n8n</td>
                   <td className="py-2 text-muted-foreground">Workflow automation</td>
-                  <td className="py-2 text-green-600">Self-hosted option</td>
+                  <td className="py-2 text-[#7A7A2A]">Self-hosted option</td>
                 </tr>
                 <tr>
                   <td className="py-2 font-medium">Runway Enterprise</td>
                   <td className="py-2 text-muted-foreground">Video generation</td>
-                  <td className="py-2 text-green-600">Commercial rights included</td>
+                  <td className="py-2 text-[#7A7A2A]">Commercial rights included</td>
                 </tr>
               </tbody>
             </table>
@@ -262,7 +262,7 @@ export default function ToolGovernancePage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <ClipboardList className="h-5 w-5 text-slate-500" />
+            <ClipboardList className="h-5 w-5 text-foreground" />
             Request Process
           </CardTitle>
           <CardDescription>
@@ -339,7 +339,7 @@ export default function ToolGovernancePage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <AlertTriangle className="h-5 w-5 text-red-500" />
+            <AlertTriangle className="h-5 w-5 text-foreground" />
             Red Flags
           </CardTitle>
           <CardDescription>
@@ -361,7 +361,7 @@ export default function ToolGovernancePage() {
               'No way to export your data if you leave the platform',
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-2 p-2 rounded-lg hover:bg-muted/50">
-                <AlertTriangle className="h-4 w-4 text-red-500 mt-0.5 shrink-0" />
+                <AlertTriangle className="h-4 w-4 text-foreground mt-0.5 shrink-0" />
                 <p className="text-sm text-muted-foreground">{item}</p>
               </div>
             ))}
@@ -370,7 +370,7 @@ export default function ToolGovernancePage() {
       </Card>
 
       {/* Next Steps */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-center justify-between">
             <div>

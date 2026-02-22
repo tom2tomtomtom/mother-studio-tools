@@ -43,7 +43,7 @@ export default function ProjectsPage() {
           <Badge variant="outline">15 min</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-500">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-foreground">
             <FolderOpen className="h-6 w-6" />
           </div>
           <div>
@@ -54,10 +54,10 @@ export default function ProjectsPage() {
       </div>
 
       {/* Philosophy */}
-      <Card className="bg-gradient-to-r from-emerald-500/5 via-emerald-500/10 to-emerald-500/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-start gap-3">
-            <Lightbulb className="h-5 w-5 text-amber-500 mt-0.5" />
+            <Lightbulb className="h-5 w-5 text-foreground mt-0.5" />
             <div>
               <p className="font-medium">The Philosophy: Projects as "Brains"</p>
               <p className="text-muted-foreground mt-1">
@@ -175,7 +175,7 @@ export default function ProjectsPage() {
             <div className="space-y-3">
               <div className="p-3 rounded-lg border">
                 <p className="font-medium text-sm flex items-center gap-2">
-                  <Code className="h-4 w-4 text-blue-500" />
+                  <Code className="h-4 w-4 text-foreground" />
                   For a Coding Project
                 </p>
                 <p className="text-sm text-muted-foreground mt-1 font-mono bg-muted p-2 rounded">
@@ -184,7 +184,7 @@ export default function ProjectsPage() {
               </div>
               <div className="p-3 rounded-lg border">
                 <p className="font-medium text-sm flex items-center gap-2">
-                  <FileText className="h-4 w-4 text-green-500" />
+                  <FileText className="h-4 w-4 text-foreground" />
                   For a Writing Project
                 </p>
                 <p className="text-sm text-muted-foreground mt-1 font-mono bg-muted p-2 rounded">
@@ -195,7 +195,7 @@ export default function ProjectsPage() {
           </div>
 
           <div className="flex items-start gap-2 text-sm">
-            <Lightbulb className="h-4 w-4 text-amber-500 mt-0.5 shrink-0" />
+            <Lightbulb className="h-4 w-4 text-foreground mt-0.5 shrink-0" />
             <p className="text-muted-foreground">
               <strong>Benefit:</strong> This ensures consistent tone and output format across every chat in the project
               without you needing to re-prompt it every time.
@@ -228,7 +228,7 @@ export default function ProjectsPage() {
           </div>
 
           <div className="flex items-start gap-3">
-            <Trash2 className="h-5 w-5 text-amber-500 mt-0.5 shrink-0" />
+            <Trash2 className="h-5 w-5 text-foreground mt-0.5 shrink-0" />
             <div>
               <p className="font-medium">Memory Hygiene</p>
               <p className="text-sm text-muted-foreground mt-1">
@@ -270,7 +270,7 @@ export default function ProjectsPage() {
           {/* Newsletter Engine */}
           <div className="p-4 rounded-lg border">
             <div className="flex items-center gap-2 mb-3">
-              <Newspaper className="h-5 w-5 text-blue-500" />
+              <Newspaper className="h-5 w-5 text-foreground" />
               <p className="font-medium">The "Newsletter Engine"</p>
             </div>
             <p className="text-sm text-muted-foreground mb-3">
@@ -291,7 +291,7 @@ export default function ProjectsPage() {
           {/* Board Prep Room */}
           <div className="p-4 rounded-lg border">
             <div className="flex items-center gap-2 mb-3">
-              <Presentation className="h-5 w-5 text-purple-500" />
+              <Presentation className="h-5 w-5 text-foreground" />
               <p className="font-medium">The "Board Prep Room"</p>
             </div>
             <p className="text-sm text-muted-foreground mb-3">
@@ -311,7 +311,7 @@ export default function ProjectsPage() {
           {/* Coding Assistant */}
           <div className="p-4 rounded-lg border">
             <div className="flex items-center gap-2 mb-3">
-              <Code className="h-5 w-5 text-green-500" />
+              <Code className="h-5 w-5 text-foreground" />
               <p className="font-medium">The "Coding Assistant"</p>
             </div>
             <p className="text-sm text-muted-foreground mb-3">
@@ -377,7 +377,7 @@ export default function ProjectsPage() {
       </Card>
 
       {/* Next Steps */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-center justify-between">
             <div>

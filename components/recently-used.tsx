@@ -47,7 +47,7 @@ export function RecentlyUsed() {
   }
 
   return (
-    <Card className="bg-gradient-to-r from-amber-500/5 via-amber-500/10 to-amber-500/5 border-amber-200">
+    <Card className="bg-muted/30 border-border">
       <CardHeader className="pb-3">
         <div className="flex items-center justify-between">
           <CardTitle className="flex items-center gap-2 text-lg">

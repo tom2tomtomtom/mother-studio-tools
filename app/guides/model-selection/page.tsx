@@ -47,7 +47,7 @@ export default function ModelSelectionPage() {
           <Badge variant="outline">15 min</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-violet-500/10 text-violet-500">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-violet-500/10 text-foreground">
             <Brain className="h-6 w-6" />
           </div>
           <div>
@@ -58,10 +58,10 @@ export default function ModelSelectionPage() {
       </div>
 
       {/* Why Model Selection Matters */}
-      <Card className="bg-gradient-to-r from-violet-500/5 via-violet-500/10 to-violet-500/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-start gap-3">
-            <Lightbulb className="h-5 w-5 text-amber-500 mt-0.5" />
+            <Lightbulb className="h-5 w-5 text-foreground mt-0.5" />
             <div>
               <p className="font-medium">Why Model Selection Matters</p>
               <p className="text-muted-foreground mt-1">
@@ -78,7 +78,7 @@ export default function ModelSelectionPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <BarChart3 className="h-5 w-5 text-violet-500" />
+            <BarChart3 className="h-5 w-5 text-foreground" />
             Quick Decision Matrix
           </CardTitle>
           <CardDescription>
@@ -145,7 +145,7 @@ export default function ModelSelectionPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <FileText className="h-5 w-5 text-violet-500" />
+            <FileText className="h-5 w-5 text-foreground" />
             By Task Type
           </CardTitle>
           <CardDescription>
@@ -166,7 +166,7 @@ export default function ModelSelectionPage() {
 
           <div className="p-4 rounded-lg border">
             <p className="font-medium flex items-center gap-2">
-              <FileText className="h-4 w-4 text-orange-500" />
+              <FileText className="h-4 w-4 text-foreground" />
               Content Creation
             </p>
             <ul className="text-sm text-muted-foreground mt-2 space-y-1 list-disc list-inside">
@@ -179,7 +179,7 @@ export default function ModelSelectionPage() {
 
           <div className="p-4 rounded-lg border">
             <p className="font-medium flex items-center gap-2">
-              <BarChart3 className="h-4 w-4 text-blue-500" />
+              <BarChart3 className="h-4 w-4 text-foreground" />
               Data Analysis
             </p>
             <ul className="text-sm text-muted-foreground mt-2 space-y-1 list-disc list-inside">
@@ -190,7 +190,7 @@ export default function ModelSelectionPage() {
 
           <div className="p-4 rounded-lg border">
             <p className="font-medium flex items-center gap-2">
-              <Cog className="h-4 w-4 text-green-500" />
+              <Cog className="h-4 w-4 text-foreground" />
               Automation
             </p>
             <ul className="text-sm text-muted-foreground mt-2 space-y-1 list-disc list-inside">
@@ -205,7 +205,7 @@ export default function ModelSelectionPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Users className="h-5 w-5 text-violet-500" />
+            <Users className="h-5 w-5 text-foreground" />
             By Department
           </CardTitle>
           <CardDescription>
@@ -245,7 +245,7 @@ export default function ModelSelectionPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Brain className="h-5 w-5 text-violet-500" />
+            <Brain className="h-5 w-5 text-foreground" />
             Decision Flowchart
           </CardTitle>
           <CardDescription>
@@ -291,7 +291,7 @@ export default function ModelSelectionPage() {
       </Card>
 
       {/* Next Steps */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-center justify-between">
             <div>

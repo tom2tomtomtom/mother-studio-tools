@@ -43,7 +43,7 @@ export default function FavoritesPage() {
       {/* Header */}
       <div>
         <h1 className="text-3xl font-bold flex items-center gap-3">
-          <Star className="h-8 w-8 text-yellow-500 fill-yellow-500" />
+          <Star className="h-8 w-8 text-[#7A5A18] fill-[#7A5A18]" />
           Favorites
         </h1>
         <p className="text-muted-foreground mt-2">
@@ -71,27 +71,27 @@ export default function FavoritesPage() {
             <div className="flex flex-wrap justify-center gap-2">
               <Link href="/team/creative">
                 <Badge variant="outline" className="cursor-pointer hover:bg-accent">
-                  🎨 Creative
+                  Creative
                 </Badge>
               </Link>
               <Link href="/team/strategy">
                 <Badge variant="outline" className="cursor-pointer hover:bg-accent">
-                  🎯 Strategy
+                  Strategy
                 </Badge>
               </Link>
               <Link href="/team/copywriting">
                 <Badge variant="outline" className="cursor-pointer hover:bg-accent">
-                  ✍️ Copywriting
+                  Copywriting
                 </Badge>
               </Link>
               <Link href="/team/digital">
                 <Badge variant="outline" className="cursor-pointer hover:bg-accent">
-                  📱 Digital
+                  Digital
                 </Badge>
               </Link>
               <Link href="/team/production">
                 <Badge variant="outline" className="cursor-pointer hover:bg-accent">
-                  🎬 Production
+                  Production
                 </Badge>
               </Link>
             </div>

@@ -41,7 +41,7 @@ export default function RunwayPage() {
           <Badge variant="outline">20 min</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500/10 text-purple-500">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-foreground">
             <Video className="h-6 w-6" />
           </div>
           <div>
@@ -52,10 +52,10 @@ export default function RunwayPage() {
       </div>
 
       {/* What is Runway */}
-      <Card className="bg-gradient-to-r from-purple-500/5 via-purple-500/10 to-purple-500/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-start gap-3">
-            <Lightbulb className="h-5 w-5 text-amber-500 mt-0.5" />
+            <Lightbulb className="h-5 w-5 text-foreground mt-0.5" />
             <div>
               <p className="font-medium">What is Runway?</p>
               <p className="text-muted-foreground mt-1">
@@ -251,7 +251,7 @@ export default function RunwayPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Sparkles className="h-5 w-5 text-amber-500" />
+            <Sparkles className="h-5 w-5 text-foreground" />
             Prompting Best Practices
           </CardTitle>
         </CardHeader>
@@ -394,7 +394,7 @@ export default function RunwayPage() {
       </Card>
 
       {/* Next Steps */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-center justify-between">
             <div>

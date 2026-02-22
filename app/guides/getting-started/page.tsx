@@ -75,7 +75,7 @@ export default function GettingStartedPage() {
           <Badge variant="outline" className="text-xs text-muted-foreground">Verified Feb 2026</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-500">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-foreground">
             <GraduationCap className="h-6 w-6" />
           </div>
           <div>
@@ -86,10 +86,10 @@ export default function GettingStartedPage() {
       </div>
 
       {/* Intro */}
-      <Card className="bg-gradient-to-r from-emerald-500/5 via-emerald-500/10 to-emerald-500/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-start gap-3">
-            <Lightbulb className="h-5 w-5 text-amber-500 mt-0.5" />
+            <Lightbulb className="h-5 w-5 text-foreground mt-0.5" />
             <div>
               <p className="font-medium">What is Claude?</p>
               <p className="text-muted-foreground mt-1">
@@ -104,10 +104,10 @@ export default function GettingStartedPage() {
       </Card>
 
       {/* ===== DOWNLOAD DESKTOP APP ===== */}
-      <Card className="border-purple-500/30 bg-gradient-to-r from-purple-500/5 via-purple-500/10 to-purple-500/5">
+      <Card className="border-[#1A4A5C]/30 bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-start gap-3">
-            <Download className="h-5 w-5 text-purple-500 mt-0.5 shrink-0" />
+            <Download className="h-5 w-5 text-foreground mt-0.5 shrink-0" />
             <div>
               <p className="font-semibold mb-1">Download the Claude Desktop App</p>
               <p className="text-sm text-muted-foreground mb-3">
@@ -137,7 +137,7 @@ export default function GettingStartedPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <MessageSquare className="h-5 w-5 text-blue-500" />
+            <MessageSquare className="h-5 w-5 text-foreground" />
             Step 1: Finding Your Way Around
           </CardTitle>
           <CardDescription>
@@ -193,7 +193,7 @@ export default function GettingStartedPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Brain className="h-5 w-5 text-orange-500" />
+            <Brain className="h-5 w-5 text-foreground" />
             Step 2: Choosing a Model &amp; Extended Thinking
           </CardTitle>
           <CardDescription>
@@ -213,21 +213,21 @@ export default function GettingStartedPage() {
 
           <div className="space-y-3">
             <div className="flex items-start gap-3 p-3 rounded-lg border">
-              <div className="flex h-6 w-6 items-center justify-center rounded-full bg-orange-500/10 text-orange-500 text-xs font-bold shrink-0">O</div>
+              <div className="flex h-6 w-6 items-center justify-center rounded-full bg-muted text-foreground text-xs font-bold shrink-0">O</div>
               <div>
                 <p className="font-medium text-sm">Opus 4.6 — &quot;Most capable for ambitious work&quot;</p>
                 <p className="text-xs text-muted-foreground">The most powerful model. Use for complex strategy, long analysis, or when quality matters most. Slower but best results.</p>
               </div>
             </div>
             <div className="flex items-start gap-3 p-3 rounded-lg border border-blue-500/30 bg-blue-500/5">
-              <div className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-500/10 text-blue-500 text-xs font-bold shrink-0">S</div>
+              <div className="flex h-6 w-6 items-center justify-center rounded-full bg-muted text-foreground text-xs font-bold shrink-0">S</div>
               <div>
                 <p className="font-medium text-sm">Sonnet 4.5 — &quot;Best for everyday tasks&quot; <Badge variant="secondary" className="text-xs ml-1">Recommended</Badge></p>
                 <p className="text-xs text-muted-foreground">Fast, smart, and great for 90% of what you&apos;ll do. Writing, brainstorming, summarising, analysis — start here.</p>
               </div>
             </div>
             <div className="flex items-start gap-3 p-3 rounded-lg border">
-              <div className="flex h-6 w-6 items-center justify-center rounded-full bg-green-500/10 text-green-500 text-xs font-bold shrink-0">H</div>
+              <div className="flex h-6 w-6 items-center justify-center rounded-full bg-muted text-foreground text-xs font-bold shrink-0">H</div>
               <div>
                 <p className="font-medium text-sm">Haiku 4.5 — &quot;Fastest for quick answers&quot;</p>
                 <p className="text-xs text-muted-foreground">Lightning fast for simple questions, quick lookups, and straightforward tasks.</p>
@@ -238,7 +238,7 @@ export default function GettingStartedPage() {
           {/* Extended Thinking */}
           <div className="p-4 rounded-lg border border-orange-500/30 bg-orange-500/5">
             <div className="flex items-center gap-2 mb-2">
-              <Brain className="h-5 w-5 text-orange-500" />
+              <Brain className="h-5 w-5 text-foreground" />
               <p className="font-semibold text-sm">Extended Thinking</p>
             </div>
             <p className="text-sm text-muted-foreground mb-3">
@@ -271,7 +271,7 @@ export default function GettingStartedPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Plug className="h-5 w-5 text-cyan-500" />
+            <Plug className="h-5 w-5 text-foreground" />
             Step 3: Connect Your Tools
           </CardTitle>
           <CardDescription>
@@ -329,7 +329,7 @@ export default function GettingStartedPage() {
 
           <div className="p-3 rounded-lg bg-blue-500/5 border border-blue-500/30 text-sm">
             <div className="flex items-center gap-2 mb-1">
-              <Globe className="h-4 w-4 text-blue-500" />
+              <Globe className="h-4 w-4 text-foreground" />
               <strong>Tip: Set up connectors on the web</strong>
             </div>
             <p className="text-muted-foreground">
@@ -338,9 +338,9 @@ export default function GettingStartedPage() {
             </p>
           </div>
 
-          <div className="p-3 rounded-lg bg-emerald-500/5 border border-emerald-500/30 text-sm">
+          <div className="p-3 rounded-lg bg-emerald-500/5 border border-border text-sm">
             <div className="flex items-center gap-2 mb-1">
-              <CheckCircle2 className="h-4 w-4 text-emerald-500" />
+              <CheckCircle2 className="h-4 w-4 text-foreground" />
               <strong>That&apos;s it!</strong>
             </div>
             <p className="text-muted-foreground">
@@ -354,7 +354,7 @@ export default function GettingStartedPage() {
             <p className="font-medium">What Each Connector Does</p>
 
             <div className="flex items-start gap-3 p-3 rounded-lg border">
-              <Mail className="h-5 w-5 text-red-500 mt-0.5 shrink-0" />
+              <Mail className="h-5 w-5 text-foreground mt-0.5 shrink-0" />
               <div>
                 <p className="font-medium text-sm">Gmail</p>
                 <p className="text-xs text-muted-foreground">
@@ -365,7 +365,7 @@ export default function GettingStartedPage() {
             </div>
 
             <div className="flex items-start gap-3 p-3 rounded-lg border">
-              <FolderOpen className="h-5 w-5 text-blue-500 mt-0.5 shrink-0" />
+              <FolderOpen className="h-5 w-5 text-foreground mt-0.5 shrink-0" />
               <div>
                 <p className="font-medium text-sm">Google Drive</p>
                 <p className="text-xs text-muted-foreground">
@@ -376,7 +376,7 @@ export default function GettingStartedPage() {
             </div>
 
             <div className="flex items-start gap-3 p-3 rounded-lg border">
-              <Calendar className="h-5 w-5 text-green-500 mt-0.5 shrink-0" />
+              <Calendar className="h-5 w-5 text-foreground mt-0.5 shrink-0" />
               <div>
                 <p className="font-medium text-sm">Google Calendar</p>
                 <p className="text-xs text-muted-foreground">
@@ -398,7 +398,7 @@ export default function GettingStartedPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Star className="h-5 w-5 text-amber-500" />
+            <Star className="h-5 w-5 text-foreground" />
             Step 4: Things You Can Do Right Now
           </CardTitle>
           <CardDescription>
@@ -409,7 +409,7 @@ export default function GettingStartedPage() {
           <div className="grid gap-3">
             <div className="p-4 rounded-lg border">
               <div className="flex items-center gap-2 mb-2">
-                <FileText className="h-4 w-4 text-blue-500" />
+                <FileText className="h-4 w-4 text-foreground" />
                 <p className="font-medium text-sm">Write &amp; Edit</p>
               </div>
               <p className="text-xs text-muted-foreground mb-2">Perfect for first drafts, rewrites, and adapting tone.</p>
@@ -421,7 +421,7 @@ export default function GettingStartedPage() {
 
             <div className="p-4 rounded-lg border">
               <div className="flex items-center gap-2 mb-2">
-                <Search className="h-4 w-4 text-orange-500" />
+                <Search className="h-4 w-4 text-foreground" />
                 <p className="font-medium text-sm">Research &amp; Analyse</p>
               </div>
               <p className="text-xs text-muted-foreground mb-2">Get summaries, comparisons, and insights fast.</p>
@@ -433,7 +433,7 @@ export default function GettingStartedPage() {
 
             <div className="p-4 rounded-lg border">
               <div className="flex items-center gap-2 mb-2">
-                <Sparkles className="h-4 w-4 text-purple-500" />
+                <Sparkles className="h-4 w-4 text-foreground" />
                 <p className="font-medium text-sm">Brainstorm &amp; Ideate</p>
               </div>
               <p className="text-xs text-muted-foreground mb-2">Use Claude as a creative thinking partner.</p>
@@ -445,7 +445,7 @@ export default function GettingStartedPage() {
 
             <div className="p-4 rounded-lg border">
               <div className="flex items-center gap-2 mb-2">
-                <Mail className="h-4 w-4 text-red-500" />
+                <Mail className="h-4 w-4 text-foreground" />
                 <p className="font-medium text-sm">Work With Your Tools (requires connectors)</p>
               </div>
               <p className="text-xs text-muted-foreground mb-2">Once connectors are set up, try these.</p>
@@ -462,7 +462,7 @@ export default function GettingStartedPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <MessageSquare className="h-5 w-5 text-blue-500" />
+            <MessageSquare className="h-5 w-5 text-foreground" />
             Understanding the Modes
           </CardTitle>
           <CardDescription>
@@ -470,9 +470,9 @@ export default function GettingStartedPage() {
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="p-3 rounded-lg bg-purple-500/5 border border-purple-500/30 text-sm mb-2">
+          <div className="p-3 rounded-lg bg-purple-500/5 border border-[#1A4A5C]/30 text-sm mb-2">
             <div className="flex items-center gap-2 mb-1">
-              <Download className="h-4 w-4 text-purple-500" />
+              <Download className="h-4 w-4 text-foreground" />
               <strong>Desktop app required for Cowork &amp; Code</strong>
             </div>
             <p className="text-muted-foreground">
@@ -486,7 +486,7 @@ export default function GettingStartedPage() {
             {/* Chat */}
             <div className="p-4 rounded-lg border border-blue-500/30 bg-blue-500/5">
               <div className="flex items-center gap-2 mb-2">
-                <MessageSquare className="h-5 w-5 text-blue-500" />
+                <MessageSquare className="h-5 w-5 text-foreground" />
                 <p className="font-semibold">Chat</p>
                 <Badge variant="secondary" className="text-xs">Start here</Badge>
                 <Badge variant="outline" className="text-xs">Web + Desktop</Badge>
@@ -500,11 +500,11 @@ export default function GettingStartedPage() {
             </div>
 
             {/* Cowork */}
-            <div className="p-4 rounded-lg border border-purple-500/30 bg-purple-500/5">
+            <div className="p-4 rounded-lg border border-[#1A4A5C]/30 bg-purple-500/5">
               <div className="flex items-center gap-2 mb-2">
-                <Bot className="h-5 w-5 text-purple-500" />
+                <Bot className="h-5 w-5 text-foreground" />
                 <p className="font-semibold">Cowork</p>
-                <Badge variant="outline" className="text-xs border-purple-500/50 text-purple-600">Desktop only</Badge>
+                <Badge variant="outline" className="text-xs border-[#1A4A5C]/50 text-[#1A4A5C]">Desktop only</Badge>
               </div>
               <p className="text-sm text-muted-foreground">
                 Cowork turns Claude into an autonomous agent that works on your computer. You give it a job
@@ -523,7 +523,7 @@ export default function GettingStartedPage() {
             {/* Code */}
             <div className="p-4 rounded-lg border border-green-500/30 bg-green-500/5">
               <div className="flex items-center gap-2 mb-2">
-                <Terminal className="h-5 w-5 text-green-500" />
+                <Terminal className="h-5 w-5 text-foreground" />
                 <p className="font-semibold">Code</p>
                 <Badge variant="outline" className="text-xs">For developers</Badge>
               </div>
@@ -543,7 +543,7 @@ export default function GettingStartedPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Search className="h-5 w-5 text-orange-500" />
+            <Search className="h-5 w-5 text-foreground" />
             Research Mode
           </CardTitle>
           <CardDescription>
@@ -577,7 +577,7 @@ export default function GettingStartedPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Layers className="h-5 w-5 text-indigo-500" />
+            <Layers className="h-5 w-5 text-foreground" />
             Artifacts: Claude&apos;s Creative Canvas
           </CardTitle>
           <CardDescription>
@@ -596,19 +596,19 @@ export default function GettingStartedPage() {
             <p className="font-medium text-sm mb-3">What You Can Do with Artifacts</p>
             <div className="grid gap-2 sm:grid-cols-2">
               <div className="flex items-start gap-2 p-2.5 rounded-lg border">
-                <CheckCircle2 className="h-4 w-4 text-emerald-500 mt-0.5 shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-foreground mt-0.5 shrink-0" />
                 <p className="text-xs text-muted-foreground"><strong className="text-foreground">Create documents</strong> — briefs, reports, emails, plans</p>
               </div>
               <div className="flex items-start gap-2 p-2.5 rounded-lg border">
-                <CheckCircle2 className="h-4 w-4 text-emerald-500 mt-0.5 shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-foreground mt-0.5 shrink-0" />
                 <p className="text-xs text-muted-foreground"><strong className="text-foreground">Build charts &amp; tables</strong> — data visualisations from your numbers</p>
               </div>
               <div className="flex items-start gap-2 p-2.5 rounded-lg border">
-                <CheckCircle2 className="h-4 w-4 text-emerald-500 mt-0.5 shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-foreground mt-0.5 shrink-0" />
                 <p className="text-xs text-muted-foreground"><strong className="text-foreground">Iterate easily</strong> — say &quot;make the headline bolder&quot; and the artifact updates</p>
               </div>
               <div className="flex items-start gap-2 p-2.5 rounded-lg border">
-                <CheckCircle2 className="h-4 w-4 text-emerald-500 mt-0.5 shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-foreground mt-0.5 shrink-0" />
                 <p className="text-xs text-muted-foreground"><strong className="text-foreground">Copy or download</strong> — grab the content for your own documents</p>
               </div>
             </div>
@@ -617,7 +617,7 @@ export default function GettingStartedPage() {
           {/* Sharing */}
           <div className="p-4 rounded-lg border border-indigo-500/30 bg-indigo-500/5">
             <div className="flex items-center gap-2 mb-2">
-              <Share2 className="h-5 w-5 text-indigo-500" />
+              <Share2 className="h-5 w-5 text-foreground" />
               <p className="font-semibold text-sm">Sharing Artifacts</p>
             </div>
             <p className="text-sm text-muted-foreground mb-3">
@@ -653,7 +653,7 @@ export default function GettingStartedPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Settings className="h-5 w-5 text-violet-500" />
+            <Settings className="h-5 w-5 text-foreground" />
             Bonus: Response Styles
           </CardTitle>
           <CardDescription>
@@ -693,14 +693,14 @@ export default function GettingStartedPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Lightbulb className="h-5 w-5 text-amber-500" />
+            <Lightbulb className="h-5 w-5 text-foreground" />
             Tips for Getting Great Results
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-3">
             <div className="flex items-start gap-3">
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-amber-500/10 text-amber-500 text-xs font-semibold shrink-0">1</span>
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-muted text-foreground text-xs font-semibold shrink-0">1</span>
               <div>
                 <p className="font-medium text-sm">Be specific about what you want</p>
                 <p className="text-xs text-muted-foreground">
@@ -710,7 +710,7 @@ export default function GettingStartedPage() {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-amber-500/10 text-amber-500 text-xs font-semibold shrink-0">2</span>
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-muted text-foreground text-xs font-semibold shrink-0">2</span>
               <div>
                 <p className="font-medium text-sm">Give context</p>
                 <p className="text-xs text-muted-foreground">
@@ -720,7 +720,7 @@ export default function GettingStartedPage() {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-amber-500/10 text-amber-500 text-xs font-semibold shrink-0">3</span>
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-muted text-foreground text-xs font-semibold shrink-0">3</span>
               <div>
                 <p className="font-medium text-sm">Iterate — don&apos;t start over</p>
                 <p className="text-xs text-muted-foreground">
@@ -731,7 +731,7 @@ export default function GettingStartedPage() {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-amber-500/10 text-amber-500 text-xs font-semibold shrink-0">4</span>
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-muted text-foreground text-xs font-semibold shrink-0">4</span>
               <div>
                 <p className="font-medium text-sm">Use follow-up questions</p>
                 <p className="text-xs text-muted-foreground">
@@ -741,7 +741,7 @@ export default function GettingStartedPage() {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-amber-500/10 text-amber-500 text-xs font-semibold shrink-0">5</span>
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-muted text-foreground text-xs font-semibold shrink-0">5</span>
               <div>
                 <p className="font-medium text-sm">Upload files freely</p>
                 <p className="text-xs text-muted-foreground">
@@ -755,7 +755,7 @@ export default function GettingStartedPage() {
       </Card>
 
       {/* ===== WHAT'S NEXT ===== */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      <Card className="bg-muted/30">
         <CardHeader>
           <CardTitle>What&apos;s Next?</CardTitle>
           <CardDescription>
@@ -765,28 +765,28 @@ export default function GettingStartedPage() {
         <CardContent>
           <div className="grid gap-3 sm:grid-cols-2">
             <Link href="/guides/projects" className="flex items-center gap-2 p-3 rounded-lg border hover:border-primary/50 hover:bg-muted/50 transition-all group">
-              <FolderOpen className="h-5 w-5 text-emerald-500 shrink-0" />
+              <FolderOpen className="h-5 w-5 text-foreground shrink-0" />
               <div>
                 <p className="font-medium text-sm group-hover:text-primary transition-colors">Projects</p>
                 <p className="text-xs text-muted-foreground">Give Claude persistent memory for a client or campaign</p>
               </div>
             </Link>
             <Link href="/guides/connectors" className="flex items-center gap-2 p-3 rounded-lg border hover:border-primary/50 hover:bg-muted/50 transition-all group">
-              <Plug className="h-5 w-5 text-cyan-500 shrink-0" />
+              <Plug className="h-5 w-5 text-foreground shrink-0" />
               <div>
                 <p className="font-medium text-sm group-hover:text-primary transition-colors">Connectors Deep Dive</p>
                 <p className="text-xs text-muted-foreground">Advanced integrations including MCP and third-party tools</p>
               </div>
             </Link>
             <Link href="/guides/artifacts" className="flex items-center gap-2 p-3 rounded-lg border hover:border-primary/50 hover:bg-muted/50 transition-all group">
-              <Layers className="h-5 w-5 text-indigo-500 shrink-0" />
+              <Layers className="h-5 w-5 text-foreground shrink-0" />
               <div>
                 <p className="font-medium text-sm group-hover:text-primary transition-colors">Mastering Artifacts</p>
                 <p className="text-xs text-muted-foreground">Build apps, visualise data, and create interactive content</p>
               </div>
             </Link>
             <Link href="/guides/deep-research" className="flex items-center gap-2 p-3 rounded-lg border hover:border-primary/50 hover:bg-muted/50 transition-all group">
-              <Search className="h-5 w-5 text-orange-500 shrink-0" />
+              <Search className="h-5 w-5 text-foreground shrink-0" />
               <div>
                 <p className="font-medium text-sm group-hover:text-primary transition-colors">Deep Research</p>
                 <p className="text-xs text-muted-foreground">Run comprehensive research missions across the web</p>

@@ -40,7 +40,7 @@ export default function CustomSkillsPage() {
           <Badge variant="outline">20 min</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-pink-500/10 text-pink-500">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-foreground">
             <Sparkles className="h-6 w-6" />
           </div>
           <div>
@@ -69,10 +69,10 @@ export default function CustomSkillsPage() {
       </Card>
 
       {/* The Skill Factory */}
-      <Card className="bg-gradient-to-r from-pink-500/5 via-pink-500/10 to-pink-500/5">
+      <Card className="bg-muted/30">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Lightbulb className="h-5 w-5 text-amber-500" />
+            <Lightbulb className="h-5 w-5 text-foreground" />
             The Expert Workflow: Let Claude Build the Skill
           </CardTitle>
           <CardDescription>
@@ -144,7 +144,7 @@ export default function CustomSkillsPage() {
       <Card className="border-red-500/50">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <FolderArchive className="h-5 w-5 text-red-500" />
+            <FolderArchive className="h-5 w-5 text-foreground" />
             Packaging (The "Zip" Trick)
           </CardTitle>
           <CardDescription>
@@ -157,7 +157,7 @@ export default function CustomSkillsPage() {
           </p>
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="p-3 rounded-lg border border-green-500/50 bg-green-500/5">
-              <p className="font-medium text-green-600 text-sm">Correct</p>
+              <p className="font-medium text-[#7A7A2A] text-sm">Correct</p>
               <p className="text-sm mt-1">
                 Zip the folder <code className="bg-muted px-1 rounded">Brand-Guidelines</code>
               </p>
@@ -166,7 +166,7 @@ export default function CustomSkillsPage() {
               </p>
             </div>
             <div className="p-3 rounded-lg border border-red-500/50 bg-red-500/5">
-              <p className="font-medium text-red-600 text-sm">Incorrect</p>
+              <p className="font-medium text-[#6B2B1A] text-sm">Incorrect</p>
               <p className="text-sm mt-1">
                 Select <code className="bg-muted px-1 rounded">Skill.md</code> and zip it directly
               </p>
@@ -241,7 +241,7 @@ export default function CustomSkillsPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Zap className="h-5 w-5 text-amber-500" />
+            <Zap className="h-5 w-5 text-foreground" />
             Pro tip: "Self-healing" skills
           </CardTitle>
         </CardHeader>
@@ -334,7 +334,7 @@ Available now. Link in bio."`}
       </Card>
 
       {/* Next Steps */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-center justify-between">
             <div>

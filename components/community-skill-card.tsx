@@ -35,7 +35,7 @@ export function CommunitySkillCard({ skill }: { skill: CommunitySkill }) {
   };
 
   return (
-    <Card className="h-full flex flex-col hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200">
+    <Card className="h-full flex flex-col hover:border-foreground/20 transition-all duration-200">
       <CardHeader className="flex-1">
         <div className="flex items-start justify-between gap-2">
           <CardTitle className="text-base">{skill.name}</CardTitle>

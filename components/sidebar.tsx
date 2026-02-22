@@ -20,7 +20,8 @@ import {
   Lightbulb,
   Wand2,
   Users,
-  Video
+  Video,
+  Layers
 } from 'lucide-react';
 import { teamIcons } from '@/lib/constants';
 
@@ -58,9 +59,9 @@ export function Sidebar() {
   const sidebarContent = (
     <div className="flex h-full flex-col">
       {/* Header */}
-      <div className="flex h-16 items-center justify-between px-4 border-b">
+      <div className="flex h-20 items-center justify-between px-4 border-b border-sidebar-border tartan-dark">
         {!collapsed && (
-          <Link href="/" className="font-bold text-lg truncate">
+          <Link href="/" className="font-black text-3xl tracking-tight text-white truncate">
             Mother
           </Link>
         )}
@@ -69,7 +70,7 @@ export function Sidebar() {
           variant="ghost"
           size="icon"
           onClick={() => setCollapsed(!collapsed)}
-          className="h-8 w-8 hidden md:flex"
+          className="h-8 w-8 hidden md:flex text-sidebar-foreground hover:text-white hover:bg-sidebar-accent"
           aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
         >
           {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
@@ -79,7 +80,7 @@ export function Sidebar() {
           variant="ghost"
           size="icon"
           onClick={() => setMobileOpen(false)}
-          className="h-8 w-8 md:hidden"
+          className="h-8 w-8 md:hidden text-sidebar-foreground hover:text-white hover:bg-sidebar-accent"
           aria-label="Close menu"
         >
           <X className="h-4 w-4" />
@@ -108,6 +109,9 @@ export function Sidebar() {
           <NavLink href="/prompt-generator" icon={<Video className="h-4 w-4" />} collapsed={collapsed} active={pathname === '/prompt-generator'}>
             Prompt Generator
           </NavLink>
+          <NavLink href="/catalogue" icon={<Layers className="h-4 w-4" />} collapsed={collapsed} active={pathname === '/catalogue'}>
+            Full Catalogue
+          </NavLink>
           <NavLink href="/plugins" icon={<Puzzle className="h-4 w-4" />} collapsed={collapsed} active={pathname === '/plugins'}>
             Cowork Plugins
           </NavLink>
@@ -119,11 +123,11 @@ export function Sidebar() {
           </NavLink>
 
           {/* Separator */}
-          <div className="my-4 h-px bg-border" />
+          <div className="my-4 h-px bg-sidebar-border" />
 
           {/* Teams */}
           {!collapsed && (
-            <div className="mb-2 px-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+            <div className="mb-2 px-2 text-xs font-semibold text-sidebar-foreground/50 uppercase tracking-wider">
               Departments
             </div>
           )}
@@ -131,7 +135,7 @@ export function Sidebar() {
             <NavLink
               key={team.slug}
               href={`/team/${team.slug}`}
-              icon={<span className="text-base" role="img" aria-label={team.name}>{teamIcons[team.slug] || '📁'}</span>}
+              icon={<span className="text-[10px] font-bold uppercase w-5 h-5 flex items-center justify-center rounded bg-sidebar-accent text-sidebar-foreground" aria-label={team.name}>{teamIcons[team.slug] || ''}</span>}
               collapsed={collapsed}
               active={pathname === `/team/${team.slug}`}
             >
@@ -142,9 +146,9 @@ export function Sidebar() {
       </ScrollArea>
 
       {/* Footer */}
-      <div className="border-t p-4">
+      <div className="border-t border-sidebar-border p-4">
         {!collapsed && (
-          <div className="text-xs text-muted-foreground">
+          <div className="text-xs text-sidebar-foreground/50">
             {teams.reduce((acc, t) => acc + t.solutionCount, 0)} tools across {teams.length} departments
           </div>
         )}
@@ -177,7 +181,7 @@ export function Sidebar() {
       {/* Mobile sidebar (drawer) */}
       <aside
         className={cn(
-          "fixed left-0 top-0 z-50 h-screen w-72 bg-background border-r transition-transform duration-300 md:hidden",
+          "fixed left-0 top-0 z-50 h-screen w-72 bg-sidebar text-sidebar-foreground border-r border-sidebar-border transition-transform duration-300 md:hidden",
           mobileOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
@@ -187,7 +191,7 @@ export function Sidebar() {
       {/* Desktop sidebar */}
       <aside
         className={cn(
-          "fixed left-0 top-0 z-40 h-screen bg-background border-r transition-all duration-300 hidden md:block",
+          "fixed left-0 top-0 z-40 h-screen bg-sidebar text-sidebar-foreground border-r border-sidebar-border transition-all duration-300 hidden md:block",
           collapsed ? "w-16" : "w-64"
         )}
       >
@@ -210,10 +214,10 @@ function NavLink({ href, icon, children, collapsed, active }: NavLinkProps) {
     <Link
       href={href}
       className={cn(
-        "flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium transition-all duration-200",
+        "relative flex items-center gap-3 rounded px-3 py-2 text-sm font-medium transition-colors duration-150",
         active
-          ? "bg-primary text-primary-foreground shadow-sm"
-          : "text-muted-foreground hover:bg-accent hover:text-foreground",
+          ? "text-white font-semibold before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[3px] before:h-4 before:bg-white before:rounded-full"
+          : "text-sidebar-foreground/60 hover:text-white",
         collapsed && "justify-center px-2"
       )}
     >

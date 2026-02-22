@@ -41,7 +41,7 @@ export default function PowerHacksPage() {
           <Badge variant="outline">25 min</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/10 text-amber-500">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-foreground">
             <Zap className="h-6 w-6" />
           </div>
           <div>
@@ -55,7 +55,7 @@ export default function PowerHacksPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Bot className="h-5 w-5 text-purple-500" />
+            <Bot className="h-5 w-5 text-foreground" />
             Cowork Agent Hacks
           </CardTitle>
           <CardDescription>
@@ -65,7 +65,7 @@ export default function PowerHacksPage() {
         <CardContent className="space-y-6">
           <div>
             <p className="font-medium flex items-center gap-2">
-              <Zap className="h-4 w-4 text-amber-500" />
+              <Zap className="h-4 w-4 text-foreground" />
               The "Parallel Subagents" Command
             </p>
             <p className="text-sm text-muted-foreground mt-1">
@@ -93,7 +93,7 @@ export default function PowerHacksPage() {
 
           <div className="p-4 rounded-lg border border-amber-500/50 bg-amber-500/5">
             <p className="font-medium flex items-center gap-2">
-              <Shield className="h-4 w-4 text-amber-500" />
+              <Shield className="h-4 w-4 text-foreground" />
               The Workspace Quarantine
             </p>
             <p className="text-sm text-muted-foreground mt-1">
@@ -120,7 +120,7 @@ export default function PowerHacksPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Terminal className="h-5 w-5 text-green-500" />
+            <Terminal className="h-5 w-5 text-foreground" />
             Developer & CLI Shortcuts
           </CardTitle>
           <CardDescription>
@@ -169,7 +169,7 @@ export default function PowerHacksPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Sparkles className="h-5 w-5 text-pink-500" />
+            <Sparkles className="h-5 w-5 text-foreground" />
             Customization & Automation
           </CardTitle>
         </CardHeader>
@@ -223,7 +223,7 @@ export default function PowerHacksPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Chrome className="h-5 w-5 text-blue-500" />
+            <Chrome className="h-5 w-5 text-foreground" />
             Claude in Chrome
           </CardTitle>
           <CardDescription>
@@ -271,7 +271,7 @@ export default function PowerHacksPage() {
 
           <div className="p-4 rounded-lg border border-red-500/50 bg-red-500/5">
             <p className="font-medium flex items-center gap-2">
-              <AlertTriangle className="h-4 w-4 text-red-500" />
+              <AlertTriangle className="h-4 w-4 text-foreground" />
               Safety & Privacy
             </p>
             <ul className="text-sm text-muted-foreground mt-2 space-y-1 list-disc list-inside">
@@ -284,7 +284,7 @@ export default function PowerHacksPage() {
       </Card>
 
       {/* Quick Reference */}
-      <Card className="bg-gradient-to-r from-amber-500/5 via-amber-500/10 to-amber-500/5">
+      <Card className="bg-muted/30">
         <CardHeader>
           <CardTitle>Quick Reference: Power Commands</CardTitle>
         </CardHeader>

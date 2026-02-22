@@ -68,7 +68,7 @@ function GuideSection({
               transition={{ duration: 0.2 }}
               className="px-4 pb-4"
             >
-              <div className="prose prose-sm dark:prose-invert max-w-none text-sm leading-relaxed text-muted-foreground">
+              <div className="prose prose-sm max-w-none text-sm leading-relaxed text-muted-foreground">
                 {children}
               </div>
             </motion.div>
@@ -147,7 +147,7 @@ export function StrategyGuide() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-transparent">
+    <Card className="border-primary/20 bg-muted/30">
       <Collapsible open={isOpen} onOpenChange={setIsOpen}>
         <CardHeader className="pb-3">
           <div className="flex items-start justify-between gap-4">
@@ -359,7 +359,7 @@ export function StrategyGuide() {
                     <p>Don&apos;t just ask a question. Frame who Claude is, what it&apos;s working on, what you need, and how you want it delivered.</p>
                     <p className="text-xs uppercase tracking-wide font-medium text-destructive mt-2">Weak prompt:</p>
                     <Blockquote>Tell me about the wellness drink market.</Blockquote>
-                    <p className="text-xs uppercase tracking-wide font-medium text-green-600 dark:text-green-400 mt-2">Strong prompt:</p>
+                    <p className="text-xs uppercase tracking-wide font-medium text-foreground mt-2">Strong prompt:</p>
                     <Blockquote>You&apos;re a strategy director preparing for a new business pitch. Based on the Australian premium wellness drink market, give me three distinct positioning territories for a new brand entering this space. For each territory, provide: a one-line proposition, the target consumer profile, the emotional territory it owns, the key proof points needed, and one brand reference from any category that occupies similar strategic space.</Blockquote>
 
                     <h4 className="font-semibold text-foreground mt-4 mb-2">Pattern 2: Pressure-testing (adversarial prompting)</h4>
@@ -655,7 +655,7 @@ export function StrategyGuide() {
                   </div>
 
                   <GuideSection title="Always Do / Never Do" icon={<ShieldCheck className="h-4 w-4" />}>
-                    <h4 className="font-semibold text-green-600 dark:text-green-400 mb-2">Always</h4>
+                    <h4 className="font-semibold text-foreground mb-2">Always</h4>
                     <ul className="list-disc ml-4 space-y-1.5">
                       <li><strong className="text-foreground">Verify key claims</strong> before they go in a deck. Click the citations. Check the sources. AI is a starting point, not a final answer.</li>
                       <li><strong className="text-foreground">Use Projects and Notebooks</strong> — don&apos;t do strategy research in throwaway chats. Persistent context makes everything better.</li>

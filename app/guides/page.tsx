@@ -36,7 +36,6 @@ const claudeGuides = [
     icon: GraduationCap,
     difficulty: 'Beginner',
     time: '15 min',
-    color: 'text-emerald-500',
     lastVerified: 'Feb 2026',
   },
   {
@@ -46,7 +45,6 @@ const claudeGuides = [
     icon: FolderOpen,
     difficulty: 'Beginner',
     time: '15 min',
-    color: 'text-emerald-500',
   },
   {
     slug: 'mcp-setup',
@@ -55,7 +53,6 @@ const claudeGuides = [
     icon: Settings,
     difficulty: 'Beginner',
     time: '10 min',
-    color: 'text-blue-500',
     lastVerified: 'Feb 2026',
   },
   {
@@ -63,9 +60,8 @@ const claudeGuides = [
     title: 'Claude Code',
     description: 'An AI agent that lives in your terminal and works directly with your files',
     icon: Terminal,
-    difficulty: 'Beginner → Advanced',
+    difficulty: 'Beginner to Advanced',
     time: '50 min',
-    color: 'text-green-500',
   },
   {
     slug: 'artifacts',
@@ -74,7 +70,6 @@ const claudeGuides = [
     icon: Layers,
     difficulty: 'Beginner',
     time: '15 min',
-    color: 'text-indigo-500',
   },
   {
     slug: 'cowork',
@@ -83,7 +78,6 @@ const claudeGuides = [
     icon: Bot,
     difficulty: 'Intermediate',
     time: '20 min',
-    color: 'text-purple-500',
     lastVerified: 'Feb 2026',
   },
   {
@@ -93,7 +87,6 @@ const claudeGuides = [
     icon: Puzzle,
     difficulty: 'Intermediate',
     time: '20 min',
-    color: 'text-purple-500',
     lastVerified: 'Feb 2026',
   },
   {
@@ -103,7 +96,6 @@ const claudeGuides = [
     icon: Search,
     difficulty: 'Intermediate',
     time: '15 min',
-    color: 'text-orange-500',
   },
   {
     slug: 'custom-skills',
@@ -112,7 +104,6 @@ const claudeGuides = [
     icon: Sparkles,
     difficulty: 'Intermediate',
     time: '20 min',
-    color: 'text-pink-500',
     lastVerified: 'Feb 2026',
   },
   {
@@ -122,7 +113,6 @@ const claudeGuides = [
     icon: Plug,
     difficulty: 'Intermediate',
     time: '20 min',
-    color: 'text-cyan-500',
     lastVerified: 'Feb 2026',
   },
   {
@@ -132,7 +122,6 @@ const claudeGuides = [
     icon: Chrome,
     difficulty: 'Intermediate',
     time: '15 min',
-    color: 'text-blue-500',
   },
   {
     slug: 'power-hacks',
@@ -141,7 +130,6 @@ const claudeGuides = [
     icon: Zap,
     difficulty: 'Advanced',
     time: '25 min',
-    color: 'text-amber-500',
   },
 ];
 
@@ -154,16 +142,14 @@ const googleGuides = [
     icon: Mic,
     difficulty: 'Beginner',
     time: '20 min',
-    color: 'text-rose-500',
   },
   {
     slug: 'google-ai-suite',
     title: 'Google AI Suite',
     description: 'Gemini 2.5 Pro, Imagen 4, Veo 3, Sheets AI, and Gmail AI for creative workflows',
     icon: Sparkles,
-    difficulty: 'Beginner → Intermediate',
+    difficulty: 'Beginner to Intermediate',
     time: '25 min',
-    color: 'text-blue-500',
   },
 ];
 
@@ -176,7 +162,6 @@ const n8nGuides = [
     icon: Workflow,
     difficulty: 'Intermediate',
     time: '25 min',
-    color: 'text-green-500',
   },
 ];
 
@@ -189,7 +174,6 @@ const runwayGuides = [
     icon: Video,
     difficulty: 'Intermediate',
     time: '20 min',
-    color: 'text-purple-500',
   },
 ];
 
@@ -202,7 +186,6 @@ const elevenLabsGuides = [
     icon: AudioLines,
     difficulty: 'Beginner',
     time: '15 min',
-    color: 'text-pink-500',
   },
 ];
 
@@ -215,7 +198,6 @@ const aidenGuides = [
     icon: Brain,
     difficulty: 'Intermediate',
     time: '20 min',
-    color: 'text-red-500',
   },
 ];
 
@@ -228,7 +210,6 @@ const gammaGuides = [
     icon: Presentation,
     difficulty: 'Beginner',
     time: '15 min',
-    color: 'text-yellow-500',
   },
 ];
 
@@ -241,7 +222,6 @@ const workflowGuides = [
     icon: Brain,
     difficulty: 'Beginner',
     time: '15 min',
-    color: 'text-violet-500',
   },
   {
     slug: 'multi-tool-workflows',
@@ -250,7 +230,6 @@ const workflowGuides = [
     icon: Workflow,
     difficulty: 'Intermediate',
     time: '25 min',
-    color: 'text-green-500',
   },
   {
     slug: 'tool-governance',
@@ -259,7 +238,6 @@ const workflowGuides = [
     icon: Settings,
     difficulty: 'Intermediate',
     time: '20 min',
-    color: 'text-slate-500',
   },
 ];
 
@@ -270,40 +248,38 @@ interface Guide {
   icon: React.ComponentType<{ className?: string }>;
   difficulty: string;
   time: string;
-  color: string;
   lastVerified?: string;
 }
 
 interface ToolSection {
   title: string;
   guides: Guide[];
-  color: string;
 }
 
 const sections: ToolSection[] = [
-  { title: 'Claude Enterprise', guides: claudeGuides, color: 'text-orange-500' },
-  { title: 'Google', guides: googleGuides, color: 'text-blue-500' },
-  { title: 'n8n', guides: n8nGuides, color: 'text-green-500' },
-  { title: 'Runway Enterprise', guides: runwayGuides, color: 'text-purple-500' },
-  { title: 'ElevenLabs', guides: elevenLabsGuides, color: 'text-pink-500' },
-  { title: 'AIDEN Studio', guides: aidenGuides, color: 'text-red-500' },
-  { title: 'Gamma', guides: gammaGuides, color: 'text-yellow-500' },
-  { title: 'Workflows & Governance', guides: workflowGuides, color: 'text-violet-500' },
+  { title: 'Claude Enterprise', guides: claudeGuides },
+  { title: 'Google', guides: googleGuides },
+  { title: 'n8n', guides: n8nGuides },
+  { title: 'Runway Enterprise', guides: runwayGuides },
+  { title: 'ElevenLabs', guides: elevenLabsGuides },
+  { title: 'AIDEN Studio', guides: aidenGuides },
+  { title: 'Gamma', guides: gammaGuides },
+  { title: 'Workflows & Governance', guides: workflowGuides },
 ];
 
 function GuideCard({ guide }: { guide: Guide }) {
   const Icon = guide.icon;
   return (
     <Link href={`/guides/${guide.slug}`}>
-      <Card className="hover:border-primary/50 hover:bg-muted/50 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+      <Card className="hover:border-foreground/20 transition-colors duration-200 cursor-pointer group">
         <CardHeader className="pb-3">
           <div className="flex items-start justify-between">
             <div className="flex items-center gap-3">
-              <div className={`${guide.color}`}>
+              <div className="text-foreground">
                 <Icon className="h-6 w-6" />
               </div>
               <div>
-                <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                <CardTitle className="text-lg">
                   {guide.title}
                 </CardTitle>
                 <CardDescription className="mt-1">
@@ -311,7 +287,7 @@ function GuideCard({ guide }: { guide: Guide }) {
                 </CardDescription>
               </div>
             </div>
-            <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+            <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
           </div>
         </CardHeader>
         <CardContent className="pt-0">
@@ -346,7 +322,7 @@ export default function GuidesPage() {
       {/* Header */}
       <div className="space-y-4">
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+          <div className="flex h-12 w-12 items-center justify-center rounded-md bg-muted text-foreground">
             <BookOpen className="h-6 w-6" />
           </div>
           <div>
@@ -357,7 +333,7 @@ export default function GuidesPage() {
       </div>
 
       {/* Intro Card */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <p className="text-muted-foreground">
             These guides are designed for everyone on the team. Each one walks you through a specific AI tool or feature
@@ -370,7 +346,7 @@ export default function GuidesPage() {
       {sections.map((section) => (
         <div key={section.title} className="space-y-4">
           <div className="flex items-center gap-2">
-            <h2 className={`text-xl font-semibold ${section.color}`}>{section.title}</h2>
+            <h2 className="text-xl font-semibold">{section.title}</h2>
             <Badge variant="outline" className="text-xs">
               {section.guides.length} {section.guides.length === 1 ? 'guide' : 'guides'}
             </Badge>
@@ -395,7 +371,7 @@ export default function GuidesPage() {
             </div>
             <Link
               href="/tips"
-              className="flex items-center gap-1 text-primary hover:underline font-medium"
+              className="flex items-center gap-1 text-foreground hover:underline font-medium"
             >
               Expert Tips
               <ArrowRight className="h-4 w-4" />

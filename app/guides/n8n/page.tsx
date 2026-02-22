@@ -43,7 +43,7 @@ export default function N8nPage() {
           <Badge variant="outline">25 min</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-500/10 text-green-500">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-foreground">
             <Workflow className="h-6 w-6" />
           </div>
           <div>
@@ -54,10 +54,10 @@ export default function N8nPage() {
       </div>
 
       {/* What is n8n */}
-      <Card className="bg-gradient-to-r from-green-500/5 via-green-500/10 to-green-500/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-start gap-3">
-            <Lightbulb className="h-5 w-5 text-amber-500 mt-0.5" />
+            <Lightbulb className="h-5 w-5 text-foreground mt-0.5" />
             <div>
               <p className="font-medium">What is n8n?</p>
               <p className="text-muted-foreground mt-1">
@@ -93,25 +93,25 @@ export default function N8nPage() {
               <tbody className="divide-y">
                 <tr>
                   <td className="py-2 font-medium">Self-Hosting</td>
-                  <td className="py-2 text-green-600">Yes, free</td>
+                  <td className="py-2 text-[#7A7A2A]">Yes, free</td>
                   <td className="py-2 text-muted-foreground">No</td>
                   <td className="py-2 text-muted-foreground">No</td>
                 </tr>
                 <tr>
                   <td className="py-2 font-medium">Billing Model</td>
-                  <td className="py-2 text-green-600">Per workflow</td>
+                  <td className="py-2 text-[#7A7A2A]">Per workflow</td>
                   <td className="py-2 text-muted-foreground">Per step</td>
                   <td className="py-2 text-muted-foreground">Per operation</td>
                 </tr>
                 <tr>
                   <td className="py-2 font-medium">Custom Code</td>
-                  <td className="py-2 text-green-600">JS/Python + npm</td>
+                  <td className="py-2 text-[#7A7A2A]">JS/Python + npm</td>
                   <td className="py-2 text-muted-foreground">Limited</td>
                   <td className="py-2 text-muted-foreground">Medium</td>
                 </tr>
                 <tr>
                   <td className="py-2 font-medium">AI Agents</td>
-                  <td className="py-2 text-green-600">Native LangChain</td>
+                  <td className="py-2 text-[#7A7A2A]">Native LangChain</td>
                   <td className="py-2 text-muted-foreground">Basic</td>
                   <td className="py-2 text-muted-foreground">Basic</td>
                 </tr>
@@ -204,7 +204,7 @@ export default function N8nPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Zap className="h-5 w-5 text-amber-500" />
+            <Zap className="h-5 w-5 text-foreground" />
             Common Use Cases
           </CardTitle>
         </CardHeader>
@@ -310,7 +310,7 @@ export default function N8nPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Sparkles className="h-5 w-5 text-amber-500" />
+            <Sparkles className="h-5 w-5 text-foreground" />
             The 10 Golden Rules
           </CardTitle>
           <CardDescription>Essential practices for reliable workflows</CardDescription>
@@ -467,7 +467,7 @@ export default function N8nPage() {
       </Card>
 
       {/* Next Steps */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-center justify-between">
             <div>

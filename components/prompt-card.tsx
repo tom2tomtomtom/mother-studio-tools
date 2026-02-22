@@ -12,7 +12,6 @@ import { useRecentlyUsed } from '@/hooks/use-recently-used';
 import { useAnalytics } from '@/hooks/use-analytics';
 import {
   ChevronDown,
-  ChevronUp,
   Copy,
   Check,
   Star,
@@ -58,6 +57,7 @@ interface PromptCardProps {
 export function PromptCard({ prompt, locked = false }: PromptCardProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [copyPulse, setCopyPulse] = useState(false);
   const { toggleFavorite, isFavorite } = useFavorites();
   const { addRecentlyUsed } = useRecentlyUsed();
   const { track } = useAnalytics();
@@ -68,6 +68,8 @@ export function PromptCard({ prompt, locked = false }: PromptCardProps) {
     if (locked) return;
     await navigator.clipboard.writeText(prompt.prompt);
     setCopied(true);
+    setCopyPulse(true);
+    setTimeout(() => setCopyPulse(false), 600);
     addRecentlyUsed(prompt.id);
     track({ type: 'prompt_copy', promptId: prompt.id, teamSlug: prompt.teamSlug });
     toast.success('Copied to clipboard', {
@@ -92,7 +94,7 @@ export function PromptCard({ prompt, locked = false }: PromptCardProps) {
     return (
       <Card
         id={prompt.id}
-        className="transition-all duration-200 scroll-mt-20 border-border/30 rounded-xl overflow-hidden opacity-60 cursor-not-allowed"
+        className="transition-all duration-200 scroll-mt-20 border-border/30 rounded-md overflow-hidden opacity-60 cursor-not-allowed"
       >
         <CardHeader className="pb-3">
           <div className="flex items-start justify-between gap-4">
@@ -140,7 +142,7 @@ export function PromptCard({ prompt, locked = false }: PromptCardProps) {
   return (
     <Card
       id={prompt.id}
-      className="group transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 scroll-mt-20 border-border/50 rounded-xl overflow-hidden"
+      className="group transition-all duration-200 hover:border-foreground/30 hover:shadow-sm scroll-mt-20 border-border/50 rounded-md overflow-hidden"
     >
       <Collapsible open={isOpen} onOpenChange={setIsOpen}>
         <CardHeader className="pb-3">
@@ -165,7 +167,7 @@ export function PromptCard({ prompt, locked = false }: PromptCardProps) {
               >
                 <Star
                   className={`h-4 w-4 transition-colors ${
-                    favorited ? 'fill-yellow-400 text-yellow-400' : ''
+                    favorited ? 'fill-[#7A5A18] text-[#7A5A18]' : ''
                   }`}
                 />
               </Button>
@@ -174,12 +176,14 @@ export function PromptCard({ prompt, locked = false }: PromptCardProps) {
                 <Button
                   variant={copied ? "default" : "secondary"}
                   size="sm"
-                  className="gap-1.5 h-8"
+                  className={`gap-1.5 h-8 ${copyPulse ? 'animate-pulse' : ''}`}
                   onClick={(e) => {
                     e.stopPropagation();
                     const slug = skillFiles[prompt.id].replace('.zip', '');
                     navigator.clipboard.writeText(`Use the ${slug} skill`);
                     setCopied(true);
+                    setCopyPulse(true);
+                    setTimeout(() => setCopyPulse(false), 600);
                     toast.success('Copied skill invocation', { description: `Use the ${slug} skill`, duration: 2000 });
                     setTimeout(() => setCopied(false), 2000);
                   }}
@@ -201,7 +205,7 @@ export function PromptCard({ prompt, locked = false }: PromptCardProps) {
                 <Button
                   variant={copied ? "default" : "secondary"}
                   size="sm"
-                  className="gap-1.5 h-8"
+                  className={`gap-1.5 h-8 ${copyPulse ? 'animate-pulse' : ''}`}
                   onClick={handleCopy}
                   aria-label={copied ? `Copied ${prompt.name}` : `Copy ${prompt.name} to clipboard`}
                 >
@@ -220,11 +224,7 @@ export function PromptCard({ prompt, locked = false }: PromptCardProps) {
               )}
               <CollapsibleTrigger asChild>
                 <Button variant="outline" size="sm" className="gap-1 h-8" aria-label={isOpen ? `Collapse ${prompt.name} details` : `Expand ${prompt.name} details`}>
-                  {isOpen ? (
-                    <ChevronUp className="h-4 w-4" />
-                  ) : (
-                    <ChevronDown className="h-4 w-4" />
-                  )}
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
                   <span className="hidden sm:inline">{isOpen ? 'Less' : 'More'}</span>
                 </Button>
               </CollapsibleTrigger>

@@ -39,10 +39,10 @@ export default function CoworkPluginsPage() {
         <div className="flex items-center gap-2">
           <Badge variant="secondary">Intermediate</Badge>
           <Badge variant="outline">20 min</Badge>
-          <Badge variant="outline" className="bg-purple-500/10 text-purple-600 border-purple-500/30">macOS Only</Badge>
+          <Badge variant="outline" className="bg-muted text-[#1A4A5C] border-[#1A4A5C]/30">macOS Only</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500/10 text-purple-500">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-foreground">
             <Puzzle className="h-6 w-6" />
           </div>
           <div>
@@ -53,10 +53,10 @@ export default function CoworkPluginsPage() {
       </div>
 
       {/* Concept */}
-      <Card className="bg-gradient-to-r from-purple-500/5 via-purple-500/10 to-purple-500/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-start gap-3">
-            <Lightbulb className="h-5 w-5 text-amber-500 mt-0.5" />
+            <Lightbulb className="h-5 w-5 text-foreground mt-0.5" />
             <div>
               <p className="font-medium">Plugins vs Connectors</p>
               <p className="text-muted-foreground mt-1">
@@ -298,13 +298,13 @@ export default function CoworkPluginsPage() {
       <Card className="border-amber-500/50">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <AlertTriangle className="h-5 w-5 text-amber-500" />
+            <AlertTriangle className="h-5 w-5 text-foreground" />
             Important Limitations
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex items-start gap-3">
-            <AlertTriangle className="h-4 w-4 text-amber-500 mt-0.5 shrink-0" />
+            <AlertTriangle className="h-4 w-4 text-foreground mt-0.5 shrink-0" />
             <div>
               <p className="font-medium">Local Only</p>
               <p className="text-sm text-muted-foreground">
@@ -314,7 +314,7 @@ export default function CoworkPluginsPage() {
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <AlertTriangle className="h-4 w-4 text-amber-500 mt-0.5 shrink-0" />
+            <AlertTriangle className="h-4 w-4 text-foreground mt-0.5 shrink-0" />
             <div>
               <p className="font-medium">macOS Only</p>
               <p className="text-sm text-muted-foreground">
@@ -323,7 +323,7 @@ export default function CoworkPluginsPage() {
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <AlertTriangle className="h-4 w-4 text-amber-500 mt-0.5 shrink-0" />
+            <AlertTriangle className="h-4 w-4 text-foreground mt-0.5 shrink-0" />
             <div>
               <p className="font-medium">Organization provisioning</p>
               <p className="text-sm text-muted-foreground">
@@ -336,7 +336,7 @@ export default function CoworkPluginsPage() {
       </Card>
 
       {/* Next Steps */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-center justify-between">
             <div>

@@ -43,7 +43,7 @@ export default function ArtifactsPage() {
           <Badge variant="outline">15 min</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-500">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-foreground">
             <Layers className="h-6 w-6" />
           </div>
           <div>
@@ -68,21 +68,21 @@ export default function ArtifactsPage() {
             <p className="font-medium mb-2">Common Artifact Types:</p>
             <div className="grid gap-3 sm:grid-cols-3">
               <div className="flex items-start gap-2 p-3 rounded-lg border">
-                <Code className="h-4 w-4 text-blue-500 mt-0.5 shrink-0" />
+                <Code className="h-4 w-4 text-foreground mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-sm">Code</p>
                   <p className="text-xs text-muted-foreground">Python, React, HTML/CSS websites</p>
                 </div>
               </div>
               <div className="flex items-start gap-2 p-3 rounded-lg border">
-                <FileText className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
+                <FileText className="h-4 w-4 text-foreground mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-sm">Documents</p>
                   <p className="text-xs text-muted-foreground">Markdown guides, reports, drafts</p>
                 </div>
               </div>
               <div className="flex items-start gap-2 p-3 rounded-lg border">
-                <BarChart3 className="h-4 w-4 text-purple-500 mt-0.5 shrink-0" />
+                <BarChart3 className="h-4 w-4 text-foreground mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-sm">Visualizations</p>
                   <p className="text-xs text-muted-foreground">SVGs, flowcharts, dashboards</p>
@@ -141,7 +141,7 @@ export default function ArtifactsPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Sparkles className="h-5 w-5 text-amber-500" />
+            <Sparkles className="h-5 w-5 text-foreground" />
             AI-Powered Artifacts
           </CardTitle>
           <CardDescription>
@@ -201,7 +201,7 @@ export default function ArtifactsPage() {
             </div>
           </div>
           <div className="flex items-start gap-2 text-sm text-muted-foreground">
-            <Lightbulb className="h-4 w-4 mt-0.5 text-amber-500 shrink-0" />
+            <Lightbulb className="h-4 w-4 mt-0.5 text-foreground shrink-0" />
             <p>
               <strong>Note:</strong> Persistent storage operations only function correctly once the artifact is <strong>published</strong>.
             </p>
@@ -242,7 +242,7 @@ export default function ArtifactsPage() {
       <Card className="border-primary/50">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Zap className="h-5 w-5 text-amber-500" />
+            <Zap className="h-5 w-5 text-foreground" />
             Pro tip: The "App Builder" prompt
           </CardTitle>
           <CardDescription>
@@ -300,7 +300,7 @@ export default function ArtifactsPage() {
       </Card>
 
       {/* Next Steps */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-center justify-between">
             <div>

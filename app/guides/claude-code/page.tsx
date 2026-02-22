@@ -60,7 +60,7 @@ export default function ClaudeCodePage() {
           <Badge variant="outline" className="text-xs text-muted-foreground">Verified Feb 2026</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-500/10 text-green-500">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-foreground">
             <Terminal className="h-6 w-6" />
           </div>
           <div>
@@ -71,10 +71,10 @@ export default function ClaudeCodePage() {
       </div>
 
       {/* Key Insight */}
-      <Card className="bg-gradient-to-r from-green-500/5 via-green-500/10 to-green-500/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-start gap-3">
-            <Lightbulb className="h-5 w-5 text-amber-500 mt-0.5" />
+            <Lightbulb className="h-5 w-5 text-foreground mt-0.5" />
             <div>
               <p className="font-medium">What Makes This Different</p>
               <p className="text-muted-foreground mt-1">
@@ -89,10 +89,10 @@ export default function ClaudeCodePage() {
       </Card>
 
       {/* Quick Start Track */}
-      <Card className="border-2 border-green-500/30 bg-gradient-to-r from-green-500/5 via-green-500/10 to-green-500/5">
+      <Card className="border-2 border-green-500/30 bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-start gap-3">
-            <Rocket className="h-6 w-6 text-green-500 mt-0.5 shrink-0" />
+            <Rocket className="h-6 w-6 text-foreground mt-0.5 shrink-0" />
             <div className="space-y-3">
               <div>
                 <p className="font-semibold text-lg">Just want to try it? Start here.</p>
@@ -276,7 +276,7 @@ export default function ClaudeCodePage() {
           <div className="grid gap-6 sm:grid-cols-2">
             <div className="space-y-2">
               <div className="flex items-center gap-2">
-                <Terminal className="h-5 w-5 text-green-500" />
+                <Terminal className="h-5 w-5 text-foreground" />
                 <h4 className="font-medium">Terminal</h4>
               </div>
               <p className="text-sm text-muted-foreground">
@@ -286,7 +286,7 @@ export default function ClaudeCodePage() {
             </div>
             <div className="space-y-2">
               <div className="flex items-center gap-2">
-                <Monitor className="h-5 w-5 text-blue-500" />
+                <Monitor className="h-5 w-5 text-foreground" />
                 <h4 className="font-medium">VS Code Extension</h4>
               </div>
               <p className="text-sm text-muted-foreground">
@@ -364,7 +364,7 @@ export default function ClaudeCodePage() {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-semibold">1</span>
-            <Brain className="h-5 w-5 text-purple-500" />
+            <Brain className="h-5 w-5 text-foreground" />
             The Creative Pitch (Plan Mode)
           </CardTitle>
           <CardDescription>
@@ -402,10 +402,10 @@ claude`}</pre>
             </div>
           </div>
 
-          <Card className="bg-gradient-to-r from-purple-500/5 via-purple-500/10 to-purple-500/5 border-purple-500/20">
+          <Card className="bg-muted/30 border-purple-500/20">
             <CardContent className="pt-4 pb-4">
               <div className="flex items-start gap-3">
-                <Lightbulb className="h-5 w-5 text-purple-500 mt-0.5 shrink-0" />
+                <Lightbulb className="h-5 w-5 text-foreground mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-sm">The &quot;Wow&quot; Moment</p>
                   <p className="text-sm text-muted-foreground">
@@ -452,10 +452,10 @@ claude`}</pre>
             </div>
           </div>
 
-          <Card className="bg-gradient-to-r from-orange-500/5 via-orange-500/10 to-orange-500/5 border-orange-500/20">
+          <Card className="bg-muted/30 border-orange-500/20">
             <CardContent className="pt-4 pb-4">
               <div className="flex items-start gap-3">
-                <Lightbulb className="h-5 w-5 text-orange-500 mt-0.5 shrink-0" />
+                <Lightbulb className="h-5 w-5 text-foreground mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-sm">The &quot;Wow&quot; Moment</p>
                   <p className="text-sm text-muted-foreground">
@@ -475,7 +475,7 @@ claude`}</pre>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-semibold">3</span>
-            <Play className="h-5 w-5 text-green-500" />
+            <Play className="h-5 w-5 text-foreground" />
             The Build &amp; Iteration
           </CardTitle>
           <CardDescription>
@@ -510,10 +510,10 @@ claude`}</pre>
             <pre className="bg-muted p-3 rounded-lg text-sm font-mono overflow-x-auto whitespace-pre-wrap">&quot;The Hero section feels too static. Make the headline 50% larger and add a slow &apos;floating&apos; animation to the product images so they look like they are drifting in water.&quot;</pre>
           </div>
 
-          <Card className="bg-gradient-to-r from-green-500/5 via-green-500/10 to-green-500/5 border-green-500/20">
+          <Card className="bg-muted/30 border-green-500/20">
             <CardContent className="pt-4 pb-4">
               <div className="flex items-start gap-3">
-                <Lightbulb className="h-5 w-5 text-green-500 mt-0.5 shrink-0" />
+                <Lightbulb className="h-5 w-5 text-foreground mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-sm">The &quot;Wow&quot; Moment</p>
                   <p className="text-sm text-muted-foreground">
@@ -554,10 +554,10 @@ claude`}</pre>
             <pre className="bg-muted p-3 rounded-lg text-sm font-mono overflow-x-auto">gh repo create fizz-campaign --private --source=. --push</pre>
           </div>
 
-          <Card className="bg-gradient-to-r from-blue-500/5 via-blue-500/10 to-blue-500/5 border-blue-500/20">
+          <Card className="bg-muted/30 border-blue-500/20">
             <CardContent className="pt-4 pb-4">
               <div className="flex items-start gap-3">
-                <Rocket className="h-5 w-5 text-blue-500 mt-0.5 shrink-0" />
+                <Rocket className="h-5 w-5 text-foreground mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-sm">The &quot;Wow&quot; Moment</p>
                   <p className="text-sm text-muted-foreground">
@@ -572,10 +572,10 @@ claude`}</pre>
       </Card>
 
       {/* Quick Start: You're done */}
-      <Card className="border-2 border-green-500/30 bg-gradient-to-r from-green-500/5 via-green-500/10 to-green-500/5">
+      <Card className="border-2 border-green-500/30 bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-start gap-3">
-            <CheckCircle2 className="h-6 w-6 text-green-500 mt-0.5 shrink-0" />
+            <CheckCircle2 className="h-6 w-6 text-foreground mt-0.5 shrink-0" />
             <div className="space-y-2">
               <p className="font-semibold text-lg">You did it.</p>
               <p className="text-muted-foreground">
@@ -1407,7 +1407,7 @@ claude`}</pre>
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <AlertTriangle className="h-5 w-5 text-amber-500" />
+            <AlertTriangle className="h-5 w-5 text-foreground" />
             Permissions: Claude Always Asks First
           </CardTitle>
         </CardHeader>
@@ -1418,15 +1418,15 @@ claude`}</pre>
           </p>
           <div className="space-y-2">
             <div className="flex items-start gap-2">
-              <span className="text-green-500 font-medium text-sm mt-0.5">&bull;</span>
+              <span className="text-foreground font-medium text-sm mt-0.5">&bull;</span>
               <p className="text-sm text-muted-foreground"><strong className="text-foreground">Reading files:</strong> Always allowed &mdash; no permission needed</p>
             </div>
             <div className="flex items-start gap-2">
-              <span className="text-amber-500 font-medium text-sm mt-0.5">&bull;</span>
+              <span className="text-foreground font-medium text-sm mt-0.5">&bull;</span>
               <p className="text-sm text-muted-foreground"><strong className="text-foreground">Editing files:</strong> Shows the change and waits for approval</p>
             </div>
             <div className="flex items-start gap-2">
-              <span className="text-amber-500 font-medium text-sm mt-0.5">&bull;</span>
+              <span className="text-foreground font-medium text-sm mt-0.5">&bull;</span>
               <p className="text-sm text-muted-foreground"><strong className="text-foreground">Running commands:</strong> Shows the command first and asks permission</p>
             </div>
           </div>
@@ -1646,7 +1646,7 @@ claude`}</pre>
 
       {/* Next Steps */}
       <div className="grid gap-4 sm:grid-cols-2">
-        <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+        <Card className="bg-muted/30">
           <CardContent className="pt-6">
             <div className="space-y-2">
               <h3 className="font-semibold">Want autonomous desktop tasks?</h3>
@@ -1663,7 +1663,7 @@ claude`}</pre>
             </div>
           </CardContent>
         </Card>
-        <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+        <Card className="bg-muted/30">
           <CardContent className="pt-6">
             <div className="space-y-2">
               <h3 className="font-semibold">Connect to external tools?</h3>

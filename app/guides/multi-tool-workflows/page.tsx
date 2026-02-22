@@ -43,7 +43,7 @@ export default function MultiToolWorkflowsPage() {
           <Badge variant="outline">25 min</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-500/10 text-green-500">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-foreground">
             <Workflow className="h-6 w-6" />
           </div>
           <div>
@@ -54,10 +54,10 @@ export default function MultiToolWorkflowsPage() {
       </div>
 
       {/* Why Multi-Tool */}
-      <Card className="bg-gradient-to-r from-green-500/5 via-green-500/10 to-green-500/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-start gap-3">
-            <Lightbulb className="h-5 w-5 text-amber-500 mt-0.5" />
+            <Lightbulb className="h-5 w-5 text-foreground mt-0.5" />
             <div>
               <p className="font-medium">Why Multi-Tool?</p>
               <p className="text-muted-foreground mt-1">
@@ -74,7 +74,7 @@ export default function MultiToolWorkflowsPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Search className="h-5 w-5 text-green-500" />
+            <Search className="h-5 w-5 text-foreground" />
             The Synthetic Research Pipeline
           </CardTitle>
           <CardDescription>
@@ -135,7 +135,7 @@ export default function MultiToolWorkflowsPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Video className="h-5 w-5 text-green-500" />
+            <Video className="h-5 w-5 text-foreground" />
             The Content Production Pipeline
           </CardTitle>
           <CardDescription>
@@ -201,7 +201,7 @@ export default function MultiToolWorkflowsPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Users className="h-5 w-5 text-green-500" />
+            <Users className="h-5 w-5 text-foreground" />
             The Client Intelligence Pipeline
           </CardTitle>
           <CardDescription>
@@ -256,7 +256,7 @@ export default function MultiToolWorkflowsPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Cog className="h-5 w-5 text-green-500" />
+            <Cog className="h-5 w-5 text-foreground" />
             The Automation Pipeline
           </CardTitle>
           <CardDescription>
@@ -311,7 +311,7 @@ export default function MultiToolWorkflowsPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Sparkles className="h-5 w-5 text-amber-500" />
+            <Sparkles className="h-5 w-5 text-foreground" />
             Tips for Success
           </CardTitle>
         </CardHeader>
@@ -351,7 +351,7 @@ export default function MultiToolWorkflowsPage() {
       </Card>
 
       {/* Next Steps */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-center justify-between">
             <div>

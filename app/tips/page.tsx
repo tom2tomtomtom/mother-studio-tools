@@ -60,10 +60,10 @@ export default function TipsPage() {
       </div>
 
       {/* Featured Power Tips */}
-      <Card className="bg-gradient-to-r from-amber-500/5 via-amber-500/10 to-amber-500/5 border-amber-500/30">
+      <Card className="bg-muted/30 border-border">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Zap className="h-5 w-5 text-amber-500" />
+            <Zap className="h-5 w-5 text-foreground" />
             Featured Power Tips
           </CardTitle>
           <CardDescription>
@@ -516,7 +516,7 @@ export default function TipsPage() {
       </Card>
 
       {/* Quick Reference */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      <Card className="bg-muted/30">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Zap className="h-5 w-5 text-primary" />

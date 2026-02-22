@@ -325,15 +325,15 @@ function RecommendationChips({ recommendations, onClose }: { recommendations: Re
           key={rIdx}
           href={rec.url}
           onClick={onClose}
-          className="flex items-center gap-2 px-3 py-2 bg-background border rounded-lg hover:border-primary hover:bg-primary/5 transition-colors text-xs group"
+          className="flex items-center gap-2 px-3 py-2 bg-background border rounded-md hover:border-foreground/20 transition-colors text-xs group"
         >
           <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${
-            rec.type === 'Guide' ? 'bg-blue-500' :
-            rec.type === 'Department' ? 'bg-purple-500' :
-            rec.type === 'Prompt' ? 'bg-green-500' :
-            'bg-orange-500'
+            rec.type === 'Guide' ? 'bg-[#1A4A5C]' :
+            rec.type === 'Department' ? 'bg-[#6B2B1A]' :
+            rec.type === 'Prompt' ? 'bg-[#7A7A2A]' :
+            'bg-[#7A5A18]'
           }`} />
-          <span className="font-medium group-hover:text-primary transition-colors">
+          <span className="font-medium group-hover:text-foreground transition-colors">
             {rec.title}
           </span>
           <ArrowRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />

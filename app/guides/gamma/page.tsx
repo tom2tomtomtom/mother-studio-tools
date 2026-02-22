@@ -41,7 +41,7 @@ export default function GammaPage() {
           <Badge variant="outline">15 min</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-foreground">
             <Presentation className="h-6 w-6" />
           </div>
           <div>
@@ -52,10 +52,10 @@ export default function GammaPage() {
       </div>
 
       {/* What is Gamma */}
-      <Card className="bg-gradient-to-r from-yellow-500/5 via-yellow-500/10 to-yellow-500/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-start gap-3">
-            <Lightbulb className="h-5 w-5 text-amber-500 mt-0.5" />
+            <Lightbulb className="h-5 w-5 text-foreground mt-0.5" />
             <div>
               <p className="font-medium">What is Gamma?</p>
               <p className="text-muted-foreground mt-1">
@@ -87,22 +87,22 @@ export default function GammaPage() {
               <tbody className="divide-y">
                 <tr>
                   <td className="py-2 font-medium">Format</td>
-                  <td className="py-2 text-green-600">Web-native, scrollable</td>
+                  <td className="py-2 text-[#7A7A2A]">Web-native, scrollable</td>
                   <td className="py-2 text-muted-foreground">Static slides</td>
                 </tr>
                 <tr>
                   <td className="py-2 font-medium">AI Integration</td>
-                  <td className="py-2 text-green-600">Native AI-first design</td>
+                  <td className="py-2 text-[#7A7A2A]">Native AI-first design</td>
                   <td className="py-2 text-muted-foreground">AI as add-on</td>
                 </tr>
                 <tr>
                   <td className="py-2 font-medium">Content Creation</td>
-                  <td className="py-2 text-green-600">Full deck from prompt</td>
+                  <td className="py-2 text-[#7A7A2A]">Full deck from prompt</td>
                   <td className="py-2 text-muted-foreground">Slide-by-slide</td>
                 </tr>
                 <tr>
                   <td className="py-2 font-medium">Sharing</td>
-                  <td className="py-2 text-green-600">Live links, interactive</td>
+                  <td className="py-2 text-[#7A7A2A]">Live links, interactive</td>
                   <td className="py-2 text-muted-foreground">File downloads</td>
                 </tr>
               </tbody>
@@ -324,7 +324,7 @@ export default function GammaPage() {
         <CardContent className="space-y-4">
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="p-3 rounded-lg border border-green-500/50 bg-green-500/5">
-              <p className="font-medium text-sm text-green-600">Recommended: Live Link</p>
+              <p className="font-medium text-sm text-[#7A7A2A]">Recommended: Live Link</p>
               <p className="text-xs text-muted-foreground">Full interactivity, works in any browser</p>
             </div>
             <div className="p-3 rounded-lg border">
@@ -364,7 +364,7 @@ export default function GammaPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Sparkles className="h-5 w-5 text-amber-500" />
+            <Sparkles className="h-5 w-5 text-foreground" />
             Prompting Best Practices
           </CardTitle>
         </CardHeader>
@@ -401,7 +401,7 @@ export default function GammaPage() {
       </Card>
 
       {/* Next Steps */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-center justify-between">
             <div>

@@ -39,7 +39,7 @@ export default function DeepResearchPage() {
           <Badge variant="outline">15 min</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-500/10 text-orange-500">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-foreground">
             <Search className="h-6 w-6" />
           </div>
           <div>
@@ -50,10 +50,10 @@ export default function DeepResearchPage() {
       </div>
 
       {/* Concept */}
-      <Card className="bg-gradient-to-r from-orange-500/5 via-orange-500/10 to-orange-500/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-start gap-3">
-            <Lightbulb className="h-5 w-5 text-amber-500 mt-0.5" />
+            <Lightbulb className="h-5 w-5 text-foreground mt-0.5" />
             <div>
               <p className="font-medium">The Concept</p>
               <p className="text-muted-foreground mt-1">
@@ -108,11 +108,11 @@ export default function DeepResearchPage() {
               <p className="font-medium">The Mission Prompt</p>
               <div className="mt-2 space-y-2">
                 <div className="flex items-center gap-2">
-                  <span className="text-red-500 font-medium text-sm">Don't:</span>
+                  <span className="text-foreground font-medium text-sm">Don't:</span>
                   <code className="bg-muted px-2 py-1 rounded text-sm">"What is the market size for X?"</code>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="text-green-500 font-medium text-sm shrink-0">Do:</span>
+                  <span className="text-foreground font-medium text-sm shrink-0">Do:</span>
                   <code className="bg-muted px-2 py-1 rounded text-sm">
                     "Research the market size for X. Look for competitors in the US and EU markets,
                     synthesize their pricing models into a spreadsheet, and write a 2-page summary of the trends."
@@ -184,8 +184,8 @@ export default function DeepResearchPage() {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <div className="flex -space-x-1">
-              <FolderOpen className="h-5 w-5 text-blue-500" />
-              <Globe className="h-5 w-5 text-green-500" />
+              <FolderOpen className="h-5 w-5 text-foreground" />
+              <Globe className="h-5 w-5 text-foreground" />
             </div>
             Hybrid Research (Local + Web)
           </CardTitle>
@@ -207,8 +207,8 @@ export default function DeepResearchPage() {
           <div>
             <p className="font-medium">Use Case: Personal Knowledge Synthesis</p>
             <div className="bg-muted p-4 rounded-lg mt-2 text-sm">
-              "Read all the PDF notes in my 'Thesis' folder <span className="text-blue-500">(Local)</span>,
-              search the web for recent counter-arguments published in 2025 <span className="text-green-500">(Web)</span>,
+              "Read all the PDF notes in my 'Thesis' folder <span className="text-foreground">(Local)</span>,
+              search the web for recent counter-arguments published in 2025 <span className="text-foreground">(Web)</span>,
               and write a literature review comparing my notes to the new public data."
             </div>
           </div>
@@ -219,7 +219,7 @@ export default function DeepResearchPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Zap className="h-5 w-5 text-amber-500" />
+            <Zap className="h-5 w-5 text-foreground" />
             Pro Tips for Research Sessions
           </CardTitle>
         </CardHeader>
@@ -293,7 +293,7 @@ export default function DeepResearchPage() {
       </Card>
 
       {/* Next Steps */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-center justify-between">
             <div>

@@ -46,7 +46,7 @@ export default function ChromeExtensionPage() {
           <Badge variant="outline">15 min</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-blue-500">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-foreground">
             <Chrome className="h-6 w-6" />
           </div>
           <div>
@@ -57,10 +57,10 @@ export default function ChromeExtensionPage() {
       </div>
 
       {/* Concept */}
-      <Card className="bg-gradient-to-r from-blue-500/5 via-blue-500/10 to-blue-500/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-start gap-3">
-            <Lightbulb className="h-5 w-5 text-amber-500 mt-0.5" />
+            <Lightbulb className="h-5 w-5 text-foreground mt-0.5" />
             <div>
               <p className="font-medium">The Concept</p>
               <p className="text-muted-foreground mt-1">
@@ -185,7 +185,7 @@ export default function ChromeExtensionPage() {
         </CardHeader>
         <CardContent className="space-y-6">
           <div className="flex items-start gap-3">
-            <Lightbulb className="h-5 w-5 text-amber-500 mt-0.5 shrink-0" />
+            <Lightbulb className="h-5 w-5 text-foreground mt-0.5 shrink-0" />
             <p className="text-muted-foreground">
               <strong>Workflow Training</strong> lets you teach Claude how to perform repetitive web tasks
               so it can run them autonomously later. You teach by demonstration, not instruction.
@@ -273,7 +273,7 @@ export default function ChromeExtensionPage() {
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex items-start gap-3">
-            <Shield className="h-5 w-5 text-amber-500 mt-0.5 shrink-0" />
+            <Shield className="h-5 w-5 text-foreground mt-0.5 shrink-0" />
             <div>
               <p className="font-medium">Limit Access</p>
               <p className="text-sm text-muted-foreground mt-1">
@@ -283,9 +283,9 @@ export default function ChromeExtensionPage() {
             </div>
           </div>
 
-          <div className="p-4 rounded-lg border border-amber-500/30 bg-amber-500/5">
+          <div className="p-4 rounded-lg border border-border bg-amber-500/5">
             <p className="font-medium text-sm flex items-center gap-2">
-              <AlertTriangle className="h-4 w-4 text-amber-500" />
+              <AlertTriangle className="h-4 w-4 text-foreground" />
               Prompt Injection Risk
             </p>
             <p className="text-sm text-muted-foreground mt-2">
@@ -300,7 +300,7 @@ export default function ChromeExtensionPage() {
           </div>
 
           <div className="flex items-start gap-3">
-            <AlertTriangle className="h-5 w-5 text-red-500 mt-0.5 shrink-0" />
+            <AlertTriangle className="h-5 w-5 text-foreground mt-0.5 shrink-0" />
             <div>
               <p className="font-medium">Avoid High-Risk Data</p>
               <p className="text-sm text-muted-foreground mt-1">
@@ -313,7 +313,7 @@ export default function ChromeExtensionPage() {
 
           <div className="p-4 rounded-lg border border-red-500/30 bg-red-500/5">
             <p className="font-medium text-sm flex items-center gap-2">
-              <AlertTriangle className="h-4 w-4 text-red-500" />
+              <AlertTriangle className="h-4 w-4 text-foreground" />
               Sites to Avoid for Automation
             </p>
             <ul className="text-sm text-muted-foreground mt-2 space-y-1 list-disc list-inside">
@@ -370,7 +370,7 @@ export default function ChromeExtensionPage() {
       </Card>
 
       {/* Next Steps */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-center justify-between">
             <div>

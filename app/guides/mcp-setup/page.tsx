@@ -38,7 +38,7 @@ export default function MCPSetupPage() {
           <Badge variant="outline">10 min</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-blue-500">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-foreground">
             <Settings className="h-6 w-6" />
           </div>
           <div>
@@ -93,7 +93,7 @@ export default function MCPSetupPage() {
             </p>
           </div>
           <div className="flex items-start gap-2 text-sm text-muted-foreground">
-            <Lightbulb className="h-4 w-4 mt-0.5 text-amber-500" />
+            <Lightbulb className="h-4 w-4 mt-0.5 text-foreground" />
             <p>
               Claude will generate paths correctly for your OS. macOS uses <code>/Users/yourname/Desktop</code>
               while Windows uses <code>C:\\Users\\yourname\\Desktop</code> with proper escaping.
@@ -146,14 +146,14 @@ export default function MCPSetupPage() {
         <CardContent>
           <ol className="space-y-3">
             <li className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 shrink-0" />
+              <CheckCircle className="h-5 w-5 text-foreground mt-0.5 shrink-0" />
               <div>
                 <p className="font-medium">Open Claude Desktop</p>
                 <p className="text-sm text-muted-foreground">Make sure you have the desktop app, not the web version</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 shrink-0" />
+              <CheckCircle className="h-5 w-5 text-foreground mt-0.5 shrink-0" />
               <div>
                 <p className="font-medium">Go to Settings</p>
                 <p className="text-sm text-muted-foreground">
@@ -162,27 +162,27 @@ export default function MCPSetupPage() {
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 shrink-0" />
+              <CheckCircle className="h-5 w-5 text-foreground mt-0.5 shrink-0" />
               <div>
                 <p className="font-medium">Click Developer in the sidebar</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 shrink-0" />
+              <CheckCircle className="h-5 w-5 text-foreground mt-0.5 shrink-0" />
               <div>
                 <p className="font-medium">Click Edit Config</p>
                 <p className="text-sm text-muted-foreground">This opens the config file in your text editor</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 shrink-0" />
+              <CheckCircle className="h-5 w-5 text-foreground mt-0.5 shrink-0" />
               <div>
                 <p className="font-medium">Paste the JSON Claude generated</p>
                 <p className="text-sm text-muted-foreground">Delete any existing text first, then paste</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 shrink-0" />
+              <CheckCircle className="h-5 w-5 text-foreground mt-0.5 shrink-0" />
               <div>
                 <p className="font-medium">Save and restart Claude Desktop</p>
                 <p className="text-sm text-muted-foreground">Quit the app completely and reopen it</p>
@@ -218,7 +218,7 @@ export default function MCPSetupPage() {
       <Card className="border-amber-500/50">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <AlertCircle className="h-5 w-5 text-amber-500" />
+            <AlertCircle className="h-5 w-5 text-foreground" />
             Troubleshooting
           </CardTitle>
           <CardDescription>
@@ -248,7 +248,7 @@ export default function MCPSetupPage() {
       </Card>
 
       {/* Next Steps */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-center justify-between">
             <div>

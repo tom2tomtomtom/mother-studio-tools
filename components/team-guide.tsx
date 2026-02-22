@@ -105,7 +105,7 @@ export function TeamGuide({ title, description, content }: TeamGuideProps) {
     .replace(/^[\s-]*\n/, '');
 
   return (
-    <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-transparent">
+    <Card className="border-primary/20 bg-muted/30">
       <Collapsible open={isOpen} onOpenChange={setIsOpen}>
         <CardHeader className="pb-3">
           <div className="flex items-start justify-between gap-4">

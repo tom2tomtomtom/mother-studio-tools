@@ -41,7 +41,7 @@ export default function GoogleAISuitePage() {
           <Badge variant="outline">25 min</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-blue-500">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-foreground">
             <Sparkles className="h-6 w-6" />
           </div>
           <div>
@@ -52,10 +52,10 @@ export default function GoogleAISuitePage() {
       </div>
 
       {/* What is Google AI Suite */}
-      <Card className="bg-gradient-to-r from-blue-500/5 via-blue-500/10 to-blue-500/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-start gap-3">
-            <Lightbulb className="h-5 w-5 text-amber-500 mt-0.5" />
+            <Lightbulb className="h-5 w-5 text-foreground mt-0.5" />
             <div>
               <p className="font-medium">What is Google AI Suite?</p>
               <p className="text-muted-foreground mt-1">
@@ -72,7 +72,7 @@ export default function GoogleAISuitePage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Sparkles className="h-5 w-5 text-blue-500" />
+            <Sparkles className="h-5 w-5 text-foreground" />
             Gemini 2.5 Pro
           </CardTitle>
           <CardDescription>
@@ -123,7 +123,7 @@ export default function GoogleAISuitePage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Image className="h-5 w-5 text-blue-500" />
+            <Image className="h-5 w-5 text-foreground" />
             Imagen 4
           </CardTitle>
           <CardDescription>
@@ -174,7 +174,7 @@ export default function GoogleAISuitePage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Video className="h-5 w-5 text-blue-500" />
+            <Video className="h-5 w-5 text-foreground" />
             Veo 3
           </CardTitle>
           <CardDescription>
@@ -225,8 +225,8 @@ export default function GoogleAISuitePage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Table className="h-5 w-5 text-blue-500" />
-            <Mail className="h-5 w-5 text-blue-500" />
+            <Table className="h-5 w-5 text-foreground" />
+            <Mail className="h-5 w-5 text-foreground" />
             Sheets AI & Gmail AI
           </CardTitle>
           <CardDescription>
@@ -275,7 +275,7 @@ export default function GoogleAISuitePage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Layers className="h-5 w-5 text-blue-500" />
+            <Layers className="h-5 w-5 text-foreground" />
             Integration Tips
           </CardTitle>
           <CardDescription>
@@ -323,7 +323,7 @@ Sheets AI (Reporting & Analytics)`}</pre>
       </Card>
 
       {/* Next Steps */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-center justify-between">
             <div>

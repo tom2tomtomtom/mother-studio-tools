@@ -49,18 +49,18 @@ import {
 const TOOL_COLORS: Record<string, { border: string; bg: string; text: string }> = {
   purple: {
     border: 'border-purple-500',
-    bg: 'bg-purple-50 dark:bg-purple-950/30',
-    text: 'text-purple-600 dark:text-purple-400',
+    bg: 'bg-muted',
+    text: 'text-foreground',
   },
   blue: {
     border: 'border-blue-500',
-    bg: 'bg-blue-50 dark:bg-blue-950/30',
-    text: 'text-blue-600 dark:text-blue-400',
+    bg: 'bg-muted',
+    text: 'text-foreground',
   },
   amber: {
     border: 'border-amber-500',
-    bg: 'bg-amber-50 dark:bg-amber-950/30',
-    text: 'text-amber-600 dark:text-amber-400',
+    bg: 'bg-muted',
+    text: 'text-foreground',
   },
 };
 
@@ -420,7 +420,7 @@ export function PromptGeneratorForm() {
             <CollapsibleContent>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
                 <div className="space-y-2">
-                  <span className="text-xs font-semibold text-green-600 dark:text-green-400">
+                  <span className="text-xs font-semibold text-foreground">
                     Do
                   </span>
                   <ul className="space-y-1.5">
@@ -429,7 +429,7 @@ export function PromptGeneratorForm() {
                         key={i}
                         className="text-xs text-muted-foreground flex items-start gap-2"
                       >
-                        <span className="text-green-600 dark:text-green-400 mt-0.5 shrink-0">
+                        <span className="text-foreground mt-0.5 shrink-0">
                           +
                         </span>
                         {tip}
@@ -438,7 +438,7 @@ export function PromptGeneratorForm() {
                   </ul>
                 </div>
                 <div className="space-y-2">
-                  <span className="text-xs font-semibold text-red-600 dark:text-red-400">
+                  <span className="text-xs font-semibold text-foreground">
                     Don&apos;t
                   </span>
                   <ul className="space-y-1.5">
@@ -447,7 +447,7 @@ export function PromptGeneratorForm() {
                         key={i}
                         className="text-xs text-muted-foreground flex items-start gap-2"
                       >
-                        <span className="text-red-600 dark:text-red-400 mt-0.5 shrink-0">
+                        <span className="text-foreground mt-0.5 shrink-0">
                           -
                         </span>
                         {tip}

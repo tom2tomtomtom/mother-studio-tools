@@ -44,7 +44,7 @@ export default function NotebookLMPage() {
           <Badge variant="outline">20 min</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-blue-500">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-foreground">
             <BookOpen className="h-6 w-6" />
           </div>
           <div>
@@ -55,10 +55,10 @@ export default function NotebookLMPage() {
       </div>
 
       {/* What is NotebookLM */}
-      <Card className="bg-gradient-to-r from-blue-500/5 via-blue-500/10 to-blue-500/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-start gap-3">
-            <Lightbulb className="h-5 w-5 text-amber-500 mt-0.5" />
+            <Lightbulb className="h-5 w-5 text-foreground mt-0.5" />
             <div>
               <p className="font-medium">What is NotebookLM?</p>
               <p className="text-muted-foreground mt-1">
@@ -263,7 +263,7 @@ export default function NotebookLMPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Sparkles className="h-5 w-5 text-amber-500" />
+            <Sparkles className="h-5 w-5 text-foreground" />
             The 3-Layer Research Method
           </CardTitle>
           <CardDescription>Professional approach for comprehensive research</CardDescription>
@@ -448,7 +448,7 @@ export default function NotebookLMPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Sparkles className="h-5 w-5 text-amber-500" />
+            <Sparkles className="h-5 w-5 text-foreground" />
             Pro Tips
           </CardTitle>
         </CardHeader>
@@ -496,7 +496,7 @@ export default function NotebookLMPage() {
       </Card>
 
       {/* Next Steps */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      <Card className="bg-muted/30">
         <CardContent className="pt-6">
           <div className="flex items-center justify-between">
             <div>
