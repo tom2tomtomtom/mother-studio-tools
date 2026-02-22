@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, Download, Lock, MessageSquare, FileInput, FileOutput, Lightbulb, Zap, FolderOpen, Sparkles, Bot } from 'lucide-react';
+import { ArrowLeft, Download, Lock, MessageSquare, FileInput, FileOutput, Lightbulb, Zap, FolderOpen, Sparkles, Bot, Terminal } from 'lucide-react';
 import { SkillMarkdown } from './skill-markdown';
 import { CopyButtonClient } from './copy-button';
 import { CollapsibleReference } from './collapsible-reference';
@@ -14,6 +14,13 @@ interface Props {
 }
 
 type ToolType = 'skill' | 'project' | 'cowork';
+
+interface CoworkPlugin {
+  pluginSlug: string;
+  pluginName: string;
+  commands: { name: string; description: string }[];
+  connectors: string[];
+}
 
 interface SkillGuide {
   displayName: string;
@@ -26,6 +33,7 @@ interface SkillGuide {
   whatYouGet: string[];
   tips: string[];
   projectSetup?: string[];
+  coworkPlugin?: CoworkPlugin;
 }
 
 const SKILL_GUIDES: Record<string, SkillGuide> = {
@@ -60,6 +68,16 @@ const SKILL_GUIDES: Record<string, SkillGuide> = {
       'For recurring meetings, ask Claude to compare with last week\'s actions',
       'Use in a Claude Project with your team\'s meeting template for consistent formatting',
     ],
+    coworkPlugin: {
+      pluginSlug: 'client-experience',
+      pluginName: 'Client Experience',
+      commands: [
+        { name: '/meeting-notes', description: 'Generate structured meeting notes with RAID logs' },
+        { name: '/proposal-builder', description: 'Build client proposals with scope and pricing' },
+        { name: '/client-health', description: 'Assess account health with scorecards' },
+      ],
+      connectors: ['Slack', 'Notion', 'Google Drive'],
+    },
   },
   'timeline-generator': {
     displayName: 'Dynamic Timelines',
@@ -94,6 +112,16 @@ const SKILL_GUIDES: Record<string, SkillGuide> = {
       'Ask for "simple", "moderate", or "complex" project templates as a starting point',
       'Request a table format if you need to paste into a project management tool',
     ],
+    coworkPlugin: {
+      pluginSlug: 'campaign-management',
+      pluginName: 'Campaign Management',
+      commands: [
+        { name: '/project-plan', description: 'Create WBS project plans with dependencies' },
+        { name: '/status-report', description: 'Generate campaign status reports' },
+        { name: '/change-impact', description: 'Assess change impact with RACI matrices' },
+      ],
+      connectors: ['Slack', 'Notion', 'Google Drive'],
+    },
   },
   'competitor-research': {
     displayName: 'Rapid Research Tool',
@@ -127,6 +155,16 @@ const SKILL_GUIDES: Record<string, SkillGuide> = {
       'On macOS, use Cowork for live research — it can browse competitor sites and run parallel sub-agents to research 5 competitors simultaneously',
       'Great for pitch prep: "Focus on what makes us better than [competitor]"',
     ],
+    coworkPlugin: {
+      pluginSlug: 'competitor-research',
+      pluginName: 'Competitor Research',
+      commands: [
+        { name: '/landscape-map', description: 'Map the competitive landscape' },
+        { name: '/feature-gaps', description: 'Identify feature gaps vs competitors' },
+        { name: '/improvement-plan', description: 'Prioritized improvement recommendations' },
+      ],
+      connectors: ['Slack', 'Notion', 'Google Drive'],
+    },
     projectSetup: [
       'Create a new Claude Project called "Competitive Research" (or one per client)',
       'Upload: your product overview, feature list, pricing page, and any existing competitor reports',
@@ -168,6 +206,16 @@ const SKILL_GUIDES: Record<string, SkillGuide> = {
       'Ask Claude to flag anything you might be forgetting',
       'Use this alongside the Timeline Generator for a matching timeline',
     ],
+    coworkPlugin: {
+      pluginSlug: 'campaign-management',
+      pluginName: 'Campaign Management',
+      commands: [
+        { name: '/project-plan', description: 'Create WBS project plans with dependencies' },
+        { name: '/status-report', description: 'Generate campaign status reports' },
+        { name: '/change-impact', description: 'Assess change impact with RACI matrices' },
+      ],
+      connectors: ['Slack', 'Notion', 'Google Drive'],
+    },
   },
   'brand-voice-enforcer': {
     displayName: 'Brand Guidelines Bot',
@@ -201,6 +249,16 @@ const SKILL_GUIDES: Record<string, SkillGuide> = {
       'Claude remembers past brand voice decisions within the project — consistency improves over time',
       'Ask Claude to create a voice guide from scratch if the brand doesn\'t have one yet',
     ],
+    coworkPlugin: {
+      pluginSlug: 'brand-strategy',
+      pluginName: 'Brand Strategy',
+      commands: [
+        { name: '/positioning', description: 'Build brand positioning statements' },
+        { name: '/competitor-analysis', description: 'Analyze competitive positioning' },
+        { name: '/messaging-framework', description: 'Create messaging hierarchies' },
+      ],
+      connectors: ['Slack', 'Notion', 'Google Drive'],
+    },
     projectSetup: [
       'Create a new Claude Project called "[Client Name] Brand Voice"',
       'Upload: brand guidelines PDF, style guide, terminology list, and any "instead of / say" examples',
@@ -445,6 +503,58 @@ export default async function SkillDetailPage({ params }: Props) {
                 ))}
               </ul>
             </div>
+
+            {/* Cowork Plugin */}
+            {guide.coworkPlugin && (
+              <div className="rounded-md border-2 border-[#7A5A18]/20 bg-[#7A5A18]/5 p-5">
+                <div className="flex items-center gap-2 mb-1">
+                  <Bot className="h-5 w-5 text-[#7A5A18]" />
+                  <h3 className="text-base font-bold">Also available as Cowork Plugin</h3>
+                  <span className="text-xs font-medium text-[#7A5A18] bg-[#7A5A18]/10 px-2 py-0.5 rounded-full">macOS</span>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Install the <strong>{guide.coworkPlugin.pluginName}</strong> plugin for slash commands and optional integrations.
+                </p>
+
+                {/* Commands */}
+                <div className="mb-4">
+                  <div className="flex items-center gap-1.5 mb-2">
+                    <Terminal className="h-4 w-4 text-[#7A5A18]" />
+                    <span className="text-sm font-medium">Slash Commands</span>
+                  </div>
+                  <div className="space-y-1.5">
+                    {guide.coworkPlugin.commands.map((cmd) => (
+                      <div key={cmd.name} className="flex items-baseline gap-2">
+                        <code className="text-xs font-mono font-medium bg-[#7A5A18]/10 text-[#7A5A18] px-1.5 py-0.5 rounded shrink-0">{cmd.name}</code>
+                        <span className="text-sm text-muted-foreground">{cmd.description}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Connectors */}
+                {guide.coworkPlugin.connectors.length > 0 && (
+                  <p className="text-xs text-muted-foreground mb-4">
+                    Optional: Connect {guide.coworkPlugin.connectors.join(', ')}
+                  </p>
+                )}
+
+                {/* Actions */}
+                <div className="flex items-center gap-3">
+                  <a
+                    href={`/plugins/${guide.coworkPlugin.pluginSlug}.zip`}
+                    download
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[#7A5A18] text-white font-medium text-sm hover:bg-[#7A5A18]/90 transition-colors"
+                  >
+                    <Download className="h-4 w-4" />
+                    Download Plugin
+                  </a>
+                  <Link href="/plugins" className="text-sm text-[#7A5A18] hover:underline">
+                    View all plugins
+                  </Link>
+                </div>
+              </div>
+            )}
           </div>
         )}
 
