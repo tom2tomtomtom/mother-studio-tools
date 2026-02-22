@@ -59,7 +59,7 @@ export default function HomePage() {
         <div className="rounded-lg overflow-hidden shadow-lg">
           <div className="bg-[#1A4A5C] px-6 py-5">
             <h2 className="text-2xl font-bold text-white">Your Active Tools</h2>
-            <p className="text-sm text-white/60 mt-1">Click any skill to copy, then paste in Claude.</p>
+            <p className="text-sm text-white/60 mt-1">Click any skill to learn more, or use the quick action to copy/download.</p>
           </div>
           <div className="p-6 bg-card">
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
