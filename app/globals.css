@@ -79,11 +79,11 @@
      SHADOW TOKENS — flat, minimal depth
      ======================================== */
   --shadow-xs: 0 1px 2px rgba(17, 17, 17, 0.04);
-  --shadow-sm: 0 1px 3px rgba(17, 17, 17, 0.05);
-  --shadow-md: 0 2px 6px rgba(17, 17, 17, 0.06);
-  --shadow-lg: 0 4px 12px rgba(17, 17, 17, 0.08);
-  --shadow-xl: 0 8px 24px rgba(17, 17, 17, 0.1);
-  --shadow-2xl: 0 12px 32px rgba(17, 17, 17, 0.12);
+  --shadow-sm: 0 1px 2px rgba(17, 17, 17, 0.03), 0 1px 3px rgba(17, 17, 17, 0.06);
+  --shadow-md: 0 2px 4px rgba(17, 17, 17, 0.03), 0 4px 12px rgba(17, 17, 17, 0.07);
+  --shadow-lg: 0 4px 8px rgba(17, 17, 17, 0.03), 0 8px 24px rgba(17, 17, 17, 0.08);
+  --shadow-xl: 0 8px 16px rgba(17, 17, 17, 0.04), 0 16px 48px rgba(17, 17, 17, 0.1);
+  --shadow-2xl: 0 12px 24px rgba(17, 17, 17, 0.05), 0 24px 64px rgba(17, 17, 17, 0.12);
   --shadow-inner: inset 0 1px 3px rgba(17, 17, 17, 0.04);
   --shadow-focus: 0 0 0 3px rgba(17, 17, 17, 0.15);
   --shadow-glow: none;
@@ -223,11 +223,17 @@
   h1, h2 {
     font-family: var(--font-sans, sans-serif);
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
   }
 
-  h3 {
-    letter-spacing: -0.01em;
+  h3, h4 {
+    letter-spacing: -0.015em;
+  }
+
+  /* Tabular numbers for data/stats */
+  .tabular-nums,
+  [data-stat] {
+    font-variant-numeric: tabular-nums;
   }
 }
 

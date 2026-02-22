@@ -19,9 +19,8 @@ export function SkillInfo({ name, slug, description, preloaded = true, locked = 
         <Lock className="h-4 w-4 text-muted-foreground/60 mt-0.5 shrink-0" />
         <div className="min-w-0">
           <span className="text-sm font-medium text-muted-foreground">{name}</span>
-          <p className="text-xs font-mono text-muted-foreground/50 mt-0.5">{slug}</p>
-          {description && <p className="text-xs text-muted-foreground/50 mt-0.5">{description}</p>}
-          <p className="text-xs text-muted-foreground/40 mt-1">Contact to unlock</p>
+          {description && <p className="text-xs text-muted-foreground/50 mt-0.5 leading-relaxed">{description}</p>}
+          <p className="text-xs text-muted-foreground/40 mt-1.5">Contact to unlock</p>
         </div>
       </div>
     );
@@ -38,9 +37,8 @@ export function SkillInfo({ name, slug, description, preloaded = true, locked = 
         <Download className="h-4 w-4 text-muted-foreground mt-0.5 shrink-0" />
         <div className="min-w-0">
           <span className="text-sm font-medium">{name}</span>
-          <p className="text-xs font-mono text-foreground/50 mt-0.5">{slug}</p>
-          {description && <p className="text-xs text-muted-foreground mt-0.5">{description}</p>}
-          <p className="text-xs text-muted-foreground mt-1 opacity-0 group-hover:opacity-100 transition-opacity">Click to download skill ZIP</p>
+          {description && <p className="text-xs text-muted-foreground mt-0.5 leading-relaxed">{description}</p>}
+          <p className="text-xs text-muted-foreground mt-1.5 opacity-0 group-hover:opacity-100 transition-opacity">Click to download</p>
         </div>
       </a>
     );
@@ -55,9 +53,8 @@ export function SkillInfo({ name, slug, description, preloaded = true, locked = 
       <Sparkles className="h-4 w-4 text-foreground mt-0.5 shrink-0 group-hover:rotate-12 transition-transform" />
       <div className="min-w-0">
         <span className="text-sm font-medium">{name}</span>
-        <p className="text-xs font-mono text-foreground/50 mt-0.5">{slug}</p>
-        {description && <p className="text-xs text-muted-foreground mt-0.5">{description}</p>}
-        <p className="text-xs text-muted-foreground mt-1 opacity-0 group-hover:opacity-100 transition-opacity">Click to copy, then paste in Claude</p>
+        {description && <p className="text-xs text-muted-foreground mt-0.5 leading-relaxed">{description}</p>}
+        <p className="text-xs text-muted-foreground mt-1.5 opacity-0 group-hover:opacity-100 transition-opacity">Click to copy</p>
       </div>
     </button>
   );

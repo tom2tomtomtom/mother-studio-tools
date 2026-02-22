@@ -50,13 +50,13 @@ export default function HomePage() {
             <StatCard label="In the Catalogue" value="50+" accent="umber" />
             <StatCard label="Departments" value={totalTeams} accent="ochre" />
           </div>
-          <p className="text-sm text-white/30 mt-4 tracking-wide">More tools rolling out soon</p>
+          <p className="text-sm text-white/50 mt-4">More tools rolling out soon</p>
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto space-y-12">
+      <div className="max-w-6xl mx-auto space-y-16">
         {/* ===== ACTIVE TOOLS ===== */}
-        <div className="rounded-md overflow-hidden border">
+        <div className="rounded-lg overflow-hidden shadow-lg">
           <div className="bg-[#1A4A5C] px-6 py-5">
             <h2 className="text-2xl font-bold text-white">Your Active Tools</h2>
             <p className="text-sm text-white/60 mt-1">Click any skill to copy, then paste in Claude.</p>
@@ -70,8 +70,8 @@ export default function HomePage() {
               <SkillInfo name="Brand Guidelines Bot" slug="brand-voice-enforcer" description="Check copy against brand voice for tone, terminology, and consistency" />
               <SkillInfo name="Media Plan Translator" slug="media-strategy-planner" description="PESO media mix with channel rationale and budget split recommendations" preloaded={false} />
             </div>
-            <Link href="/catalogue" className="flex items-center gap-2 mt-5 pt-4 border-t text-sm text-muted-foreground hover:text-foreground transition-colors group">
-              <span><span className="font-semibold text-foreground">44+ more skills</span> across every department</span>
+            <Link href="/catalogue" className="flex items-center gap-2 mt-6 pt-5 border-t border-border/50 text-sm text-muted-foreground hover:text-foreground transition-colors group">
+              <span><span className="font-medium text-foreground">44+ more skills</span> across every department</span>
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -106,7 +106,7 @@ export default function HomePage() {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 stagger">
             {teams.map(team => (
               <Link key={team.slug} href={`/team/${team.slug}`}>
-                <Card className={`h-full border-0 ${DEPT_BG[team.slug] || 'bg-muted'} hover:translate-x-1 hover:shadow-lg hover:brightness-110 transition-all duration-200 cursor-pointer group`}>
+                <Card className={`h-full border-0 shadow-sm ${DEPT_BG[team.slug] || 'bg-muted'} hover:translate-x-1 hover:shadow-lg hover:brightness-110 transition-all duration-200 cursor-pointer group`}>
                   <CardHeader>
                     <CardTitle className="flex items-center gap-3 text-white">
                       {team.name}
@@ -159,8 +159,8 @@ const STAT_BG: Record<string, string> = {
 
 function StatCard({ label, value, accent }: { label: string; value: string | number; accent: string }) {
   return (
-    <div className={`${STAT_BG[accent] || 'bg-white/10'} px-6 py-4 rounded-md hover:scale-105 transition-transform duration-200`}>
-      <div className="text-4xl sm:text-5xl font-black text-white">{value}</div>
+    <div className={`${STAT_BG[accent] || 'bg-white/10'} px-6 py-4 rounded-md hover:scale-[1.02] transition-transform duration-200`}>
+      <div className="text-4xl sm:text-5xl font-black text-white tabular-nums">{value}</div>
       <div className="text-[10px] uppercase tracking-widest text-white/50 mt-1">{label}</div>
     </div>
   );
