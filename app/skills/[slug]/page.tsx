@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, Download, Lock, MessageSquare, FileInput, FileOutput, Lightbulb, Zap } from 'lucide-react';
+import { ArrowLeft, Download, Lock, MessageSquare, FileInput, FileOutput, Lightbulb, Zap, FolderOpen, Sparkles, Bot } from 'lucide-react';
 import { SkillMarkdown } from './skill-markdown';
 import { CopyButtonClient } from './copy-button';
 import { CollapsibleReference } from './collapsible-reference';
@@ -13,15 +13,19 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
+type ToolType = 'skill' | 'project' | 'cowork';
+
 interface SkillGuide {
   displayName: string;
   description: string;
   preloaded: boolean;
+  toolType: ToolType;
   whatItDoes: string;
   howToUse: string[];
   whatToProvide: string[];
   whatYouGet: string[];
   tips: string[];
+  projectSetup?: string[];
 }
 
 const SKILL_GUIDES: Record<string, SkillGuide> = {
@@ -29,6 +33,7 @@ const SKILL_GUIDES: Record<string, SkillGuide> = {
     displayName: 'Contact Reports',
     description: 'Turn meeting recordings and rough notes into polished, structured contact reports',
     preloaded: true,
+    toolType: 'skill',
     whatItDoes: 'Takes raw meeting transcripts, recordings, or rough notes and transforms them into professional contact reports with clear decisions, action items, owners, and deadlines. Works for internal WIPs, client meetings, brainstorms, and strategy sessions.',
     howToUse: [
       'Open Claude and type: Use the meeting-notes-actions skill',
@@ -60,6 +65,7 @@ const SKILL_GUIDES: Record<string, SkillGuide> = {
     displayName: 'Dynamic Timelines',
     description: 'Build detailed project timelines with phases, milestones, dependencies, and realistic buffer',
     preloaded: true,
+    toolType: 'skill',
     whatItDoes: 'Creates professional project timelines from a brief or scope description. Produces phase breakdowns, milestone dates, dependency chains, critical path analysis, review gates, and buffer allocation — everything a PM needs to keep a project on track.',
     howToUse: [
       'Open Claude and type: Use the timeline-generator skill',
@@ -93,15 +99,16 @@ const SKILL_GUIDES: Record<string, SkillGuide> = {
     displayName: 'Rapid Research Tool',
     description: 'Research competitors and get actionable improvement recommendations in minutes',
     preloaded: false,
-    whatItDoes: 'Researches competitor websites, products, and strategies then delivers a structured competitive analysis with feature gap identification, UX comparison, and prioritized improvement recommendations. Turns hours of manual research into a focused brief.',
+    toolType: 'project',
+    whatItDoes: 'Researches competitor websites, products, and strategies then delivers a structured competitive analysis with feature gap identification, UX comparison, and prioritized improvement recommendations. Turns hours of manual research into a focused brief. Best used as a Claude Project so your product context persists across research sessions.',
     howToUse: [
-      'Download the skill ZIP using the button below',
-      'Create a Claude Project and add the skill files to the project knowledge',
-      'In the project chat, name your competitors and describe your product',
-      'Claude will build a structured competitive analysis with actionable recommendations',
+      'Download the skill ZIP and create a Claude Project called "Competitive Research"',
+      'Upload the skill files to the project knowledge base, along with your product docs, positioning, and any past research',
+      'Set project instructions: "You are a competitive intelligence analyst. Always reference the uploaded product docs when making recommendations."',
+      'In the project chat, name competitors to research — Claude already knows your product from the uploaded docs',
     ],
     whatToProvide: [
-      'Your product or app name and URL',
+      'Your product docs, pitch deck, or feature list (upload once to the project)',
       'Competitor names and URLs (or ask Claude to identify your top competitors)',
       'Focus area: full analysis, features only, UX audit, pricing comparison, or messaging',
       'Context: "We\'re planning Q2 roadmap" or "Preparing a competitive pitch"',
@@ -114,16 +121,25 @@ const SKILL_GUIDES: Record<string, SkillGuide> = {
       'Prioritized recommendations: quick wins vs. strategic investments',
     ],
     tips: [
-      'Always share your own product first — recommendations need both sides to compare',
-      'Ask for a specific focus if you don\'t need a full analysis',
-      'Use with web search enabled in Claude for the most current competitor data',
+      'Upload your product docs to the project so you never have to re-explain what you do',
+      'Each new research session builds on previous findings stored in the project',
+      'Enable web search in Claude for the most current competitor data',
+      'On macOS, use Cowork for live research — it can browse competitor sites and run parallel sub-agents to research 5 competitors simultaneously',
       'Great for pitch prep: "Focus on what makes us better than [competitor]"',
+    ],
+    projectSetup: [
+      'Create a new Claude Project called "Competitive Research" (or one per client)',
+      'Upload: your product overview, feature list, pricing page, and any existing competitor reports',
+      'Add the skill files from the downloaded ZIP to the project knowledge',
+      'Set instructions: "You are a competitive intelligence analyst for [Company]. Reference uploaded product docs when benchmarking. Always lead with actionable recommendations."',
+      'Start chatting — your product context is now persistent across all conversations in this project',
     ],
   },
   'scope-of-work-writer': {
     displayName: 'Scope Writer',
     description: 'Generate professional SOWs from project briefs — complete with deliverables, timelines, and legal terms',
     preloaded: true,
+    toolType: 'skill',
     whatItDoes: 'Produces comprehensive scopes of work from a project description or brief. Covers everything: deliverables table with formats and quantities, phased timeline, RACI matrix, assumptions, exclusions, revision caps, sign-off process, and payment milestones. Built to protect both agency and client.',
     howToUse: [
       'Open Claude and type: Use the scope-of-work-writer skill',
@@ -157,16 +173,17 @@ const SKILL_GUIDES: Record<string, SkillGuide> = {
     displayName: 'Brand Guidelines Bot',
     description: 'Check any copy against brand voice guidelines for tone, terminology, and consistency',
     preloaded: true,
-    whatItDoes: 'Reviews copy against a brand\'s documented voice guidelines and flags inconsistencies in tone, terminology, style, and messaging. Produces a structured review with specific fixes and an approval readiness assessment. Essential for maintaining brand consistency across teams and channels.',
+    toolType: 'project',
+    whatItDoes: 'Reviews copy against a brand\'s documented voice guidelines and flags inconsistencies in tone, terminology, style, and messaging. Produces a structured review with specific fixes and an approval readiness assessment. Best used as a Claude Project — upload brand guidelines once and check unlimited pieces of copy against them without re-pasting every time.',
     howToUse: [
-      'Open Claude and type: Use the brand-voice-enforcer skill',
-      'Paste the copy you want reviewed',
-      'Paste or upload the brand voice guidelines (or describe the brand\'s tone)',
-      'Claude will return a detailed review with issues flagged and specific fixes',
+      'Create a Claude Project called "[Client Name] Brand Voice" and upload the brand guidelines PDF',
+      'Add the skill to the project: copy "Use the brand-voice-enforcer skill" into the project instructions',
+      'Paste any copy into the project chat — Claude already has the guidelines loaded',
+      'Claude returns a detailed review with issues flagged, specific fixes, and approval readiness',
     ],
     whatToProvide: [
+      'Brand voice guidelines document — upload to the project once (PDF, doc, or text)',
       'The copy to review (email, social post, website copy, ad copy, etc.)',
-      'Brand voice guidelines document (PDF, doc, or paste the key rules)',
       'The channel this is for (social, email, website, print — tone flexes by channel)',
       'Any specific concerns: "Does this sound too casual?" or "Check the product names"',
     ],
@@ -178,16 +195,25 @@ const SKILL_GUIDES: Record<string, SkillGuide> = {
       'Approval readiness and confidence level',
     ],
     tips: [
-      'Upload brand guidelines to a Claude Project so you don\'t have to paste them every time',
+      'Create one project per client — each with their specific brand guidelines uploaded',
       'Include "instead of / say" examples in your guidelines for best results',
-      'Great for onboarding new copywriters — run their first drafts through this',
-      'Ask Claude to also create a voice guide if the brand doesn\'t have one yet',
+      'Share the project with your team so everyone checks copy against the same guidelines',
+      'Claude remembers past brand voice decisions within the project — consistency improves over time',
+      'Ask Claude to create a voice guide from scratch if the brand doesn\'t have one yet',
+    ],
+    projectSetup: [
+      'Create a new Claude Project called "[Client Name] Brand Voice"',
+      'Upload: brand guidelines PDF, style guide, terminology list, and any "instead of / say" examples',
+      'Set instructions: "You are a brand voice reviewer for [Client]. Always check copy against the uploaded brand guidelines. Flag issues as Critical or Minor. Assess approval readiness."',
+      'Share with your team: set visibility to "Shared with Organization" so copywriters can self-check',
+      'Start pasting copy — guidelines are always loaded, no re-uploading needed',
     ],
   },
   'media-strategy-planner': {
     displayName: 'Media Plan Translator',
     description: 'Plan integrated media strategies using the PESO model with channel rationale and budget splits',
     preloaded: false,
+    toolType: 'skill',
     whatItDoes: 'Builds integrated media strategies using the PESO framework (Paid, Earned, Shared, Owned). Maps audiences to channels, recommends budget allocation, creates flighting schedules, and defines measurement frameworks. Takes a campaign brief and turns it into a presentable media plan.',
     howToUse: [
       'Download the skill ZIP using the button below',
@@ -303,7 +329,12 @@ export default async function SkillDetailPage({ params }: Props) {
               {description}
             </p>
           )}
-          <div className="mt-6">
+          {guide && (
+            <div className="mt-4">
+              <ToolTypeBadge type={guide.toolType} />
+            </div>
+          )}
+          <div className="mt-5">
             {isUnlocked ? (
               <SkillAction slug={slug} preloaded={guide.preloaded} />
             ) : (
@@ -377,6 +408,28 @@ export default async function SkillDetailPage({ params }: Props) {
               </div>
             </div>
 
+            {/* Project Setup (for project-type tools) */}
+            {guide.projectSetup && (
+              <div className="rounded-md border-2 border-[#6B2B1A]/20 bg-[#6B2B1A]/5 p-5">
+                <div className="flex items-center gap-2 mb-3">
+                  <FolderOpen className="h-5 w-5 text-[#6B2B1A]" />
+                  <h3 className="text-base font-bold">Set up the Project</h3>
+                  <span className="text-xs font-medium text-[#6B2B1A] bg-[#6B2B1A]/10 px-2 py-0.5 rounded-full">Recommended</span>
+                </div>
+                <p className="text-sm text-muted-foreground mb-3">
+                  This tool works best as a Claude Project. Set it up once and use it forever:
+                </p>
+                <ol className="space-y-2.5">
+                  {guide.projectSetup.map((step, i) => (
+                    <li key={i} className="flex gap-3">
+                      <span className="flex-shrink-0 flex items-center justify-center h-5 w-5 rounded-full bg-[#6B2B1A] text-white text-xs font-bold mt-0.5">{i + 1}</span>
+                      <span className="text-sm text-muted-foreground">{step}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
+
             {/* Tips */}
             <div className="rounded-md bg-[#1A4A5C]/5 border border-[#1A4A5C]/10 p-5">
               <div className="flex items-center gap-2 mb-3">
@@ -438,5 +491,23 @@ function SkillAction({ slug, preloaded }: { slug: string; preloaded: boolean }) 
       <Download className="h-4 w-4" />
       Download Skill
     </a>
+  );
+}
+
+const TOOL_TYPE_CONFIG: Record<ToolType, { label: string; sublabel: string; icon: typeof Sparkles; color: string }> = {
+  skill: { label: 'Skill', sublabel: 'Copy and paste in Claude', icon: Sparkles, color: '#1A4A5C' },
+  project: { label: 'Best as Project', sublabel: 'Upload docs once, use forever', icon: FolderOpen, color: '#6B2B1A' },
+  cowork: { label: 'Cowork', sublabel: 'Autonomous agent (macOS)', icon: Bot, color: '#7A5A18' },
+};
+
+function ToolTypeBadge({ type }: { type: ToolType }) {
+  const config = TOOL_TYPE_CONFIG[type];
+  const Icon = config.icon;
+  return (
+    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm" style={{ backgroundColor: `${config.color}33`, color: 'white' }}>
+      <Icon className="h-3.5 w-3.5" />
+      <span className="font-medium">{config.label}</span>
+      <span className="text-white/50 text-xs hidden sm:inline">— {config.sublabel}</span>
+    </div>
   );
 }
