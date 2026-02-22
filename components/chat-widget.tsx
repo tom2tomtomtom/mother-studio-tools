@@ -509,7 +509,7 @@ export function ChatWidget() {
             exit={{ scale: 0 }}
             onClick={() => setIsOpen(true)}
             aria-label="Open Mother AI chat assistant"
-            className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-primary text-primary-foreground rounded-full px-4 py-3 shadow-lg hover:shadow-xl transition-shadow"
+            className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#FFD60A] text-[#111111] rounded-full px-5 py-3 shadow-lg hover:shadow-xl hover:brightness-110 transition-all font-semibold"
           >
             <MessageCircle className="h-5 w-5" aria-hidden="true" />
             <span className="font-medium">Need Help?</span>
