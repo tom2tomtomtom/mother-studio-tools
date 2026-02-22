@@ -4,7 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { RecentlyUsed } from '@/components/recently-used';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, Zap, Users, FileText, Monitor, Image, GraduationCap, Wand2 } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Users, FileText, Monitor, Image, GraduationCap, Wand2, Lock, CheckCircle2 } from 'lucide-react';
 import { SkillInfo } from '@/components/skill-info';
 import { teamIcons } from '@/lib/constants';
 
@@ -53,6 +53,37 @@ export default function HomePage() {
           <StatCard icon={<Zap className="h-5 w-5" />} label="Plugins" value={13} />
           <StatCard icon={<Users className="h-5 w-5" />} label="Departments" value={totalTeams} />
         </div>
+      </div>
+
+      {/* Your Active Tools — prominent hero section */}
+      <Card className="border-primary/30 bg-gradient-to-br from-primary/5 via-primary/10 to-primary/5 shadow-lg">
+        <CardHeader className="pb-4">
+          <CardTitle className="flex items-center gap-2 text-2xl">
+            <CheckCircle2 className="h-6 w-6 text-primary" />
+            Your Active Tools
+          </CardTitle>
+          <CardDescription className="text-base">
+            6 custom-built AI skills ready to use — click any skill to copy, then paste in Claude
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <SkillInfo name="Contact Reports" slug="meeting-notes-actions" description="Structured meeting summaries with action items, owners, and deadlines" />
+            <SkillInfo name="Dynamic Timelines" slug="timeline-generator" description="Project timelines with phases, milestones, dependencies, and buffer" />
+            <SkillInfo name="Rapid Research Tool" slug="competitor-research" description="Competitor benchmarking with feature gaps and improvement recommendations" preloaded={false} />
+            <SkillInfo name="Scope Writer" slug="scope-of-work-writer" description="Detailed SOWs with deliverables, timelines, and sign-off terms" />
+            <SkillInfo name="Brand Guidelines Bot" slug="brand-voice-enforcer" description="Check copy against brand voice for tone, terminology, and consistency" />
+            <SkillInfo name="Media Plan Translator" slug="media-strategy-planner" description="PESO media mix with channel rationale and budget split recommendations" preloaded={false} />
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* What's Coming — teaser count */}
+      <div className="flex items-center gap-3 px-4 py-3 rounded-lg border border-border/50 bg-muted/30">
+        <Lock className="h-5 w-5 text-muted-foreground shrink-0" />
+        <p className="text-sm text-muted-foreground">
+          <span className="font-semibold text-foreground">44+ more skills available</span> — browse the full catalogue below to see what&apos;s coming next
+        </p>
       </div>
 
       {/* Getting Started Banner */}
@@ -221,15 +252,15 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Claude Skills */}
-      <Card className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+      {/* Full Skills Catalogue */}
+      <Card className="bg-gradient-to-r from-muted/30 via-muted/50 to-muted/30 border-border/50">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Sparkles className="h-5 w-5 text-primary" />
-            Claude Skills
+            <Lock className="h-5 w-5 text-muted-foreground" />
+            Full Skills Catalogue
           </CardTitle>
           <CardDescription>
-            50 skills are preloaded in your Claude account — click to copy and paste in Claude. 12 additional skills are available to download.
+            50+ skills across every agency department — contact us to unlock additional tools for your team
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
