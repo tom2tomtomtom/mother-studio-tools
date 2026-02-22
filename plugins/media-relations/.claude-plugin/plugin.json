@@ -1,0 +1,11 @@
+{
+  "name": "media-relations",
+  "title": "Media Relations",
+  "description": "Drafts AP-style press releases, journalist pitch emails, and media coverage analysis reports. Delivers publication-ready releases, targeted pitch angles, and coverage scorecards. Use when announcing products, pitching journalists, analyzing earned media performance, or building media lists.",
+  "version": "1.0.0",
+  "capabilities": {
+    "skills": true,
+    "commands": true,
+    "connectors": true
+  }
+}

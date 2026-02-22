@@ -1,0 +1,11 @@
+{
+  "name": "client-experience",
+  "title": "Client Experience",
+  "description": "Generates structured meeting notes, client proposals, and account health scorecards using RAID logs. Delivers formatted meeting summaries, proposal documents, and relationship health assessments. Use when running client meetings, building proposals, assessing account health, or planning quarterly business reviews.",
+  "version": "1.0.0",
+  "capabilities": {
+    "skills": true,
+    "commands": true,
+    "connectors": true
+  }
+}

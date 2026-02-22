@@ -1,0 +1,11 @@
+{
+  "name": "finance-ops",
+  "title": "Finance Operations",
+  "description": "Processes invoices, categorizes expenses, generates budget reports, and maintains audit trails. Delivers financial analysis, anomaly detection, and compliance documentation. Use when processing invoices, analyzing expenses, building budget reports, or preparing for audits.",
+  "version": "1.0.0",
+  "capabilities": {
+    "skills": true,
+    "commands": true,
+    "connectors": true
+  }
+}

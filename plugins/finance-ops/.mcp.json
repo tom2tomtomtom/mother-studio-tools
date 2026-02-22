@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "google-sheets": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-server-google-sheets"],
+      "env": {
+        "GOOGLE_CREDENTIALS": "${GOOGLE_CREDENTIALS}"
+      },
+      "optional": true
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-server-filesystem"],
+      "env": {
+        "FILESYSTEM_PATH": "${FILESYSTEM_PATH}"
+      },
+      "optional": true
+    },
+    "slack": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-server-slack"],
+      "env": {
+        "SLACK_TOKEN": "${SLACK_TOKEN}"
+      },
+      "optional": true
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "design-system",
+  "title": "Design System",
+  "description": "Conducts design reviews against WCAG 2.1, generates style guide documentation, and audits accessibility compliance. Delivers annotated design feedback, documented design systems, and accessibility reports. Use when reviewing designs, documenting style guides, checking accessibility, or establishing visual standards.",
+  "version": "1.0.0",
+  "capabilities": {
+    "skills": true,
+    "commands": true,
+    "connectors": true
+  }
+}

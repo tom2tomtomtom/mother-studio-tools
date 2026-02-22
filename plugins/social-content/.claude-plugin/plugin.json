@@ -1,0 +1,11 @@
+{
+  "name": "social-content",
+  "title": "Social & Content",
+  "description": "Creates platform-optimized social posts, editorial content calendars, and blog outlines with SEO structure. Delivers ready-to-post content, monthly publishing schedules, and structured article drafts. Use when planning social content, building editorial calendars, outlining blog posts, or adapting content across platforms.",
+  "version": "1.0.0",
+  "capabilities": {
+    "skills": true,
+    "commands": true,
+    "connectors": true
+  }
+}

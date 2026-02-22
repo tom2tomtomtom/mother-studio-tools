@@ -1,0 +1,11 @@
+{
+  "name": "campaign-management",
+  "title": "Campaign Management",
+  "description": "Creates WBS project plans, status reports, and change impact assessments with RACI matrices. Delivers structured timelines, executive status summaries, and scope change documentation. Use when planning campaigns, reporting project status, managing scope changes, or building resource allocation plans.",
+  "version": "1.0.0",
+  "capabilities": {
+    "skills": true,
+    "commands": true,
+    "connectors": true
+  }
+}

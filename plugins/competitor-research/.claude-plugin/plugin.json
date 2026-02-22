@@ -1,0 +1,11 @@
+{
+  "name": "competitor-research",
+  "title": "Competitor Research",
+  "description": "Researches competitor websites, apps, and business strategies then delivers prioritized improvement recommendations. Produces competitive landscape maps, feature gap analyses, UX benchmarks, and opportunity reports. Use when analyzing competitors, benchmarking your product, identifying market gaps, or planning feature roadmaps.",
+  "version": "1.0.0",
+  "capabilities": {
+    "skills": true,
+    "commands": true,
+    "connectors": true
+  }
+}

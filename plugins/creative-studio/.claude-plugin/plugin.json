@@ -1,0 +1,11 @@
+{
+  "name": "creative-studio",
+  "title": "Creative Studio",
+  "description": "Generates hero imagery, mood boards, and campaign visual toolkits using Gemini Imagen. Reviews generated assets against brand guidelines, handles multi-format resize suites, and provides art direction feedback. Use when creating visual assets, building campaign toolkits, checking brand consistency, or generating imagery from creative briefs.",
+  "version": "1.0.0",
+  "capabilities": {
+    "skills": true,
+    "commands": true,
+    "connectors": true
+  }
+}

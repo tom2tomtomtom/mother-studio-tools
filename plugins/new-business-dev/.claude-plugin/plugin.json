@@ -1,0 +1,11 @@
+{
+  "name": "new-business-dev",
+  "title": "New Business Development",
+  "description": "Builds pitch deck narratives, drafts RFP responses with differentiators, and creates prospect research briefs. Delivers structured pitch storylines, compliant RFP submissions, and actionable prospect intelligence. Use when preparing pitches, responding to RFPs, researching prospects, or developing case studies.",
+  "version": "1.0.0",
+  "capabilities": {
+    "skills": true,
+    "commands": true,
+    "connectors": true
+  }
+}

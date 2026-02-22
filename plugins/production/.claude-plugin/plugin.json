@@ -1,0 +1,11 @@
+{
+  "name": "production",
+  "title": "Production",
+  "description": "Generates production briefs, shot lists, and delivery spec sheets with budget frameworks. Delivers detailed production plans, sequenced shot breakdowns, and technical specifications. Use when planning video or photo shoots, organizing shot sequences, specifying deliverables, or scoping production budgets.",
+  "version": "1.0.0",
+  "capabilities": {
+    "skills": true,
+    "commands": true,
+    "connectors": true
+  }
+}

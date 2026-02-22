@@ -1,0 +1,11 @@
+{
+  "name": "crisis-comms",
+  "title": "Crisis Communications",
+  "description": "Generates crisis response plans, stakeholder updates, and media holding statements using the REACT model. Delivers response timelines, messaging matrices, and press statements. Use when responding to breaking news, managing stakeholder communications, or drafting media responses during critical situations.",
+  "version": "1.0.0",
+  "capabilities": {
+    "skills": true,
+    "commands": true,
+    "connectors": true
+  }
+}

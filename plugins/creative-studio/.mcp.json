@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "media-pipeline": {
+      "command": "node",
+      "args": ["${HOME}/.claude/mcps/claude-image-gen/build/index.js"],
+      "env": {
+        "GEMINI_API_KEY": "${GEMINI_API_KEY}"
+      },
+      "optional": true
+    },
+    "figma": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-server-figma"],
+      "env": {
+        "FIGMA_TOKEN": "${FIGMA_TOKEN}"
+      },
+      "optional": true
+    }
+  }
+}

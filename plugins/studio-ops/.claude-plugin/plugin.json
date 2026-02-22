@@ -1,0 +1,11 @@
+{
+  "name": "studio-ops",
+  "title": "Studio Operations",
+  "description": "Documents SOPs, creates 30-60-90 onboarding plans, and builds budget trackers with capacity planning. Delivers standardized process guides, structured onboarding schedules, and financial tracking frameworks. Use when standardizing processes, onboarding team members, tracking budgets, or planning resource capacity.",
+  "version": "1.0.0",
+  "capabilities": {
+    "skills": true,
+    "commands": true,
+    "connectors": true
+  }
+}
