@@ -2,7 +2,7 @@ import { teams, prompts } from '@/lib/prompts';
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { RecentlyUsed } from '@/components/recently-used';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, Zap, Users, FileText, GraduationCap, Wand2 } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Users, FileText, GraduationCap } from 'lucide-react';
 import { SkillInfo } from '@/components/skill-info';
 
 const UNLOCKED_SKILLS = new Set([
@@ -123,25 +123,6 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ===== SKILL BUILDER CTA ===== */}
-      <section className="-mx-4 md:-mx-6 px-4 md:px-6 bg-[#6B2B1A] py-10 mt-12">
-        <div className="max-w-6xl mx-auto">
-          <Link href="/skill-builder" className="flex items-center justify-between group">
-            <div className="flex items-center gap-5">
-              <div className="flex h-14 w-14 items-center justify-center rounded-md bg-white/15">
-                <Wand2 className="h-7 w-7 text-white" />
-              </div>
-              <div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white">Build Your Own Skill</h3>
-                <p className="text-white/50 text-sm mt-0.5">
-                  Describe any task and AI will generate an expert-level Claude Skill in seconds
-                </p>
-              </div>
-            </div>
-            <ArrowRight className="h-6 w-6 text-white/50 group-hover:translate-x-2 transition-transform shrink-0" />
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }

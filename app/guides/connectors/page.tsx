@@ -201,7 +201,7 @@ export default function ConnectorsPage() {
               <p className="font-medium">A. Connecting Local Tools (Filesystem)</p>
             </div>
             <p className="text-sm text-muted-foreground mb-3">
-              The most critical connector for "Cowork" workflows—grants Claude access to your hard drive.
+              Grants Claude Desktop access to your hard drive for file-based workflows.
             </p>
             <div className="space-y-3">
               <div className="p-3 rounded-lg bg-muted">
@@ -459,7 +459,7 @@ export default function ConnectorsPage() {
                 <tr>
                   <td className="py-2 font-medium">Filesystem MCP</td>
                   <td className="py-2">Desktop Only</td>
-                  <td className="py-2 text-muted-foreground">Local files, Cowork tasks</td>
+                  <td className="py-2 text-muted-foreground">Local files, desktop tasks</td>
                 </tr>
                 <tr>
                   <td className="py-2 font-medium">Remote MCP</td>

@@ -47,8 +47,6 @@ const APP_PAGES = {
     { slug: 'mcp-setup', title: 'MCP Configuration', type: 'Guide' as const },
     { slug: 'claude-code', title: 'Claude Code', type: 'Guide' as const },
     { slug: 'artifacts', title: 'Artifacts', type: 'Guide' as const },
-    { slug: 'cowork', title: 'Cowork Agent', type: 'Guide' as const },
-    { slug: 'cowork-plugins', title: 'Cowork Plugins', type: 'Guide' as const },
     { slug: 'deep-research', title: 'Deep Research', type: 'Guide' as const },
     { slug: 'custom-skills', title: 'Custom Skills', type: 'Guide' as const },
     { slug: 'connectors', title: 'Connectors & Integrations', type: 'Guide' as const },
@@ -70,7 +68,6 @@ const APP_PAGES = {
     { slug: '', title: 'Home', type: 'Page' as const },
     { slug: 'guides', title: 'All Guides', type: 'Page' as const },
     { slug: 'tips', title: 'Expert Tips', type: 'Page' as const },
-    { slug: 'plugins', title: 'Cowork Plugins', type: 'Page' as const },
     { slug: 'search', title: 'Search', type: 'Page' as const },
     { slug: 'favorites', title: 'Favorites', type: 'Page' as const },
     { slug: 'prompt-generator', title: 'Prompt Generator', type: 'Page' as const },
@@ -92,7 +89,7 @@ const TEAM_DESCRIPTIONS: Record<string, string> = {
 };
 
 const TEAM_SPECIAL_CONTENT: Record<string, string> = {
-  'strategy': 'This page also features a "Research & Insights with AI Tools" guide — a practical walkthrough of using Claude (Projects, Research mode, prompt craft, Cowork) and Google NotebookLM (source-grounded notebooks, audio overviews, mind maps, data tables) together for strategy research. It covers the "Ping-Pong Method" workflow, a 15-minute demo script, and rules of engagement.',
+  'strategy': 'This page also features a "Research & Insights with AI Tools" guide — a practical walkthrough of using Claude (Projects, Research mode, prompt craft) and Google NotebookLM (source-grounded notebooks, audio overviews, mind maps, data tables) together for strategy research. It covers the "Ping-Pong Method" workflow, a 15-minute demo script, and rules of engagement.',
 };
 
 // Build compact prompt index grouped by team (with short descriptions)
@@ -129,8 +126,6 @@ function buildSystemPrompt(pathname: string, userContext?: { favorites: string[]
     }
   } else if (pathname === '/guides') {
     pageContext = 'The user is on the Guides overview page.';
-  } else if (pathname === '/plugins') {
-    pageContext = 'The user is on the Cowork Plugins page.';
   } else if (pathname === '/tips') {
     pageContext = 'The user is on the Expert Tips page.';
   } else if (pathname === '/favorites') {
@@ -185,7 +180,6 @@ ${teams.map(t => `- ${t.slug}: ${t.name} (${t.solutionCount} tools)`).join('\n')
 
 OTHER PAGES:
 - /tips: Expert tips and shortcuts
-- /plugins: Cowork plugins library
 - /guides: All guides overview
 - /search: Search prompts
 
@@ -195,7 +189,7 @@ RULES:
 3. Always include 2-3 followUps to continue the conversation
 4. Use markdown in text: **bold**, *italic*, \`code\`, - bullet lists
 5. Be concise but substantive in "text" — share real expertise, techniques, frameworks, and examples
-6. **ONLY use URLs that appear in the lists above.** Never invent or guess URLs. Every url in recommendations MUST be one of: /team/{slug}#{id}, /guides/{slug}, /tips, /plugins, /search, /guides, or /
+6. **ONLY use URLs that appear in the lists above.** Never invent or guess URLs. Every url in recommendations MUST be one of: /team/{slug}#{id}, /guides/{slug}, /tips, /search, /guides, or /
 7. Output RAW JSON only — no markdown code fences, no extra text
 8. If greeting, return empty recommendations []
 9. **Never repeat yourself.** Read the conversation history. If you already recommended something, acknowledge that and offer NEW information — deeper details, alternative tools, workflow tips, or related prompts the user hasn't seen

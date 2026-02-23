@@ -11,7 +11,6 @@ import {
   FileText,
   Globe,
   FolderOpen,
-  Puzzle,
   Zap
 } from 'lucide-react';
 
@@ -66,33 +65,6 @@ export default function DeepResearchPage() {
         </CardContent>
       </Card>
 
-      {/* The Engine */}
-      <Card>
-        <CardHeader>
-          <CardTitle>The Engine: Cowork for Research</CardTitle>
-          <CardDescription>
-            Deep research relies on the Cowork tab because it supports long-running tasks
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div>
-            <p className="font-medium">Why it works</p>
-            <p className="text-sm text-muted-foreground mt-1">
-              In standard chat, Claude answers instantly. In Cowork, Claude can spend significant time analyzing,
-              breaking the request into sub-tasks, and coordinating parallel "sub-agents" to gather data from
-              different sources simultaneously.
-            </p>
-          </div>
-          <div>
-            <p className="font-medium">The Output</p>
-            <p className="text-sm text-muted-foreground mt-1">
-              It doesn't just give you a text summary; it creates "professional outputs" like formatted reports
-              or Excel spreadsheets containing your research data.
-            </p>
-          </div>
-        </CardContent>
-      </Card>
-
       {/* The Workflow */}
       <Card>
         <CardHeader>
@@ -141,39 +113,6 @@ export default function DeepResearchPage() {
                 Claude combines information from web searches, academic articles, and your own notes.
                 It can read PDFs or "messy inputs" (like voice memos) and turn them into polished documents.
               </p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Research Plugins */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Puzzle className="h-5 w-5 text-primary" />
-            Research Plugins
-          </CardTitle>
-          <CardDescription>
-            Install specialized plugins to make Claude a subject-matter expert
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="grid gap-3 sm:grid-cols-2">
-            <div className="p-3 rounded-lg border">
-              <p className="font-medium">Biology Research</p>
-              <p className="text-sm text-muted-foreground">Searches literature, analyzes results, plans experiments</p>
-            </div>
-            <div className="p-3 rounded-lg border">
-              <p className="font-medium">Sales Research</p>
-              <p className="text-sm text-muted-foreground">Researches prospects and preps deal memos</p>
-            </div>
-            <div className="p-3 rounded-lg border">
-              <p className="font-medium">Finance</p>
-              <p className="text-sm text-muted-foreground">Analyzes financial models and tracks metrics</p>
-            </div>
-            <div className="p-3 rounded-lg border">
-              <p className="font-medium">Enterprise Search</p>
-              <p className="text-sm text-muted-foreground">Finds information across your company's internal tools</p>
             </div>
           </div>
         </CardContent>
@@ -266,7 +205,7 @@ export default function DeepResearchPage() {
         </CardHeader>
         <CardContent>
           <div className="bg-muted p-4 rounded-lg text-sm font-mono">
-            <p className="text-muted-foreground mb-2"># Paste this into Cowork:</p>
+            <p className="text-muted-foreground mb-2"># Paste this into Claude:</p>
             <p>
               "I need a competitive analysis for [YOUR INDUSTRY].
             </p>

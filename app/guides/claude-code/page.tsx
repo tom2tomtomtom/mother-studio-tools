@@ -1645,42 +1645,23 @@ claude`}</pre>
       </Card>
 
       {/* Next Steps */}
-      <div className="grid gap-4 sm:grid-cols-2">
-        <Card className="bg-muted/30">
-          <CardContent className="pt-6">
-            <div className="space-y-2">
-              <h3 className="font-semibold">Want autonomous desktop tasks?</h3>
-              <p className="text-sm text-muted-foreground">
-                Cowork lets Claude control your computer &mdash; move files, fill spreadsheets, create documents.
-              </p>
-              <Link
-                href="/guides/cowork"
-                className="flex items-center gap-1 text-primary hover:underline font-medium text-sm"
-              >
-                Cowork Guide
-                <ChevronRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className="bg-muted/30">
-          <CardContent className="pt-6">
-            <div className="space-y-2">
-              <h3 className="font-semibold">Connect to external tools?</h3>
-              <p className="text-sm text-muted-foreground">
-                MCP servers let Claude access Slack, Notion, Google Drive, and more.
-              </p>
-              <Link
-                href="/guides/mcp-setup"
-                className="flex items-center gap-1 text-primary hover:underline font-medium text-sm"
-              >
-                MCP Setup Guide
-                <ChevronRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+      <Card className="bg-muted/30">
+        <CardContent className="pt-6">
+          <div className="space-y-2">
+            <h3 className="font-semibold">Connect to external tools?</h3>
+            <p className="text-sm text-muted-foreground">
+              MCP servers let Claude access Slack, Notion, Google Drive, and more.
+            </p>
+            <Link
+              href="/guides/mcp-setup"
+              className="flex items-center gap-1 text-primary hover:underline font-medium text-sm"
+            >
+              MCP Setup Guide
+              <ChevronRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }

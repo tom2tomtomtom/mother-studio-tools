@@ -21,7 +21,6 @@ import {
   ArrowLeftRight,
   Presentation,
   ShieldCheck,
-  FileText,
   Headphones,
   Network,
   Table,
@@ -382,24 +381,7 @@ export function StrategyGuide() {
                     <Blockquote>Based on everything we&apos;ve discussed, what are the three biggest unknowns that could change our strategic recommendation? What research would we need to resolve them?</Blockquote>
                   </GuideSection>
 
-                  <GuideSection title="1.5 Cowork Mode (Generating Deliverables)" icon={<FileText className="h-4 w-4" />}>
-                    <p>
-                      Cowork is Claude&apos;s desktop tool for producing actual files — strategy decks in PowerPoint, reports in Word, data tables in Excel, and more. Once you&apos;ve done the strategic thinking in a regular Claude chat or Project, come to Cowork to turn that thinking into polished deliverables.
-                    </p>
-                    <h4 className="font-semibold text-foreground mt-3 mb-2">What Cowork can produce:</h4>
-                    <ul className="list-disc ml-4 space-y-1">
-                      <li>PowerPoint strategy decks with formatted slides</li>
-                      <li>Word documents for research reports and written strategies</li>
-                      <li>Excel spreadsheets for competitive data, audience frameworks, or budget models</li>
-                      <li>PDFs, HTML pages, and other file formats</li>
-                      <li>Markdown files</li>
-                    </ul>
-                    <p className="mt-2">
-                      <strong className="text-foreground">How to use it:</strong> Paste or describe your strategic output and ask Cowork to format it. Be specific about what you want — number of slides, structure, level of detail, whether you want speaker notes.
-                    </p>
-                  </GuideSection>
-
-                  <GuideSection title="1.6 Connected Workspace (Google Integration)" icon={<Zap className="h-4 w-4" />}>
+                  <GuideSection title="1.5 Connected Workspace (Google Integration)" icon={<Zap className="h-4 w-4" />}>
                     <p>
                       On Team and Enterprise plans, Claude can connect to your Google Workspace — Gmail, Google Docs, Google Calendar. This means Research mode can search your internal documents alongside the web.
                     </p>
@@ -572,7 +554,6 @@ export function StrategyGuide() {
                       ['Visual research maps', 'NotebookLM', 'Auto-generates from sources'],
                       ['Structured comparisons', 'NotebookLM', 'Extracts tables from messy sources'],
                       ['Strategic narrative', 'Claude', 'Strong at structuring arguments'],
-                      ['Producing deliverables', 'Claude Cowork', 'Creates decks, docs, spreadsheets'],
                       ['Briefing the team', 'NotebookLM (Audio)', 'Shareable podcast format'],
                     ]} />
                   </GuideSection>
@@ -607,7 +588,6 @@ export function StrategyGuide() {
                           <tr className="border-b border-border/50"><td className="py-2 pr-3 font-mono text-xs">2 min</td><td className="py-2 pr-3">Play 60s of Audio Overview</td><td className="py-2 italic">&ldquo;Share this before a brainstorm instead of asking everyone to read 40 pages.&rdquo;</td></tr>
                           <tr className="border-b border-border/50"><td className="py-2 pr-3 font-mono text-xs">4 min</td><td className="py-2 pr-3">Claude Project: custom instructions, positioning prompt, pressure-test</td><td className="py-2 italic">&ldquo;This is where strategic thinking happens. It gets better because it knows our context.&rdquo;</td></tr>
                           <tr className="border-b border-border/50"><td className="py-2 pr-3 font-mono text-xs">3 min</td><td className="py-2 pr-3">Data point from NotebookLM &rarr; Claude interpretation</td><td className="py-2 italic">&ldquo;Ground in sources, then interpret. This is the workflow.&rdquo;</td></tr>
-                          <tr className="border-b border-border/50"><td className="py-2 pr-3 font-mono text-xs">2 min</td><td className="py-2 pr-3">Mention Cowork for deliverables</td><td className="py-2 italic">&ldquo;Once the thinking is done, it builds the deck for you.&rdquo;</td></tr>
                           <tr className="border-b border-border/50"><td className="py-2 pr-3 font-mono text-xs">2 min</td><td className="py-2 pr-3">Q&amp;A</td><td className="py-2 italic">Address accuracy, privacy, and workflow integration</td></tr>
                         </tbody>
                       </table>

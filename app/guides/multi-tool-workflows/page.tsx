@@ -10,7 +10,6 @@ import {
   Workflow,
   Search,
   FileText,
-  Bot,
   Mic,
   ArrowRight,
   Users,
@@ -157,10 +156,10 @@ export default function MultiToolWorkflowsPage() {
           <div className="p-4 rounded-lg border">
             <p className="font-medium flex items-center gap-2">
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-green-500 text-white text-xs font-semibold">2</span>
-              Cowork — Generate Visual Concepts
+              Image Generation — Visual Concepts
             </p>
             <p className="text-sm text-muted-foreground mt-2 ml-8">
-              Use Cowork with image generation to create concept visuals, mood boards, and asset variations
+              Use image generation tools to create concept visuals, mood boards, and asset variations
               based on the approved messaging.
             </p>
           </div>

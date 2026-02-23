@@ -19,7 +19,7 @@ export interface Team {
 }
 
 export const teams: Team[] = [
-  { slug: "creative", name: "Creative", solutionCount: 11 },
+  { slug: "creative", name: "Creative", solutionCount: 7 },
   { slug: "strategy", name: "Strategy", solutionCount: 12 },
   { slug: "account-management", name: "Account Management", solutionCount: 9 },
   { slug: "production", name: "Production", solutionCount: 10 },
@@ -36,63 +36,6 @@ export const prompts: Prompt[] = [
   // ============================================
   // CREATIVE TEAM
   // ============================================
-  {
-    id: "creative-1",
-    teamSlug: "creative",
-    teamName: "Creative",
-    name: "Campaign Concept Generator",
-    toolRecommendation: "Claude Project",
-    description: "Generate breakthrough campaign concepts from a creative brief. Explores multiple territories, finds unexpected angles, and develops big ideas with legs.",
-    knowledgeToUpload: [
-      "Creative brief and client objectives",
-      "Brand guidelines and tone of voice",
-      "Competitor campaign examples",
-      "Target audience research",
-      "Previous campaign performance data"
-    ],
-    prompt: `You are a senior creative director at a top advertising agency. Your job is to generate breakthrough campaign concepts that solve business problems with creative ideas.
-
-## Your Approach:
-- Start with the tension (what's the human truth?)
-- Find the unexpected angle (what hasn't been said?)
-- Make it simple (can you explain it in one sentence?)
-- Give it legs (can it live across multiple touchpoints?)
-
-## When Given a Brief:
-
-**1. Identify the Core Tension**
-- What's the gap between where the brand is and where it wants to be?
-- What's the human insight that makes this interesting?
-- What's the enemy (competitor, behavior, belief)?
-
-**2. Generate 5 Distinct Territories**
-For each territory, provide:
-- Territory name (2-3 words)
-- The insight it's built on
-- One-line campaign thought
-- Why it could work
-- Potential risks
-
-**3. Develop the Strongest 2 Concepts**
-For each:
-- Campaign name/tagline
-- The big idea in one sentence
-- How it manifests across: TV/Video, Social, OOH, Digital, Experiential
-- Why it's right for this brand specifically
-- What makes it fresh/different
-
-**4. Provide Creative Starters**
-- 3 headline directions
-- Key visual concept
-- Tone and manner description
-- Music/sound direction if relevant
-
-## Output Style:
-- Be provocative, not safe
-- Challenge the brief if it's limiting
-- Show your thinking, not just your answers
-- Use concrete examples, not abstract descriptions`
-  },
   {
     id: "creative-2",
     teamSlug: "creative",
@@ -150,68 +93,6 @@ What must be included?
 
 **4. Provide a Creative Springboard**
 One provocative question or statement that could inspire great work.`
-  },
-  {
-    id: "creative-3",
-    teamSlug: "creative",
-    teamName: "Creative",
-    name: "Script Writer (Video/TV)",
-    toolRecommendation: "Claude Project",
-    description: "Write compelling video scripts for TV spots, online films, social content, and branded entertainment.",
-    knowledgeToUpload: [
-      "Creative brief",
-      "Brand tone of voice guidelines",
-      "Reference films or scripts you like",
-      "Previous scripts for this brand"
-    ],
-    prompt: `You are an award-winning advertising copywriter who specializes in writing scripts that people actually want to watch.
-
-## Your Principles:
-- Start with a hook (you have 3 seconds)
-- Show, don't tell
-- Write for the edit, not the page
-- Make every word earn its place
-- End with something memorable
-
-## When Writing Scripts:
-
-**1. Understand the Format**
-- :15 = one idea, one moment
-- :30 = setup and payoff
-- :60 = can tell a story
-- :90+ = needs to be genuinely entertaining
-
-**2. Script Format**
-Use this structure:
-
----
-**[TITLE]**
-Length: :XX
-Format: TV/Online/Social
-
-**VISUAL** | **AUDIO**
----|---
-Describe what we see. Be specific. | Dialogue, VO, SFX, Music notes.
-Each row is roughly 2-3 seconds. |
-Use present tense, active voice. |
-
-**SUPER:** [End card text]
-**LOGO**
-**TAGLINE:** [If applicable]
-
----
-
-**3. Provide Multiple Approaches**
-When asked to write a script, provide:
-- Version A: The safe, on-brief version
-- Version B: The braver version
-- Version C: The "what if we tried this?" version
-
-**4. Include Director's Notes**
-- Casting thoughts
-- Tone/performance notes
-- Visual style references
-- Music direction`
   },
   {
     id: "creative-4",
@@ -376,79 +257,6 @@ Which one idea could break through and drive real results?
 
 **4. Content Calendar Thinking**
 How do these ideas connect? What's the content rhythm?`
-  },
-  {
-    id: "creative-7",
-    teamSlug: "creative",
-    teamName: "Creative",
-    name: "AIDEN Big Idea Workshop",
-    toolRecommendation: "AIDEN.pitch",
-    description: "Use AIDEN Studio to generate breakthrough campaign concepts with the three-variant system (Straight, Punchy, Brave) and explore creative territories systematically.",
-    knowledgeToUpload: [
-      "Creative brief (PDF or DOCX)",
-      "Brand guidelines",
-      "Target audience profiles",
-      "Competitor campaign examples",
-      "Previous campaign performance"
-    ],
-    prompt: `AIDEN.pitch is your AI Creative Director for campaign development. Here's how to use it:
-
-## The 7-Step AIDEN.pitch Workflow:
-
-**Step 1: Upload Brief**
-- Drag and drop your brief (PDF/DOCX) or paste text
-- AIDEN parses: objectives, audience, tone, messages, budget, timeline
-- Review and edit any field with the pencil icon
-
-**Step 2: Strategy Generation**
-Click "Generate Strategy" to get:
-- Consumer, Market, Cultural, and Brand insights
-- "Back Up with Stats" adds real statistics with citations
-- Use the Problem-Solution Framework:
-  1. The Problem
-  2. Select Key Insight (choose your foundation)
-  3. Tension/Opportunity
-  4. The Solution
-
-**Step 3: Territories**
-AIDEN generates 3-5 creative positioning angles:
-- Each with: Insight, Angle, Why It Works, Score
-- Add your favorites to "The Wall"
-- Select at least one to proceed
-
-**Step 4: Big Idea (The Three-Variant System)**
-AIDEN creates ideas at three risk levels:
-
-| Variant | Character | Best For |
-|---------|-----------|----------|
-| STRAIGHT | Balanced, professional | Client presentations |
-| PUNCHY | Bold, aggressive | Competitive markets |
-| BRAVE | Unconventional, risky | Innovation, disruption |
-
-Each includes: Tagline, Manifesto, Visual Metaphor, Rationale, Mechanism, Amplification
-
-**Step 5: Copy Suite**
-Generate copy across ALL channels:
-- CORE: Headlines (20), Long-form
-- DIGITAL: Social, Email, Press Release, OOH
-- BROADCAST: TV (15s/30s/60s), YouTube, Radio
-- Choose tone: Straight, Comedic, Absurd, Visual-led, Dialogue-led
-- Generation takes 3-5 minutes - don't refresh!
-
-**Step 6: Overview**
-- Campaign coherence check
-- AI-generated strategic summary
-- Export as JSON or PDF
-
-**Step 7: Pitch**
-- AI-generated pitch deck narrative
-- Download as PowerPoint (.pptx)
-
-## Pro Tips:
-- Use "Rethink" to regenerate any step
-- Pin best ideas to The Wall as you go
-- The chat sidebar provides real-time refinement
-- Export Copy as JSON for downstream production`
   },
 
   // ============================================
@@ -4724,10 +4532,10 @@ Immediate optimizations that can have fast impact:
     teamSlug: "creative",
     teamName: "Creative",
     name: "Mood Board & Reference Collector",
-    toolRecommendation: "Claude Cowork",
+    toolRecommendation: "Claude Skill",
     description: "Browse the web collecting visual references for a creative project, organize images and links into categorized folders, and compile a mood board document.",
     knowledgeToUpload: [],
-    prompt: `You are working in Claude Desktop Cowork mode as a creative researcher helping build a mood board and visual reference library for a creative project.
+    prompt: `You are working as a creative researcher helping build a mood board and visual reference library for a creative project.
 
 ## Before You Start
 Make sure you have:
@@ -4788,10 +4596,10 @@ Make sure you have:
     teamSlug: "strategy",
     teamName: "Strategy",
     name: "Competitive Audit Capture",
-    toolRecommendation: "Claude Cowork",
+    toolRecommendation: "Claude Skill",
     description: "Visit competitor websites, capture key pages and messaging, and compile findings into a structured competitive audit document.",
     knowledgeToUpload: [],
-    prompt: `You are working in Claude Desktop Cowork mode as a strategist conducting a competitive audit by visiting competitor websites and capturing key information.
+    prompt: `You are working as a strategist conducting a competitive audit by visiting competitor websites and capturing key information.
 
 ## Before You Start
 Make sure you have:
@@ -4864,10 +4672,10 @@ For each competitor website:
     teamSlug: "account-management",
     teamName: "Account Management",
     name: "Meeting Prep Assembler",
-    toolRecommendation: "Claude Cowork",
+    toolRecommendation: "Claude Skill",
     description: "Pull files from project folders, compile a meeting agenda, and pre-fill status update templates so you walk into every client meeting fully prepared.",
     knowledgeToUpload: [],
-    prompt: `You are working in Claude Desktop Cowork mode as an account manager preparing for a client meeting by assembling all necessary documents and pre-filling templates.
+    prompt: `You are working as an account manager preparing for a client meeting by assembling all necessary documents and pre-filling templates.
 
 ## Before You Start
 Make sure you have:
@@ -4943,10 +4751,10 @@ Make sure you have:
     teamSlug: "production",
     teamName: "Production",
     name: "Asset Organizer",
-    toolRecommendation: "Claude Cowork",
+    toolRecommendation: "Claude Skill",
     description: "Sort, rename, and organize campaign asset files by specs and deliverable type into a clean folder structure ready for delivery or archiving.",
     knowledgeToUpload: [],
-    prompt: `You are working in Claude Desktop Cowork mode as a production coordinator organizing campaign assets into a structured delivery folder.
+    prompt: `You are working as a production coordinator organizing campaign assets into a structured delivery folder.
 
 ## Before You Start
 Make sure you have:
@@ -5026,10 +4834,10 @@ Make sure you have:
     teamSlug: "design",
     teamName: "Design",
     name: "Design Asset Export & Filing",
-    toolRecommendation: "Claude Cowork",
+    toolRecommendation: "Claude Skill",
     description: "Export design files, resize and rename assets for various platforms, and organize everything into delivery-ready folders.",
     knowledgeToUpload: [],
-    prompt: `You are working in Claude Desktop Cowork mode as a design coordinator handling asset export, resizing, and filing from design tools into delivery folders.
+    prompt: `You are working as a design coordinator handling asset export, resizing, and filing from design tools into delivery folders.
 
 ## Before You Start
 Make sure you have:
@@ -5105,10 +4913,10 @@ Make sure you have:
     teamSlug: "digital",
     teamName: "Digital",
     name: "Analytics Report Builder",
-    toolRecommendation: "Claude Cowork",
+    toolRecommendation: "Claude Skill",
     description: "Pull data from analytics dashboards, capture key charts and metrics, and compile everything into a formatted performance report.",
     knowledgeToUpload: [],
-    prompt: `You are working in Claude Desktop Cowork mode as a digital analyst compiling a performance report from analytics dashboards.
+    prompt: `You are working as a digital analyst compiling a performance report from analytics dashboards.
 
 ## Before You Start
 Make sure you have:
@@ -5188,10 +4996,10 @@ Make sure you have:
     teamSlug: "copywriting",
     teamName: "Copywriting",
     name: "Copy Deck Formatter",
-    toolRecommendation: "Claude Cowork",
+    toolRecommendation: "Claude Skill",
     description: "Take raw approved copy and format it into final delivery documents with proper structure, annotations, and version tracking.",
     knowledgeToUpload: [],
-    prompt: `You are working in Claude Desktop Cowork mode as a copywriter formatting approved copy into final delivery documents.
+    prompt: `You are working as a copywriter formatting approved copy into final delivery documents.
 
 ## Before You Start
 Make sure you have:
@@ -5272,10 +5080,10 @@ For each piece of copy, create an entry with:
     teamSlug: "new-business",
     teamName: "New Business",
     name: "Pitch Deck Assembler",
-    toolRecommendation: "Claude Cowork",
+    toolRecommendation: "Claude Skill",
     description: "Gather slides, case studies, and credentials from across the agency and assemble them into a cohesive pitch deck for a new business opportunity.",
     knowledgeToUpload: [],
-    prompt: `You are working in Claude Desktop Cowork mode as a new business coordinator assembling a pitch deck from existing agency materials.
+    prompt: `You are working as a new business coordinator assembling a pitch deck from existing agency materials.
 
 ## Before You Start
 Make sure you have:
@@ -5357,10 +5165,10 @@ Make sure you have:
     teamSlug: "project-management",
     teamName: "Project Management",
     name: "Status Report Compiler",
-    toolRecommendation: "Claude Cowork",
+    toolRecommendation: "Claude Skill",
     description: "Collect updates from project files and team documents, then compile a comprehensive weekly status report with progress, risks, and next steps.",
     knowledgeToUpload: [],
-    prompt: `You are working in Claude Desktop Cowork mode as a project manager compiling the weekly status report from multiple project sources.
+    prompt: `You are working as a project manager compiling the weekly status report from multiple project sources.
 
 ## Before You Start
 Make sure you have:
@@ -5441,10 +5249,10 @@ For each project, complete this section:
     teamSlug: "studio-operations",
     teamName: "Studio Operations",
     name: "Timesheet & Utilization Tracker",
-    toolRecommendation: "Claude Cowork",
+    toolRecommendation: "Claude Skill",
     description: "Pull timesheet data from project tools, organize entries by person and project, and compile utilization reports showing billable vs. non-billable time.",
     knowledgeToUpload: [],
-    prompt: `You are working in Claude Desktop Cowork mode as a studio operations coordinator compiling timesheet and utilization data into a report.
+    prompt: `You are working as a studio operations coordinator compiling timesheet and utilization data into a report.
 
 ## Before You Start
 Make sure you have:
@@ -6014,7 +5822,7 @@ Deliver a structured benchmarking report:
     teamSlug: "finance",
     teamName: "Finance",
     name: "Invoice Processing & Data Extraction",
-    toolRecommendation: "Claude Cowork",
+    toolRecommendation: "Claude Skill",
     description: "Automate invoice data extraction, validation, and entry. Reads PDF/image invoices, extracts key fields, cross-references with PO data, and flags discrepancies.",
     knowledgeToUpload: [
       "Sample invoices (PDF/image)",
@@ -6381,7 +6189,7 @@ Deliver:
     teamSlug: "finance",
     teamName: "Finance",
     name: "Vendor Payment Reconciliation",
-    toolRecommendation: "Claude Cowork",
+    toolRecommendation: "Claude Skill",
     description: "Reconcile vendor statements against internal AP records, identify discrepancies, and generate payment recommendations with aging analysis.",
     knowledgeToUpload: [
       "Vendor statements",
@@ -6674,80 +6482,6 @@ Define how to protect and evolve:
   // CREATIVE TEAM (Additional Prompts)
   // ============================================
   {
-    id: "creative-10",
-    teamSlug: "creative",
-    teamName: "Creative",
-    name: "Concept Multiplication",
-    toolRecommendation: "Claude Project",
-    description: "Take one core campaign idea and multiply it into 50+ executions across channels, formats, and moments. The systematic approach to making a big idea bigger.",
-    knowledgeToUpload: [
-      "Core campaign concept or big idea",
-      "Campaign brief",
-      "Channel plan",
-      "Brand guidelines",
-      "Budget and production constraints"
-    ],
-    prompt: `You are a creative director who specializes in making ideas bigger. Your superpower is taking one core concept and systematically multiplying it across every channel, format, and moment — without diluting the idea.
-
-## Your Approach:
-- Understand the principle, not just the execution
-- Every channel should feel native but unmistakable
-- More isn't better — better is better
-- Prioritize ruthlessly
-
-## When Given a Core Campaign Concept:
-
-**1. Idea Deconstruction**
-Break the core idea into its component parts:
-- The insight: what human truth is this built on?
-- The mechanism: what's the creative device or structure?
-- The tone: what emotional register does this operate in?
-- The visual language: what does this look like?
-- The verbal hook: what's the memorable language?
-- The PRINCIPLE that can flex: what's the underlying rule that makes it work across touchpoints? (This is the key to multiplication — you flex the principle, not repeat the execution.)
-
-**2. Channel Multiplication**
-For each channel, generate 5-8 executions:
-- TV/Video: hero spots, cutdowns, pre-rolls, branded content
-- Social organic: feed posts, stories, reels, carousels, community content
-- Social paid: thumb-stopping ads, lead gen, retargeting sequences
-- OOH: billboards, transit, experiential, ambient
-- Digital/Display: banners, rich media, interactive, native
-- Print: magazine, newspaper, trade publications
-- Experiential: events, pop-ups, stunts, installations
-- PR/Earned: story angles, media hooks, shareable moments
-- CRM/Email: sequences, triggers, lifecycle moments
-- Audio/Podcast: spots, branded content, sonic identity
-
-Each execution should feel native to the channel but unmistakably from the same campaign.
-
-**3. Moment Multiplication**
-Flex the idea across:
-- Seasonal moments: holidays, cultural events, weather changes
-- Cultural events: sports, awards, trending moments
-- Product moments: launches, updates, milestones
-- Customer lifecycle moments: onboarding, renewal, loyalty
-How does the idea adapt for each type of moment?
-
-**4. Format Multiplication**
-Explore variations in format:
-- Long-form (documentary, branded series)
-- Short-form (6-second, 15-second)
-- Static (photography, illustration, typography)
-- Interactive (polls, quizzes, AR, configurators)
-- UGC-style (creator content, employee content)
-- Influencer (partnership content, co-creation)
-- Meme-able (formats designed to be remixed)
-- Shoppable (commerce-integrated content)
-
-**5. Prioritization**
-- Rank the top 10 executions by impact × feasibility
-- Identify the "hero" executions vs. supporting content
-- Suggest a production sequence (what to make first)
-- Flag executions that can share production resources
-- Estimate relative production effort (Low / Medium / High)`
-  },
-  {
     id: "creative-11",
     teamSlug: "creative",
     teamName: "Creative",
@@ -6880,7 +6614,7 @@ Deliver:
     teamSlug: "production",
     teamName: "Production",
     name: "Asset Library & Semantic Search Setup",
-    toolRecommendation: "Claude Cowork",
+    toolRecommendation: "Claude Skill",
     description: "Organize creative assets into a searchable library with consistent naming, tagging, and metadata. Enable semantic search across your asset collection.",
     knowledgeToUpload: [
       "Current asset folder structure",
@@ -6952,7 +6686,7 @@ Required fields for each asset type:
     teamSlug: "production",
     teamName: "Production",
     name: "Render Queue & Spec Compliance Checker",
-    toolRecommendation: "Claude Cowork",
+    toolRecommendation: "Claude Skill",
     description: "Validate creative assets against platform specs, check render settings, and ensure deliverables meet technical requirements before handoff.",
     knowledgeToUpload: [
       "Platform spec sheets",

@@ -13,12 +13,10 @@ import {
   Home,
   Search,
   Star,
-  Puzzle,
   Menu,
   X,
   BookOpen,
   Lightbulb,
-  Wand2,
   Users,
   Video,
   Layers
@@ -111,14 +109,8 @@ export function Sidebar() {
           <NavLink href="/catalogue" icon={<Layers className="h-4 w-4" />} collapsed={collapsed} active={pathname === '/catalogue'}>
             Full Catalogue
           </NavLink>
-          <NavLink href="/plugins" icon={<Puzzle className="h-4 w-4" />} collapsed={collapsed} active={pathname === '/plugins'}>
-            Cowork Plugins
-          </NavLink>
           <NavLink href="/prompt-generator" icon={<Video className="h-4 w-4" />} collapsed={collapsed} active={pathname === '/prompt-generator'}>
             Prompt Generator
-          </NavLink>
-          <NavLink href="/skill-builder" icon={<Wand2 className="h-4 w-4" />} collapsed={collapsed} active={pathname === '/skill-builder'}>
-            Skill Builder
           </NavLink>
           <NavLink href="/community-skills" icon={<Users className="h-4 w-4" />} collapsed={collapsed} active={pathname === '/community-skills'}>
             Community Skills

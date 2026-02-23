@@ -7,11 +7,9 @@ import {
   ChevronRight,
   Home,
   Zap,
-  Bot,
   Terminal,
   Sparkles,
   Chrome,
-  Shield,
   AlertTriangle,
   Play,
   Database
@@ -50,71 +48,6 @@ export default function PowerHacksPage() {
           </div>
         </div>
       </div>
-
-      {/* Cowork Hacks */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Bot className="h-5 w-5 text-foreground" />
-            Cowork Agent Hacks
-          </CardTitle>
-          <CardDescription>
-            Maximize the autonomous agent's effectiveness
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-6">
-          <div>
-            <p className="font-medium flex items-center gap-2">
-              <Zap className="h-4 w-4 text-foreground" />
-              The "Parallel Subagents" Command
-            </p>
-            <p className="text-sm text-muted-foreground mt-1">
-              Cowork can spin up multiple instances of Claude to work simultaneously.
-              Force this behavior to speed up research significantly.
-            </p>
-            <div className="bg-muted p-3 rounded-lg mt-2 text-sm font-mono">
-              "Research these 5 competitors <strong>in parallel using subagents</strong>...
-              Create a separate analysis file for each"
-            </div>
-          </div>
-
-          <div>
-            <p className="font-medium">The "Cowork Prompting" Formula</p>
-            <p className="text-sm text-muted-foreground mt-1">
-              Cowork fails when prompts are vague. Use this structure:
-            </p>
-            <div className="bg-muted p-4 rounded-lg mt-2 text-sm space-y-1">
-              <p><strong>CONTEXT:</strong> [What you have, e.g., "Folder with 100 PDFs"]</p>
-              <p><strong>TASK:</strong> [Action, e.g., "Organize into subfolders"]</p>
-              <p><strong>OUTPUT:</strong> [Deliverable, e.g., "Summary markdown file"]</p>
-              <p><strong>CONSTRAINTS:</strong> [Rules, e.g., "Do not delete anything"]</p>
-            </div>
-          </div>
-
-          <div className="p-4 rounded-lg border border-amber-500/50 bg-amber-500/5">
-            <p className="font-medium flex items-center gap-2">
-              <Shield className="h-4 w-4 text-foreground" />
-              The Workspace Quarantine
-            </p>
-            <p className="text-sm text-muted-foreground mt-1">
-              Claude Cowork can permanently delete files. <strong>Never give it access to your root user folder.</strong>
-              Create a dedicated directory like <code className="bg-muted px-1 rounded">/cowork-workspace</code>.
-              Move files into that folder for processing, then move results out.
-            </p>
-          </div>
-
-          <div>
-            <p className="font-medium">Batching Tasks to Save Quota</p>
-            <p className="text-sm text-muted-foreground mt-1">
-              Cowork consumes significantly more quota than standard chat (one session ≈ 10–20 chat messages).
-              Batch multiple requests into one mission:
-            </p>
-            <div className="bg-muted p-3 rounded-lg mt-2 text-sm font-mono">
-              "Organize the Downloads folder, THEN summarize the PDFs, AND finally create an Excel sheet of the findings"
-            </div>
-          </div>
-        </CardContent>
-      </Card>
 
       {/* Section 3: CLI Shortcuts */}
       <Card>
@@ -297,10 +230,6 @@ export default function PowerHacksPage() {
             <div className="p-3 rounded-lg border bg-card">
               <code className="text-sm font-mono">claude commit</code>
               <p className="text-xs text-muted-foreground mt-1">Auto-generate commit message</p>
-            </div>
-            <div className="p-3 rounded-lg border bg-card">
-              <code className="text-sm font-mono">"in parallel using subagents"</code>
-              <p className="text-xs text-muted-foreground mt-1">Force parallel execution in Cowork</p>
             </div>
             <div className="p-3 rounded-lg border bg-card">
               <code className="text-sm font-mono">"enable persistent storage"</code>

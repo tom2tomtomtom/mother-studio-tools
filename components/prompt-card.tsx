@@ -46,7 +46,6 @@ const skillFiles: Record<string, string> = {
 const toolBadgeConfig: Record<string, { variant: 'default' | 'secondary' | 'outline' | 'destructive'; icon: React.ReactNode }> = {
   'Claude Project': { variant: 'secondary', icon: <FileText className="h-3 w-3 mr-1" /> },
   'Claude Skill': { variant: 'default', icon: <Sparkles className="h-3 w-3 mr-1" /> },
-  'Claude Cowork': { variant: 'outline', icon: <Monitor className="h-3 w-3 mr-1" /> },
 };
 
 interface PromptCardProps {
@@ -243,11 +242,6 @@ export function PromptCard({ prompt, locked = false }: PromptCardProps) {
                 {prompt.knowledgeToUpload.length} {prompt.knowledgeToUpload.length === 1 ? 'file suggested' : 'files suggested'}
               </Badge>
             )}
-            {prompt.toolRecommendation === 'Claude Cowork' && (
-              <Badge variant="outline" className="text-xs">
-                Requires Claude Desktop app
-              </Badge>
-            )}
           </div>
 
           {/* Prompt Preview - shown when collapsed */}
@@ -308,13 +302,6 @@ export function PromptCard({ prompt, locked = false }: PromptCardProps) {
                         <Sparkles className="h-4 w-4" />
                         Copy Skill Invocation
                       </Button>
-                    </div>
-                  )}
-                  {prompt.toolRecommendation === 'Claude Cowork' && (
-                    <div className="mb-4 p-3 bg-muted rounded-lg">
-                      <p className="text-sm text-muted-foreground">
-                        <strong>Use with Claude Desktop:</strong> Open the Claude Desktop app on macOS, enable Cowork, and grant folder access. Install the Chrome extension for web capture and Gemini MCP for image generation.
-                      </p>
                     </div>
                   )}
                   {/* Prompt Text & Action Buttons — hidden for skills */}

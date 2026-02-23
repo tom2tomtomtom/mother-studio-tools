@@ -116,12 +116,6 @@ export default function TipsPage() {
             icon={<Sparkles className="h-4 w-4" />}
           />
 
-          <TipBlock
-            title="Customizing Cowork Plugins"
-            problem="Default plugin behavior doesn't match your needs"
-            trick='In the Cowork tab, click "Customize" on a plugin. This opens a meta-prompt where you can tell Claude exactly how that plugin should behave (e.g., "For the Finance plugin, always format variance analysis as a table").'
-            icon={<Settings className="h-4 w-4" />}
-          />
         </CardContent>
       </Card>
 
@@ -196,36 +190,6 @@ export default function TipsPage() {
         </CardContent>
       </Card>
 
-      {/* Section 4: Cowork & Browser Hacks */}
-      <Card>
-        <CardHeader>
-          <div className="flex items-center justify-between">
-            <CardTitle className="flex items-center gap-2">
-              <Globe className="h-5 w-5 text-primary" />
-              Cowork & Browser Hacks
-            </CardTitle>
-            <Badge variant="secondary" className="shrink-0">Everyone</Badge>
-          </div>
-          <CardDescription>
-            Optimize how the agent works to save time and money
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-6">
-          <TipBlock
-            title='The "Intern" Loop (Browser Recording)'
-            problem="You're doing repetitive browser tasks manually"
-            trick='Use the recording button in the Chrome extension to perform a complex task once (like logging into a rewards portal and navigating to "Points"). Claude learns the sequence. Next time, just say "Run the reward points check workflow" and it executes while you do other work.'
-            icon={<Play className="h-4 w-4" />}
-          />
-
-          <TipBlock
-            title="Cost Control Strategy"
-            problem="Cowork sessions consume significantly more tokens than standard chat"
-            trick='Batch your tasks. Instead of one file organization task, ask: "Organize my Downloads folder, THEN summarize the PDFs, AND finally create an Excel sheet of the findings." This maximizes the utility of the agentic session.'
-            icon={<DollarSign className="h-4 w-4" />}
-          />
-        </CardContent>
-      </Card>
 
       {/* Section 5: Memory Hygiene */}
       <Card>
@@ -473,7 +437,7 @@ export default function TipsPage() {
           <TipBlock
             title="Invoice Processing on Autopilot"
             problem="Manual data entry from invoices eats hours every week"
-            trick='Use Claude Cowork to read PDF invoices, extract vendor, amount, line items, and PO numbers, then validate against your records. It catches duplicates and math errors humans miss. Pair with the Finance plugin for a full AP workflow.'
+            trick='Use Claude to read PDF invoices, extract vendor, amount, line items, and PO numbers, then validate against your records. It catches duplicates and math errors humans miss. Upload invoices directly to a Claude Project for a full AP workflow.'
             icon={<DollarSign className="h-4 w-4" />}
           />
 

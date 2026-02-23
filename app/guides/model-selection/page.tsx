@@ -10,7 +10,6 @@ import {
   Brain,
   Search,
   FileText,
-  Bot,
   Mic,
   Workflow,
   Video,
@@ -108,10 +107,6 @@ export default function ModelSelectionPage() {
                   <td className="py-2 text-muted-foreground">Claude Skills</td>
                 </tr>
                 <tr>
-                  <td className="py-2">Desktop automation and file management</td>
-                  <td className="py-2 text-muted-foreground">Claude Cowork</td>
-                </tr>
-                <tr>
                   <td className="py-2">Source-grounded synthesis</td>
                   <td className="py-2 text-muted-foreground">NotebookLM</td>
                 </tr>
@@ -194,8 +189,8 @@ export default function ModelSelectionPage() {
               Automation
             </p>
             <ul className="text-sm text-muted-foreground mt-2 space-y-1 list-disc list-inside">
-              <li><strong>Cowork</strong> — One-off multi-step tasks. File management, research runs, document processing.</li>
               <li><strong>n8n</strong> — Recurring automated workflows. Connects to 400+ services with code-level flexibility.</li>
+              <li><strong>Claude</strong> — One-off multi-step tasks. Document processing, analysis, and research runs.</li>
             </ul>
           </div>
         </CardContent>
@@ -225,7 +220,7 @@ export default function ModelSelectionPage() {
           </div>
           <div className="p-3 rounded-lg border">
             <p className="font-medium text-sm">Production</p>
-            <p className="text-xs text-muted-foreground">Claude Cowork + n8n</p>
+            <p className="text-xs text-muted-foreground">Claude + n8n</p>
             <p className="text-xs text-muted-foreground mt-1">One-off tasks → Recurring automation</p>
           </div>
           <div className="p-3 rounded-lg border">
@@ -235,7 +230,7 @@ export default function ModelSelectionPage() {
           </div>
           <div className="p-3 rounded-lg border">
             <p className="font-medium text-sm">Finance</p>
-            <p className="text-xs text-muted-foreground">Claude Cowork + Claude Projects</p>
+            <p className="text-xs text-muted-foreground">Claude Projects</p>
             <p className="text-xs text-muted-foreground mt-1">Data processing → Analysis and reporting</p>
           </div>
         </CardContent>
@@ -279,7 +274,7 @@ export default function ModelSelectionPage() {
 │
 ├─ Automate a process?
 │  ├─ Recurring? → n8n
-│  └─ One-off? → Claude Cowork
+│  └─ One-off? → Claude
 │
 ├─ Repeatable document format?
 │  └─ YES → Claude Skills

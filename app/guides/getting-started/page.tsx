@@ -15,7 +15,6 @@ import {
   FolderOpen,
   Globe,
   MessageSquare,
-  Bot,
   Terminal,
   Brain,
   Layers,
@@ -111,9 +110,8 @@ export default function GettingStartedPage() {
             <div>
               <p className="font-semibold mb-1">Download the Claude Desktop App</p>
               <p className="text-sm text-muted-foreground mb-3">
-                Claude works in your browser at <strong>claude.ai</strong>, but some of the most powerful features — like
-                <strong> Cowork</strong> (autonomous agent mode) — are <strong>only available in the Desktop app</strong>.
-                We recommend installing it now so you have access to everything.
+                Claude works in your browser at <strong>claude.ai</strong>, but the Desktop app provides the
+                best experience and gives you access to all features. We recommend installing it now.
               </p>
               <a
                 href="https://claude.ai/download"
@@ -147,24 +145,24 @@ export default function GettingStartedPage() {
         <CardContent className="space-y-6">
           <p className="text-sm text-muted-foreground">
             Log in with your company SSO — either in the <strong>Desktop app</strong> or at <strong>claude.ai</strong>.
-            We recommend the Desktop app because it gives you access to <strong>Cowork</strong> (autonomous agent mode).
+            We recommend the Desktop app for the best experience.
           </p>
 
           <Screenshot
             src="/screenshots/getting-started/desktop-home-annotated.png"
-            alt="Claude Desktop app showing Chat, Cowork, and Code tabs at the top, with annotation: Desktop app gives you access to Cowork"
-            caption="The Desktop app — with Chat, Cowork, and Code tabs at the top."
+            alt="Claude Desktop app showing Chat and Code tabs at the top"
+            caption="The Desktop app — with Chat and Code tabs at the top."
           />
 
           <p className="text-sm text-muted-foreground">
             The <strong>web interface</strong> at claude.ai has all the same Chat functionality — connectors, research,
-            artifacts, styles — everything except Cowork and Code.
+            artifacts, styles — everything except Code.
           </p>
 
           <Screenshot
             src="/screenshots/getting-started/web-home-annotated.png"
-            alt="Claude web interface at claude.ai with annotation: The web Claude has all other functionality"
-            caption="The web interface at claude.ai — all features except Cowork."
+            alt="Claude web interface at claude.ai"
+            caption="The web interface at claude.ai."
           />
 
           <p className="text-sm text-muted-foreground">
@@ -458,7 +456,7 @@ export default function GettingStartedPage() {
         </CardContent>
       </Card>
 
-      {/* ===== SECTION 5: MODES — CHAT, COWORK, CODE ===== */}
+      {/* ===== SECTION 5: MODES — CHAT & CODE ===== */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -466,22 +464,10 @@ export default function GettingStartedPage() {
             Understanding the Modes
           </CardTitle>
           <CardDescription>
-            Claude has three modes — you&apos;ll mostly use Chat, but Cowork is a game-changer
+            Claude has two main modes — Chat for everyday work, and Code for developers
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="p-3 rounded-lg bg-purple-500/5 border border-[#1A4A5C]/30 text-sm mb-2">
-            <div className="flex items-center gap-2 mb-1">
-              <Download className="h-4 w-4 text-foreground" />
-              <strong>Desktop app required for Cowork &amp; Code</strong>
-            </div>
-            <p className="text-muted-foreground">
-              Chat works everywhere (web + Desktop), but <strong>Cowork</strong> and <strong>Code</strong> are only available
-              in the <a href="https://claude.ai/download" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Claude Desktop app</a>.
-              If you haven&apos;t installed it yet, do that now.
-            </p>
-          </div>
-
           <div className="space-y-4">
             {/* Chat */}
             <div className="p-4 rounded-lg border border-blue-500/30 bg-blue-500/5">
@@ -497,27 +483,6 @@ export default function GettingStartedPage() {
                 and have a back-and-forth just like messaging a colleague. Every new chat starts fresh
                 unless you use a Project (which gives Claude persistent memory).
               </p>
-            </div>
-
-            {/* Cowork */}
-            <div className="p-4 rounded-lg border border-[#1A4A5C]/30 bg-purple-500/5">
-              <div className="flex items-center gap-2 mb-2">
-                <Bot className="h-5 w-5 text-foreground" />
-                <p className="font-semibold">Cowork</p>
-                <Badge variant="outline" className="text-xs border-[#1A4A5C]/50 text-[#1A4A5C]">Desktop only</Badge>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Cowork turns Claude into an autonomous agent that works on your computer. You give it a job
-                (&quot;organise these files into folders&quot; or &quot;create a spreadsheet from these invoices&quot;)
-                and it actually opens apps, clicks buttons, and does the work while you watch or do something else.
-                Think of it as a capable intern who can use your computer.
-              </p>
-              <p className="text-xs text-muted-foreground mt-2">
-                <strong>You won&apos;t see the Cowork tab on claude.ai</strong> — it only appears in the Desktop app.
-              </p>
-              <Link href="/guides/cowork" className="text-xs text-primary hover:underline mt-2 inline-flex items-center gap-1">
-                Learn more about Cowork <ArrowRight className="h-3 w-3" />
-              </Link>
             </div>
 
             {/* Code */}
